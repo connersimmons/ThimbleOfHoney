@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C5CCBC901A9CF04600A4F62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBC8F1A9CF04600A4F62D /* AppDelegate.swift */; };
+		C5CCBC921A9CF04600A4F62D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBC911A9CF04600A4F62D /* ViewController.swift */; };
+		C5CCBC951A9CF04600A4F62D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBC931A9CF04600A4F62D /* Main.storyboard */; };
+		C5CCBC971A9CF04600A4F62D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBC961A9CF04600A4F62D /* Images.xcassets */; };
+		C5CCBC9A1A9CF04600A4F62D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBC981A9CF04600A4F62D /* LaunchScreen.xib */; };
+		C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C5CCBCA01A9CF04600A4F62D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5CCBC821A9CF04600A4F62D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C5CCBC891A9CF04600A4F62D;
+			remoteInfo = ThimbleOfHoney;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CCBC8E1A9CF04600A4F62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CCBC8F1A9CF04600A4F62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C5CCBC911A9CF04600A4F62D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5CCBC941A9CF04600A4F62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5CCBC961A9CF04600A4F62D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C5CCBC991A9CF04600A4F62D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C5CCBC9F1A9CF04600A4F62D /* ThimbleOfHoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThimbleOfHoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5CCBCA41A9CF04600A4F62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThimbleOfHoneyTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C5CCBC871A9CF04600A4F62D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CCBC9C1A9CF04600A4F62D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C5CCBC811A9CF04600A4F62D = {
+			isa = PBXGroup;
+			children = (
+				C5CCBC8C1A9CF04600A4F62D /* ThimbleOfHoney */,
+				C5CCBCA21A9CF04600A4F62D /* ThimbleOfHoneyTests */,
+				C5CCBC8B1A9CF04600A4F62D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C5CCBC8B1A9CF04600A4F62D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */,
+				C5CCBC9F1A9CF04600A4F62D /* ThimbleOfHoneyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C5CCBC8C1A9CF04600A4F62D /* ThimbleOfHoney */ = {
+			isa = PBXGroup;
+			children = (
+				C5CCBC8F1A9CF04600A4F62D /* AppDelegate.swift */,
+				C5CCBC911A9CF04600A4F62D /* ViewController.swift */,
+				C5CCBC931A9CF04600A4F62D /* Main.storyboard */,
+				C5CCBC961A9CF04600A4F62D /* Images.xcassets */,
+				C5CCBC981A9CF04600A4F62D /* LaunchScreen.xib */,
+				C5CCBC8D1A9CF04600A4F62D /* Supporting Files */,
+			);
+			path = ThimbleOfHoney;
+			sourceTree = "<group>";
+		};
+		C5CCBC8D1A9CF04600A4F62D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5CCBC8E1A9CF04600A4F62D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C5CCBCA21A9CF04600A4F62D /* ThimbleOfHoneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */,
+				C5CCBCA31A9CF04600A4F62D /* Supporting Files */,
+			);
+			path = ThimbleOfHoneyTests;
+			sourceTree = "<group>";
+		};
+		C5CCBCA31A9CF04600A4F62D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C5CCBCA41A9CF04600A4F62D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C5CCBC891A9CF04600A4F62D /* ThimbleOfHoney */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5CCBCA91A9CF04600A4F62D /* Build configuration list for PBXNativeTarget "ThimbleOfHoney" */;
+			buildPhases = (
+				C5CCBC861A9CF04600A4F62D /* Sources */,
+				C5CCBC871A9CF04600A4F62D /* Frameworks */,
+				C5CCBC881A9CF04600A4F62D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThimbleOfHoney;
+			productName = ThimbleOfHoney;
+			productReference = C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C5CCBC9E1A9CF04600A4F62D /* ThimbleOfHoneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C5CCBCAC1A9CF04600A4F62D /* Build configuration list for PBXNativeTarget "ThimbleOfHoneyTests" */;
+			buildPhases = (
+				C5CCBC9B1A9CF04600A4F62D /* Sources */,
+				C5CCBC9C1A9CF04600A4F62D /* Frameworks */,
+				C5CCBC9D1A9CF04600A4F62D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C5CCBCA11A9CF04600A4F62D /* PBXTargetDependency */,
+			);
+			name = ThimbleOfHoneyTests;
+			productName = ThimbleOfHoneyTests;
+			productReference = C5CCBC9F1A9CF04600A4F62D /* ThimbleOfHoneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C5CCBC821A9CF04600A4F62D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = CWS;
+				TargetAttributes = {
+					C5CCBC891A9CF04600A4F62D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					C5CCBC9E1A9CF04600A4F62D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = C5CCBC891A9CF04600A4F62D;
+					};
+				};
+			};
+			buildConfigurationList = C5CCBC851A9CF04600A4F62D /* Build configuration list for PBXProject "ThimbleOfHoney" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C5CCBC811A9CF04600A4F62D;
+			productRefGroup = C5CCBC8B1A9CF04600A4F62D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C5CCBC891A9CF04600A4F62D /* ThimbleOfHoney */,
+				C5CCBC9E1A9CF04600A4F62D /* ThimbleOfHoneyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C5CCBC881A9CF04600A4F62D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CCBC951A9CF04600A4F62D /* Main.storyboard in Resources */,
+				C5CCBC9A1A9CF04600A4F62D /* LaunchScreen.xib in Resources */,
+				C5CCBC971A9CF04600A4F62D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CCBC9D1A9CF04600A4F62D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C5CCBC861A9CF04600A4F62D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CCBC921A9CF04600A4F62D /* ViewController.swift in Sources */,
+				C5CCBC901A9CF04600A4F62D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CCBC9B1A9CF04600A4F62D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C5CCBCA11A9CF04600A4F62D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C5CCBC891A9CF04600A4F62D /* ThimbleOfHoney */;
+			targetProxy = C5CCBCA01A9CF04600A4F62D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C5CCBC931A9CF04600A4F62D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CCBC941A9CF04600A4F62D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C5CCBC981A9CF04600A4F62D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C5CCBC991A9CF04600A4F62D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C5CCBCA71A9CF04600A4F62D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C5CCBCA81A9CF04600A4F62D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C5CCBCAA1A9CF04600A4F62D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ThimbleOfHoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C5CCBCAB1A9CF04600A4F62D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ThimbleOfHoney/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C5CCBCAD1A9CF04600A4F62D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ThimbleOfHoneyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThimbleOfHoney.app/ThimbleOfHoney";
+			};
+			name = Debug;
+		};
+		C5CCBCAE1A9CF04600A4F62D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ThimbleOfHoneyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThimbleOfHoney.app/ThimbleOfHoney";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C5CCBC851A9CF04600A4F62D /* Build configuration list for PBXProject "ThimbleOfHoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CCBCA71A9CF04600A4F62D /* Debug */,
+				C5CCBCA81A9CF04600A4F62D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C5CCBCA91A9CF04600A4F62D /* Build configuration list for PBXNativeTarget "ThimbleOfHoney" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CCBCAA1A9CF04600A4F62D /* Debug */,
+				C5CCBCAB1A9CF04600A4F62D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C5CCBCAC1A9CF04600A4F62D /* Build configuration list for PBXNativeTarget "ThimbleOfHoneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C5CCBCAD1A9CF04600A4F62D /* Debug */,
+				C5CCBCAE1A9CF04600A4F62D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C5CCBC821A9CF04600A4F62D /* Project object */;
+}
