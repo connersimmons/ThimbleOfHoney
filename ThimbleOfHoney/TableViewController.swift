@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class TableViewController: UITableViewController, NSXMLParserDelegate {
 
@@ -54,16 +55,21 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
             blogPost.postTitle = postTitle
             blogPost.postLink = postLink
             blogPost.postDesc = postDesc
+            //blogPost.postThumbnail = getThumbnail(postDesc)
             blogPosts.append(blogPost)
         }
     }
-
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    /*
+    func getThumbnail() -> UIImage {
+        
+    }
+    */
 
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -78,43 +84,45 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
         
-        cell.postImageView.image = UIImage(named: "placeholder")
-        
         let blogPost: BlogPost = blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
         
-        if blogPost.postDesc.isEmpty == false {
-            let htmlContent = blogPost.postDesc as NSString
-            var imageSource = ""
-            
-            let rangeOfString = NSMakeRange(0, htmlContent.length)
-            let regex = NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: nil, error: nil)
-            
-            if htmlContent.length > 0 {
-                let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)
+        asyncLoadPostImage(blogPost, imageView: cell.postImageView)
+        
+        return cell
+    }
+    
+    func asyncLoadPostImage(blogPost: BlogPost, imageView: UIImageView) {
+        let downloadQueue = dispatch_queue_create("com.thimbleofhoney.processdownload", nil)
+    
+        dispatch_async(downloadQueue) {
+            if blogPost.postDesc.isEmpty == false {
+                let htmlContent = blogPost.postDesc as NSString
+                var imageSource = ""
                 
-                if match != nil {
-                    var imageURL = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
-                    imageURL = imageURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
-                    if NSString(string: imageURL.lowercaseString).rangeOfString("feedburner").location == NSNotFound {
+                let rangeOfString = NSMakeRange(0, htmlContent.length)
+                let regex = NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: nil, error: nil)
+                
+                if htmlContent.length > 0 {
+                    let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)
+                    
+                    if match != nil {
+                        var imageURL = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
+                        imageURL = imageURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
                         imageSource = imageURL
                     }
                 }
-            }
-        
-            if imageSource != "" {
-                var url = NSURL(string: imageSource)
-                if url != nil{
-                    var imageData = NSData(contentsOfURL: url!)
-                    cell.postImageView.image = UIImage(data: imageData!)
-                } else {
-                    cell.postImageView.image = UIImage(named: "placeholder")
+                
+                if imageSource != "" {
+                    var url = NSURL(string: imageSource)
+                    if url != nil{
+                        var imageData = NSData(contentsOfURL: url!)
+                        imageView.image = UIImage(data: imageData!)
+                    }
                 }
-            } else {
-                cell.postImageView.image = UIImage(named: "placeholder")
             }
+            self.tableView.reloadData()
         }
-        return cell
     }
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

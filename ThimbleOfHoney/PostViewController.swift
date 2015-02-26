@@ -10,7 +10,7 @@ import UIKit
 
 class PostViewController: UIViewController, UIWebViewDelegate {
     
-    @IBOutlet var webView:UIWebView!
+    @IBOutlet var webView: UIWebView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     var postLink: String = String()
@@ -37,5 +37,5 @@ class PostViewController: UIViewController, UIWebViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }

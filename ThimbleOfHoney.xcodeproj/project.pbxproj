@@ -17,6 +17,7 @@
 		C5CCBCB61A9D8D3700A4F62D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCB51A9D8D3700A4F62D /* TableViewCell.swift */; };
 		C5CCBCBA1A9E567800A4F62D /* AFNetworking in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBCB91A9E567800A4F62D /* AFNetworking */; };
 		C5CCBCC61A9F8FC800A4F62D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBCC51A9F8FC800A4F62D /* LaunchScreen.xib */; };
+		C5CCBCC81A9FD3CF00A4F62D /* SwiftImageLoader in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBCC71A9FD3CF00A4F62D /* SwiftImageLoader */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C5CCBCBB1A9E56E100A4F62D /* ThimbleOfHoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThimbleOfHoney-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5CCBCC41A9F8E1600A4F62D /* RougeScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RougeScript-Regular.ttf"; sourceTree = "<group>"; };
 		C5CCBCC51A9F8FC800A4F62D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		C5CCBCC71A9FD3CF00A4F62D /* SwiftImageLoader */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SwiftImageLoader; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		C5CCBC8C1A9CF04600A4F62D /* ThimbleOfHoney */ = {
 			isa = PBXGroup;
 			children = (
+				C5CCBCC71A9FD3CF00A4F62D /* SwiftImageLoader */,
 				C5CCBCC51A9F8FC800A4F62D /* LaunchScreen.xib */,
 				C5CCBCC31A9F8DEA00A4F62D /* Resources */,
 				C5CCBCB91A9E567800A4F62D /* AFNetworking */,
@@ -218,6 +221,7 @@
 			files = (
 				C5CCBCC61A9F8FC800A4F62D /* LaunchScreen.xib in Resources */,
 				C5CCBC951A9CF04600A4F62D /* Main.storyboard in Resources */,
+				C5CCBCC81A9FD3CF00A4F62D /* SwiftImageLoader in Resources */,
 				C5CCBC971A9CF04600A4F62D /* Images.xcassets in Resources */,
 				C5CCBCBA1A9E567800A4F62D /* AFNetworking in Resources */,
 			);
