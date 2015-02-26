@@ -87,11 +87,36 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
         let blogPost: BlogPost = blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
         
-        asyncLoadPostImage(blogPost, imageView: cell.postImageView)
+        //asyncLoadPostImage(blogPost, imageView: cell.postImageView)
+        
+        var urlString = findFirstImage(blogPost)
+        ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
+            cell.postImageView.image = image
+        })
         
         return cell
     }
+
+    func findFirstImage(blogPost: BlogPost) -> NSString {
+        let htmlContent = blogPost.postDesc as NSString
+        var imageSource = ""
+        
+        let rangeOfString = NSMakeRange(0, htmlContent.length)
+        let regex = NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: nil, error: nil)
+            
+        if htmlContent.length > 0 {
+           let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)
+                
+           if match != nil {
+                var imageURL = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
+                imageURL = imageURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+                imageSource = imageURL
+           }
+        }
+        return imageSource
+    }
     
+    /*
     func asyncLoadPostImage(blogPost: BlogPost, imageView: UIImageView) {
         let downloadQueue = dispatch_queue_create("com.thimbleofhoney.processdownload", nil)
     
@@ -124,6 +149,7 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
             self.tableView.reloadData()
         }
     }
+    */
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
          return 100
