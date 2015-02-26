@@ -82,8 +82,38 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
         
         let blogPost: BlogPost = blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
-        println(blogPost.postDesc)
         
+        if blogPost.postDesc.isEmpty == false {
+            let htmlContent = blogPost.postDesc as NSString
+            var imageSource = ""
+            
+            let rangeOfString = NSMakeRange(0, htmlContent.length)
+            let regex = NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: nil, error: nil)
+            
+            if htmlContent.length > 0 {
+                let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)
+                
+                if match != nil {
+                    var imageURL = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
+                    imageURL = imageURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+                    if NSString(string: imageURL.lowercaseString).rangeOfString("feedburner").location == NSNotFound {
+                        imageSource = imageURL
+                    }
+                }
+            }
+        
+            if imageSource != "" {
+                var url = NSURL(string: imageSource)
+                if url != nil{
+                    var imageData = NSData(contentsOfURL: url!)
+                    cell.postImageView.image = UIImage(data: imageData!)
+                } else {
+                    cell.postImageView.image = UIImage(named: "placeholder")
+                }
+            } else {
+                cell.postImageView.image = UIImage(named: "placeholder")
+            }
+        }
         return cell
     }
 
