@@ -20,10 +20,19 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         let url:NSURL = NSURL(string: "http://thimbleofhoney.com/rss")!
         parser = NSXMLParser(contentsOfURL: url)!
         parser.delegate = self
         parser.parse()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = true
+        navigationController?.hidesBarsOnTap = true
+        navigationController?.hidesBarsWhenKeyboardAppears = true
     }
     
     // MARK: - NSXMLParserDelegate methods
@@ -86,14 +95,14 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
         
         var urlString = findFirstImage(blogPost)
         ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
-            cell.postImageView.image = image
+            //cell.postImageView.image = image
             
             //below makes the images into circles, replace the line above with these three if you want that
-            /*
+            
             cell.postImageView.image = image
             cell.postImageView.layer.cornerRadius = cell.postImageView.frame.size.width / 2;
             cell.postImageView.clipsToBounds = true
-            */
+            
         })
         
         return cell

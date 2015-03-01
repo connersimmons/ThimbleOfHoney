@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Thimble of Honey-->
+        <!--thimble of honey-->
         <scene sceneID="I3m-XN-LPF">
             <objects>
                 <tableViewController id="5JG-WC-aUD" customClass="TableViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,25 +22,63 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gde-0E-NE2">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="Mou-JQ-lpp"/>
-                                                <constraint firstAttribute="width" constant="100" id="zEG-fd-M0o"/>
+                                                <constraint firstAttribute="width" constant="100" id="G7P-tf-12S"/>
+                                                <constraint firstAttribute="height" constant="100" id="MNz-dY-wJf"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="G7P-tf-12S"/>
+                                                    <exclude reference="MNz-dY-wJf"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="G7P-tf-12S"/>
+                                                    <include reference="MNz-dY-wJf"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-tn-LNk">
-                                            <rect key="frame" x="108" y="18" width="479" height="64"/>
+                                            <rect key="frame" x="108" y="8" width="479" height="84"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="nBN-tn-LNk" secondAttribute="trailing" constant="-28" id="EvC-VK-02b"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="nBN-tn-LNk" secondAttribute="bottom" constant="9.5" id="G0I-HL-IJa"/>
-                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="topMargin" constant="10" id="JyN-SD-BcP"/>
-                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="leading" secondItem="gde-0E-NE2" secondAttribute="trailing" constant="8" id="Sp2-ny-m0O"/>
-                                        <constraint firstItem="gde-0E-NE2" firstAttribute="leading" secondItem="g4q-8K-yl8" secondAttribute="leadingMargin" constant="-8" id="Ux7-3a-SPE"/>
-                                        <constraint firstItem="gde-0E-NE2" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="topMargin" constant="-8" id="njd-2u-dj1"/>
+                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="topMargin" id="Eic-gH-QbM"/>
+                                        <constraint firstItem="gde-0E-NE2" firstAttribute="leading" secondItem="g4q-8K-yl8" secondAttribute="leadingMargin" constant="-8" id="Hb1-Ud-zmJ"/>
+                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="leading" secondItem="gde-0E-NE2" secondAttribute="trailing" constant="8" id="MyR-F8-ZZh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gde-0E-NE2" secondAttribute="bottom" constant="-8" id="SpU-hb-i1i"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nBN-tn-LNk" secondAttribute="trailing" constant="-8" id="eLC-cc-xcI"/>
+                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="leading" secondItem="gde-0E-NE2" secondAttribute="trailing" constant="8" id="gsl-P7-U3r"/>
+                                        <constraint firstItem="gde-0E-NE2" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="topMargin" constant="-8" id="haS-GE-P28"/>
+                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="bottom" secondItem="g4q-8K-yl8" secondAttribute="bottomMargin" id="mQ8-Kl-xB0"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Hb1-Ud-zmJ"/>
+                                            <exclude reference="SpU-hb-i1i"/>
+                                            <exclude reference="haS-GE-P28"/>
+                                            <exclude reference="Eic-gH-QbM"/>
+                                            <exclude reference="MyR-F8-ZZh"/>
+                                            <exclude reference="eLC-cc-xcI"/>
+                                            <exclude reference="gsl-P7-U3r"/>
+                                            <exclude reference="mQ8-Kl-xB0"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="Hb1-Ud-zmJ"/>
+                                            <include reference="SpU-hb-i1i"/>
+                                            <include reference="haS-GE-P28"/>
+                                            <include reference="Eic-gH-QbM"/>
+                                            <include reference="MyR-F8-ZZh"/>
+                                            <include reference="eLC-cc-xcI"/>
+                                            <include reference="gsl-P7-U3r"/>
+                                            <include reference="mQ8-Kl-xB0"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="postImageView" destination="gde-0E-NE2" id="7fY-qs-9gH"/>
@@ -55,11 +93,11 @@
                             <outlet property="delegate" destination="5JG-WC-aUD" id="tY6-jl-och"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Thimble of Honey" id="Xfh-Hb-0LH"/>
+                    <navigationItem key="navigationItem" title="thimble of honey" id="Xfh-Hb-0LH"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXm-vP-xcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="367"/>
+            <point key="canvasLocation" x="864" y="367"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="rID-Fg-Sy6">
