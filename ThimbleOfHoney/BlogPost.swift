@@ -17,5 +17,4 @@ class BlogPost {
     init() {
         postThumbnail = UIImage(named: "placeholder")!
     }
-    
 }

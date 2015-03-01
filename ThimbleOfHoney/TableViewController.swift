@@ -64,12 +64,7 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    func getThumbnail() -> UIImage {
-        
-    }
-    */
+
 
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -92,6 +87,13 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
         var urlString = findFirstImage(blogPost)
         ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
             cell.postImageView.image = image
+            
+            //below makes the images into circles, replace the line above with these three if you want that
+            /*
+            cell.postImageView.image = image
+            cell.postImageView.layer.cornerRadius = cell.postImageView.frame.size.width / 2;
+            cell.postImageView.clipsToBounds = true
+            */
         })
         
         return cell
