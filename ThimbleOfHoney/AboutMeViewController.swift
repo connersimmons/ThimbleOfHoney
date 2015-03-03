@@ -19,19 +19,23 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
 
         // Do any additional setup after loading the view.
         let aboutMeURL = NSURL(string:"http://thimbleofhoney.com/about")
-        println(aboutMeURL)
         let htmlString = NSData(contentsOfURL: aboutMeURL!)
-        println(htmlString)
         var dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
-        /*
-        if let aboutMeURL = aboutMeURL { // << Optional binding
-            let task = NSURLSession.sharedSession().dataTaskWithURL(aboutMeURL) {(data, response, error) in
-                println(NSString(data: data, encoding:NSUTF8StringEncoding))
-            }
-        }
-        */
         
-        blogContent.text = findAboutMeContent(dataString)
+        let aboutMeDesc = findAboutMeContent(dataString)
+        println(aboutMeDesc)
+        //blogContent.text = aboutMeDesc
+        
+        
+        var attrStr = NSAttributedString(
+            data: aboutMeDesc.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!,
+            options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
+            documentAttributes: nil,
+            error: nil)
+
+        blogContent.text = attrStr?.string
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
