@@ -107,7 +107,8 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             let selectedRow = tableView.indexPathForSelectedRow()?.row
             let blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
             let viewController = segue.destinationViewController as PostViewController
-            viewController.postLink = blogPost.postLink
+            //viewController.postLink = blogPost.postLink
+            viewController.postDesc = blogPost.postDesc
         }
     }
 }

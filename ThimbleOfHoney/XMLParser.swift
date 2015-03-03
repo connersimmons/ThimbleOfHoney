@@ -70,5 +70,5 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
         self.parseError = parseError
     }
-   
+    
 }

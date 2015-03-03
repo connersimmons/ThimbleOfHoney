@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C5BF33851AA5F7D900271BA1 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF33841AA5F7D900271BA1 /* XMLParser.swift */; };
+		C5BF33871AA61F1F00271BA1 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF33861AA61F1F00271BA1 /* AboutMeViewController.swift */; };
+		C5BF33891AA61F9A00271BA1 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF33881AA61F9A00271BA1 /* XMLParser.swift */; };
 		C5CCBC901A9CF04600A4F62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBC8F1A9CF04600A4F62D /* AppDelegate.swift */; };
 		C5CCBC951A9CF04600A4F62D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBC931A9CF04600A4F62D /* Main.storyboard */; };
 		C5CCBC971A9CF04600A4F62D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5CCBC961A9CF04600A4F62D /* Images.xcassets */; };
@@ -32,7 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C5BF33841AA5F7D900271BA1 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParser.swift; path = ../XMLParser.swift; sourceTree = "<group>"; };
+		C5BF33861AA61F1F00271BA1 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		C5BF33881AA61F9A00271BA1 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CCBC8E1A9CF04600A4F62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5CCBC8F1A9CF04600A4F62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		C5CCBC8C1A9CF04600A4F62D /* ThimbleOfHoney */ = {
 			isa = PBXGroup;
 			children = (
+				C5BF33861AA61F1F00271BA1 /* AboutMeViewController.swift */,
 				C5CCBCB91A9E567800A4F62D /* AFNetworking */,
 				C5CCBC8F1A9CF04600A4F62D /* AppDelegate.swift */,
 				C5CCBCAF1A9CF20300A4F62D /* BlogPost.swift */,
@@ -101,10 +104,10 @@
 				C5CCBCB01A9CF20300A4F62D /* TableViewController.swift */,
 				C5CCBCB51A9D8D3700A4F62D /* TableViewCell.swift */,
 				C5CCBC961A9CF04600A4F62D /* Images.xcassets */,
+				C5BF33881AA61F9A00271BA1 /* XMLParser.swift */,
 				C5CCBCC31A9F8DEA00A4F62D /* Resources */,
 				C5CCBC8D1A9CF04600A4F62D /* Supporting Files */,
 				C5CCBCBB1A9E56E100A4F62D /* ThimbleOfHoney-Bridging-Header.h */,
-				C5BF33841AA5F7D900271BA1 /* XMLParser.swift */,
 			);
 			path = ThimbleOfHoney;
 			sourceTree = "<group>";
@@ -243,8 +246,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5BF33851AA5F7D900271BA1 /* XMLParser.swift in Sources */,
+				C5BF33891AA61F9A00271BA1 /* XMLParser.swift in Sources */,
 				C5CCBCB61A9D8D3700A4F62D /* TableViewCell.swift in Sources */,
+				C5BF33871AA61F1F00271BA1 /* AboutMeViewController.swift in Sources */,
 				C5CCBCB21A9CF20300A4F62D /* BlogPost.swift in Sources */,
 				C5CCBCCC1A9FD71D00A4F62D /* ImageLoader.swift in Sources */,
 				C5CCBCB31A9CF20300A4F62D /* TableViewController.swift in Sources */,

@@ -8,21 +8,32 @@
 
 import UIKit
 
-class PostViewController: UIViewController, UIWebViewDelegate {
+class PostViewController: UIViewController, UITextViewDelegate {
     
+    /*
     @IBOutlet var webView: UIWebView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    var postDesc: String = String()
+    */
     
-    var postLink: String = String()
+    @IBOutlet weak var textView: UITextView!
+    var postDesc: String = String()
 
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         let url: NSURL = NSURL(string: postLink)!
         let request: NSURLRequest = NSURLRequest(URL: url)
         webView.loadRequest(request)
         webView.delegate = self
+        */
+        
+        textView.text = postDesc.html2String
     }
     
+    /*
     func webViewDidStartLoad(webView: UIWebView!)  {
         activityIndicator.hidden = false
         activityIndicator.startAnimating()
@@ -32,6 +43,7 @@ class PostViewController: UIViewController, UIWebViewDelegate {
         activityIndicator.hidden = true
         activityIndicator.stopAnimating()
     }
+    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
