@@ -9,64 +9,36 @@
 import UIKit
 import Foundation
 
-class TableViewController: UITableViewController, NSXMLParserDelegate {
-
-    var parser: NSXMLParser = NSXMLParser()
-    var blogPosts: [BlogPost] = []
-    var postTitle: String = String()
-    var postLink: String = String()
-    var postDesc: String = String()
-    var curElement: String = String()
+class TableViewController: UITableViewController, XMLParserDelegate {
+    
+    var xmlParser: XMLParser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        //the following line can make the dividers between table rows disappear
+        //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        
         let url:NSURL = NSURL(string: "http://thimbleofhoney.com/rss")!
-        parser = NSXMLParser(contentsOfURL: url)!
-        parser.delegate = self
-        parser.parse()
+        xmlParser = XMLParser()
+        xmlParser.delegate = self
+        xmlParser.startParsingContentsOfURL(url)
+    }
+    
+    // MARK: XMLParserDelegate method implementation
+    
+    func parsingWasFinished() {
+        self.tableView.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        navigationController?.hidesBarsOnSwipe = true
-        navigationController?.hidesBarsOnTap = true
+        //removes navigation bar on swipe
+        //navigationController?.hidesBarsOnSwipe = true
+        
+        //removes navigation bar when keyboard appears
         navigationController?.hidesBarsWhenKeyboardAppears = true
-    }
-    
-    // MARK: - NSXMLParserDelegate methods
-    func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: [NSObject : AnyObject]!) {
-        curElement = elementName
-        if elementName == "item" {
-            postTitle = String()
-            postLink = String()
-            postDesc = String()
-        }
-    }
-    
-    func parser(parser: NSXMLParser!, foundCharacters string: String!) {
-        let data = string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        if (!data.isEmpty) {
-            if curElement == "title" {
-                postTitle += data
-            } else if curElement == "link" {
-                postLink += data
-            } else if curElement == "description" {
-                postDesc += data
-            }
-        }
-    }
-    
-    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!) {
-        if elementName == "item" {
-            let blogPost: BlogPost = BlogPost()
-            blogPost.postTitle = postTitle
-            blogPost.postLink = postLink
-            blogPost.postDesc = postDesc
-            //blogPost.postThumbnail = getThumbnail(postDesc)
-            blogPosts.append(blogPost)
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,28 +53,27 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return blogPosts.count
+        //return blogPosts.count
+        return xmlParser.blogPosts.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
         
-        let blogPost: BlogPost = blogPosts[indexPath.row]
+        let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
-        
-        //asyncLoadPostImage(blogPost, imageView: cell.postImageView)
         
         var urlString = findFirstImage(blogPost)
         ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
-            //cell.postImageView.image = image
+            cell.postImageView.image = image
             
             //below makes the images into circles, replace the line above with these three if you want that
-            
+            /*
             cell.postImageView.image = image
             cell.postImageView.layer.cornerRadius = cell.postImageView.frame.size.width / 2;
             cell.postImageView.clipsToBounds = true
-            
+            */
         })
         
         return cell
@@ -126,41 +97,6 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
         }
         return imageSource
     }
-    
-    /*
-    func asyncLoadPostImage(blogPost: BlogPost, imageView: UIImageView) {
-        let downloadQueue = dispatch_queue_create("com.thimbleofhoney.processdownload", nil)
-    
-        dispatch_async(downloadQueue) {
-            if blogPost.postDesc.isEmpty == false {
-                let htmlContent = blogPost.postDesc as NSString
-                var imageSource = ""
-                
-                let rangeOfString = NSMakeRange(0, htmlContent.length)
-                let regex = NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: nil, error: nil)
-                
-                if htmlContent.length > 0 {
-                    let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)
-                    
-                    if match != nil {
-                        var imageURL = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
-                        imageURL = imageURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
-                        imageSource = imageURL
-                    }
-                }
-                
-                if imageSource != "" {
-                    var url = NSURL(string: imageSource)
-                    if url != nil{
-                        var imageData = NSData(contentsOfURL: url!)
-                        imageView.image = UIImage(data: imageData!)
-                    }
-                }
-            }
-            self.tableView.reloadData()
-        }
-    }
-    */
 
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
          return 100
@@ -169,7 +105,7 @@ class TableViewController: UITableViewController, NSXMLParserDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if segue.identifier == "viewpost" {
             let selectedRow = tableView.indexPathForSelectedRow()?.row
-            let blogPost: BlogPost = blogPosts[selectedRow!]
+            let blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
             let viewController = segue.destinationViewController as PostViewController
             viewController.postLink = blogPost.postLink
         }
