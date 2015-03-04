@@ -43,37 +43,34 @@
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                <rect key="frame" x="108" y="8" width="259" height="84"/>
-                                            </variation>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="leading" secondItem="gde-0E-NE2" secondAttribute="trailing" constant="8" id="ULN-NY-lsz"/>
-                                        <constraint firstItem="gde-0E-NE2" firstAttribute="leading" secondItem="g4q-8K-yl8" secondAttribute="leading" id="bSt-gq-RbU"/>
-                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="leading" secondItem="gde-0E-NE2" secondAttribute="trailing" constant="8" symbolic="YES" id="hei-0f-dS2"/>
-                                        <constraint firstItem="gde-0E-NE2" firstAttribute="centerY" secondItem="nBN-tn-LNk" secondAttribute="centerY" id="jcW-M8-GDs"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="nBN-tn-LNk" secondAttribute="trailing" constant="-8" id="kRG-fn-FMO"/>
-                                        <constraint firstItem="gde-0E-NE2" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="top" id="z7W-0l-3Ac"/>
+                                        <constraint firstItem="gde-0E-NE2" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="top" id="190-hP-hhv"/>
+                                        <constraint firstAttribute="trailing" secondItem="nBN-tn-LNk" secondAttribute="trailing" id="1n4-bC-kym"/>
+                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="topMargin" id="9nc-BA-j5w"/>
+                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="centerY" secondItem="gde-0E-NE2" secondAttribute="centerY" id="Bve-P9-fTO"/>
+                                        <constraint firstItem="gde-0E-NE2" firstAttribute="leading" secondItem="g4q-8K-yl8" secondAttribute="leading" id="Mci-ta-P9x"/>
+                                        <constraint firstItem="nBN-tn-LNk" firstAttribute="leading" secondItem="gde-0E-NE2" secondAttribute="trailing" constant="8" symbolic="YES" id="qEQ-Lz-hf5"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="bSt-gq-RbU"/>
-                                            <exclude reference="jcW-M8-GDs"/>
-                                            <exclude reference="z7W-0l-3Ac"/>
-                                            <exclude reference="ULN-NY-lsz"/>
-                                            <exclude reference="hei-0f-dS2"/>
-                                            <exclude reference="kRG-fn-FMO"/>
+                                            <exclude reference="190-hP-hhv"/>
+                                            <exclude reference="Mci-ta-P9x"/>
+                                            <exclude reference="1n4-bC-kym"/>
+                                            <exclude reference="9nc-BA-j5w"/>
+                                            <exclude reference="Bve-P9-fTO"/>
+                                            <exclude reference="qEQ-Lz-hf5"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="constraints">
-                                            <include reference="bSt-gq-RbU"/>
-                                            <include reference="jcW-M8-GDs"/>
-                                            <include reference="z7W-0l-3Ac"/>
-                                            <include reference="ULN-NY-lsz"/>
-                                            <include reference="hei-0f-dS2"/>
-                                            <include reference="kRG-fn-FMO"/>
+                                            <include reference="190-hP-hhv"/>
+                                            <include reference="Mci-ta-P9x"/>
+                                            <include reference="1n4-bC-kym"/>
+                                            <include reference="9nc-BA-j5w"/>
+                                            <include reference="Bve-P9-fTO"/>
+                                            <include reference="qEQ-Lz-hf5"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -94,7 +91,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXm-vP-xcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="342.75"/>
+            <point key="canvasLocation" x="1807.5" y="342.75"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="rID-Fg-Sy6">
@@ -112,6 +109,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="687"/>
+                                </variation>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -144,7 +144,17 @@
                             </mask>
                         </variation>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="OI7-UX-7QI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Xlr-0X-OLK">
+                            <connections>
+                                <action selector="shareAction:" destination="STg-bn-REY" id="S39-jM-QwM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="shareButton" destination="Xlr-0X-OLK" id="zaD-ak-euX"/>
                         <outlet property="webView" destination="s05-nn-IkG" id="682-Zg-zxl"/>
                     </connections>
                 </viewController>
@@ -158,6 +168,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lxh-dm-3au" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Posts" image="first" id="vjV-4j-fzF"/>
                     <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b9u-5p-wkM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -166,6 +177,9 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cAx-Ej-ihe">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="5JG-WC-aUD" kind="relationship" relationship="rootViewController" id="FOb-2U-7uD"/>
                     </connections>

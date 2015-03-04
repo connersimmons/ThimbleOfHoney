@@ -34,9 +34,6 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        //removes navigation bar on swipe
-        //navigationController?.hidesBarsOnSwipe = true
-        
         //removes navigation bar when keyboard appears
         navigationController?.hidesBarsWhenKeyboardAppears = true
     }
@@ -109,6 +106,10 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             let viewController = segue.destinationViewController as PostViewController
             //viewController.postLink = blogPost.postLink
             viewController.postDesc = blogPost.postDesc
+            viewController.postLink = blogPost.postLink
+            
+            //can be used to hide the tab bar when you are in the detail view of the tableview controller
+            //viewController.hidesBottomBarWhenPushed = true
         }
     }
 }
