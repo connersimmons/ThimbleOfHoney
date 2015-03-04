@@ -16,7 +16,9 @@ class PostViewController: UIViewController, UITextViewDelegate {
     var postDesc: String = String()
     */
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var webView: UIWebView!
+    
+    //@IBOutlet weak var textView: UITextView!
     var postDesc: String = String()
 
 
@@ -30,7 +32,9 @@ class PostViewController: UIViewController, UITextViewDelegate {
         webView.delegate = self
         */
         
-        textView.text = postDesc.html2String
+        //textView.text = postDesc.html2String
+        
+        webView.loadHTMLString(postDesc, baseURL: nil)
     }
     
     /*

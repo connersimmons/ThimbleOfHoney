@@ -94,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXm-vP-xcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1782" y="366.75"/>
+            <point key="canvasLocation" x="1782" y="342.75"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="rID-Fg-Sy6">
@@ -108,52 +108,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="beB-lN-vR8">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s05-nn-IkG">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="beB-lN-vR8" firstAttribute="leading" secondItem="1JZ-4v-0Qt" secondAttribute="leading" id="LMF-ur-y6D"/>
-                            <constraint firstItem="beB-lN-vR8" firstAttribute="top" secondItem="qca-4Q-u6G" secondAttribute="bottom" id="des-Vx-SlF"/>
-                            <constraint firstAttribute="trailing" secondItem="beB-lN-vR8" secondAttribute="trailing" id="icb-wE-5Co"/>
-                            <constraint firstItem="ebP-pO-ILF" firstAttribute="top" secondItem="beB-lN-vR8" secondAttribute="bottom" constant="8" symbolic="YES" id="nf3-Xt-2Qk"/>
+                            <constraint firstItem="s05-nn-IkG" firstAttribute="leading" secondItem="1JZ-4v-0Qt" secondAttribute="leading" id="314-g5-1kO"/>
+                            <constraint firstItem="s05-nn-IkG" firstAttribute="bottom" secondItem="ebP-pO-ILF" secondAttribute="top" id="SBk-JP-xzY"/>
+                            <constraint firstItem="s05-nn-IkG" firstAttribute="top" secondItem="qca-4Q-u6G" secondAttribute="bottom" id="ZBL-xx-i2i"/>
+                            <constraint firstAttribute="trailing" secondItem="s05-nn-IkG" secondAttribute="trailing" id="rDV-WB-knj"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="beB-lN-vR8"/>
+                                <exclude reference="s05-nn-IkG"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="LMF-ur-y6D"/>
-                                <exclude reference="des-Vx-SlF"/>
-                                <exclude reference="icb-wE-5Co"/>
-                                <exclude reference="nf3-Xt-2Qk"/>
+                                <exclude reference="314-g5-1kO"/>
+                                <exclude reference="SBk-JP-xzY"/>
+                                <exclude reference="ZBL-xx-i2i"/>
+                                <exclude reference="rDV-WB-knj"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="beB-lN-vR8"/>
+                                <include reference="s05-nn-IkG"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="LMF-ur-y6D"/>
-                                <include reference="des-Vx-SlF"/>
-                                <include reference="icb-wE-5Co"/>
-                                <include reference="nf3-Xt-2Qk"/>
+                                <include reference="314-g5-1kO"/>
+                                <include reference="SBk-JP-xzY"/>
+                                <include reference="ZBL-xx-i2i"/>
+                                <include reference="rDV-WB-knj"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="beB-lN-vR8" id="VcI-yY-Iv5"/>
+                        <outlet property="webView" destination="s05-nn-IkG" id="682-Zg-zxl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz6-A7-IAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2533.5" y="366.75"/>
+            <point key="canvasLocation" x="2551.5" y="342.75"/>
         </scene>
         <!--Posts-->
         <scene sceneID="J7U-hX-PlW">
@@ -172,68 +169,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fW-Fe-uzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="366.75"/>
-        </scene>
-        <!--About Me-->
-        <scene sceneID="QxX-gy-2xF">
-            <objects>
-                <viewController id="3bc-in-bNl" customClass="AboutMeViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Qsu-o2-cJP"/>
-                        <viewControllerLayoutGuide type="bottom" id="jAC-gq-Mca"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vQg-fm-8E1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-Xg-OU8">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Crw-Xg-OU8" firstAttribute="bottom" secondItem="jAC-gq-Mca" secondAttribute="top" id="Kkw-r7-wWy"/>
-                            <constraint firstItem="Crw-Xg-OU8" firstAttribute="top" secondItem="Qsu-o2-cJP" secondAttribute="bottom" constant="8" symbolic="YES" id="hBJ-lF-9Ht"/>
-                            <constraint firstAttribute="trailing" secondItem="Crw-Xg-OU8" secondAttribute="trailing" id="jr1-gC-Sht"/>
-                            <constraint firstItem="Crw-Xg-OU8" firstAttribute="leading" secondItem="vQg-fm-8E1" secondAttribute="leading" id="vpK-bD-HG5"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Crw-Xg-OU8"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Kkw-r7-wWy"/>
-                                <exclude reference="hBJ-lF-9Ht"/>
-                                <exclude reference="jr1-gC-Sht"/>
-                                <exclude reference="vpK-bD-HG5"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="Crw-Xg-OU8"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Kkw-r7-wWy"/>
-                                <include reference="hBJ-lF-9Ht"/>
-                                <include reference="jr1-gC-Sht"/>
-                                <include reference="vpK-bD-HG5"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="About Me" image="second" id="cUR-Ia-98A"/>
-                    <connections>
-                        <outlet property="blogContent" destination="Crw-Xg-OU8" id="1ha-pl-OCY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="55R-0C-I14" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1035" y="1029.75"/>
+            <point key="canvasLocation" x="1035" y="342.75"/>
         </scene>
         <!--Social-->
         <scene sceneID="zCx-sf-fcj">
@@ -252,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vh-gd-iAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="1773"/>
+            <point key="canvasLocation" x="1035" y="1725"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="A7l-Oa-sID">
@@ -267,13 +203,69 @@
                     </tabBar>
                     <connections>
                         <segue destination="Lxh-dm-3au" kind="relationship" relationship="viewControllers" id="IDp-sd-vAO"/>
-                        <segue destination="3bc-in-bNl" kind="relationship" relationship="viewControllers" id="nde-3i-Zeg"/>
+                        <segue destination="FtJ-Ym-Luq" kind="relationship" relationship="viewControllers" id="8EC-h0-bQv"/>
                         <segue destination="nps-4I-358" kind="relationship" relationship="viewControllers" id="Rjw-Mh-wU0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roj-k3-DXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="48" y="1029.75"/>
+        </scene>
+        <!--About Me-->
+        <scene sceneID="EPl-fN-N99">
+            <objects>
+                <viewController id="FtJ-Ym-Luq" customClass="AboutMeViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s0o-ow-eUe"/>
+                        <viewControllerLayoutGuide type="bottom" id="cc8-KE-3H2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hjH-yG-77X">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFS-5X-yFB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cFS-5X-yFB" firstAttribute="bottom" secondItem="cc8-KE-3H2" secondAttribute="top" id="Edl-Jz-ubq"/>
+                            <constraint firstItem="cFS-5X-yFB" firstAttribute="leading" secondItem="hjH-yG-77X" secondAttribute="leading" id="Shq-2A-17e"/>
+                            <constraint firstAttribute="trailing" secondItem="cFS-5X-yFB" secondAttribute="trailing" id="V4N-KB-7Xr"/>
+                            <constraint firstItem="cFS-5X-yFB" firstAttribute="top" secondItem="hjH-yG-77X" secondAttribute="top" constant="20" symbolic="YES" id="kSu-QK-LMP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cFS-5X-yFB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Edl-Jz-ubq"/>
+                                <exclude reference="Shq-2A-17e"/>
+                                <exclude reference="V4N-KB-7Xr"/>
+                                <exclude reference="kSu-QK-LMP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cFS-5X-yFB"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Edl-Jz-ubq"/>
+                                <include reference="Shq-2A-17e"/>
+                                <include reference="V4N-KB-7Xr"/>
+                                <include reference="kSu-QK-LMP"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About Me" image="second" id="Zom-hy-RLV"/>
+                    <connections>
+                        <outlet property="webView" destination="cFS-5X-yFB" id="xBc-XC-dST"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vf-hq-egS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="1029.75"/>
         </scene>
     </scenes>
     <resources>
