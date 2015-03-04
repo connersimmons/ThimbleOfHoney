@@ -22,7 +22,8 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
         
         let aboutMeDesc = findAboutMeContent(dataString)
-        webView.loadHTMLString(aboutMeDesc, baseURL: nil)
+        var cssString = "<style type='text/css'>img { max-width: 100%; width: auto; height: auto; }</style>"
+        webView.loadHTMLString(cssString + aboutMeDesc, baseURL: nil)
     }
 
     override func didReceiveMemoryWarning() {

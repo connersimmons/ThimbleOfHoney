@@ -23,8 +23,8 @@ class PostViewController: UIViewController, UITextViewDelegate {
         */
         
         //textView.text = postDesc.html2String
-        
-        webView.loadHTMLString(postDesc, baseURL: nil)
+        var cssString = "<style type='text/css'>img { max-width: 100%; width: auto; height: auto; }</style>"
+        webView.loadHTMLString(cssString + postDesc, baseURL: nil)
     }
 
     override func didReceiveMemoryWarning() {
