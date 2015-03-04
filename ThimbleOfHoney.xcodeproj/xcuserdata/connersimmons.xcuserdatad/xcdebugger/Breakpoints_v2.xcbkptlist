@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThimbleOfHoney/AboutMeViewController.swift"
-            timestampString = "447127506.109771"
+            timestampString = "447129030.777449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThimbleOfHoney/AboutMeViewController.swift"
-            timestampString = "447127506.109771"
+            timestampString = "447129030.777449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
@@ -90,13 +90,115 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThimbleOfHoney/AboutMeViewController.swift"
-            timestampString = "447127506.109771"
+            timestampString = "447129030.777449"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "findAboutMeContent(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ThimbleOfHoney/PostViewController.swift"
+            timestampString = "447128615.880102"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "PostViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThimbleOfHoney.PostViewController.webView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIWebView&gt;"
+                  moduleName = "ThimbleOfHoney"
+                  urlString = "file:///Users/connersimmons/Documents/ThimbleOfHoney/ThimbleOfHoney/PostViewController.swift"
+                  timestampString = "447128616.425737"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThimbleOfHoney.PostViewController.webView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIWebView&gt;"
+                  moduleName = "ThimbleOfHoney"
+                  urlString = "file:///Users/connersimmons/Documents/ThimbleOfHoney/ThimbleOfHoney/PostViewController.swift"
+                  timestampString = "447128616.42591"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThimbleOfHoney.PostViewController.webView.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIWebView&gt;"
+                  moduleName = "ThimbleOfHoney"
+                  urlString = "file:///Users/connersimmons/Documents/ThimbleOfHoney/ThimbleOfHoney/PostViewController.swift"
+                  timestampString = "447128616.426011"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThimbleOfHoney.PostViewController.init (ThimbleOfHoney.PostViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; ThimbleOfHoney.PostViewController"
+                  moduleName = "ThimbleOfHoney"
+                  urlString = "file:///Users/connersimmons/Documents/ThimbleOfHoney/ThimbleOfHoney/PostViewController.swift"
+                  timestampString = "447128616.426105"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "53">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThimbleOfHoney.PostViewController.init (ThimbleOfHoney.PostViewController.Type)() -&gt; ThimbleOfHoney.PostViewController"
+                  moduleName = "ThimbleOfHoney"
+                  urlString = "file:///Users/connersimmons/Documents/ThimbleOfHoney/ThimbleOfHoney/PostViewController.swift"
+                  timestampString = "447128616.426207"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ThimbleOfHoney.PostViewController.init (ThimbleOfHoney.PostViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; ThimbleOfHoney.PostViewController"
+                  moduleName = "ThimbleOfHoney"
+                  urlString = "file:///Users/connersimmons/Documents/ThimbleOfHoney/ThimbleOfHoney/PostViewController.swift"
+                  timestampString = "447128616.426306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

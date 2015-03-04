@@ -10,18 +10,8 @@ import UIKit
 
 class PostViewController: UIViewController, UITextViewDelegate {
     
-    /*
-    @IBOutlet var webView: UIWebView!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    var postDesc: String = String()
-    */
-    
     @IBOutlet weak var webView: UIWebView!
-    
-    //@IBOutlet weak var textView: UITextView!
     var postDesc: String = String()
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,18 +26,6 @@ class PostViewController: UIViewController, UITextViewDelegate {
         
         webView.loadHTMLString(postDesc, baseURL: nil)
     }
-    
-    /*
-    func webViewDidStartLoad(webView: UIWebView!)  {
-        activityIndicator.hidden = false
-        activityIndicator.startAnimating()
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView!)  {
-        activityIndicator.hidden = true
-        activityIndicator.stopAnimating()
-    }
-    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

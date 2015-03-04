@@ -9,11 +9,8 @@
 import UIKit
 
 class AboutMeViewController: UIViewController, XMLParserDelegate {
-
-    //@IBOutlet weak var blogContent: UITextView!
     
     @IBOutlet weak var webView: UIWebView!
-    
     var xmlParser: XMLParser!
     
     override func viewDidLoad() {
@@ -25,25 +22,7 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
         
         let aboutMeDesc = findAboutMeContent(dataString)
-        
-        
         webView.loadHTMLString(aboutMeDesc, baseURL: nil)
-        
-        
-        //println(aboutMeDesc)
-        //blogContent.text = aboutMeDesc
-        
-        /*
-        var attrStr = NSAttributedString(
-            data: aboutMeDesc.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!,
-            options: [ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType],
-            documentAttributes: nil,
-            error: nil)
-
-        println(attrStr?.string)
-        blogContent.text = attrStr?.string
-        */
-        
     }
 
     override func didReceiveMemoryWarning() {
