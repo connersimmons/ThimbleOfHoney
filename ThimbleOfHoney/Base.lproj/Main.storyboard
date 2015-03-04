@@ -40,11 +40,13 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-tn-LNk">
                                             <rect key="frame" x="108" y="8" width="479" height="84"/>
+                                            <color key="backgroundColor" red="0.94509803921568625" green="0.92156862745098034" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.94509803921568625" green="0.92156862745098034" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="gde-0E-NE2" firstAttribute="top" secondItem="g4q-8K-yl8" secondAttribute="top" id="190-hP-hhv"/>
                                         <constraint firstAttribute="trailing" secondItem="nBN-tn-LNk" secondAttribute="trailing" id="1n4-bC-kym"/>
@@ -74,6 +76,8 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.92156862745098034" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.72549019607843135" green="0.47450980392156861" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="postImageView" destination="gde-0E-NE2" id="7fY-qs-9gH"/>
                                     <outlet property="postLabel" destination="nBN-tn-LNk" id="xc6-in-TL4"/>
@@ -107,7 +111,7 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s05-nn-IkG">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.92156862745098034" blue="0.87450980392156863" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="0.0" y="64" width="400" height="687"/>

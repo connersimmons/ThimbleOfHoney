@@ -22,7 +22,10 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
         
         let aboutMeDesc = findAboutMeContent(dataString)
-        var cssString = "<style type='text/css'>img { max-width: 100%; width: auto; height: auto; }</style>"
+        var cssString = "<style type='text/css'>" +
+            "img {max-width: 100%; width: auto; height: auto;}" +
+            "body {background-color:#f4efe6;}" +
+        "</style>"
         webView.loadHTMLString(cssString + aboutMeDesc, baseURL: nil)
     }
 

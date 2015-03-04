@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ThimbleOfHoney/AboutMeViewController.swift"
-            timestampString = "447188012.371149"
+            timestampString = "447204892.114104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "findAboutMeContent(_:)"
             landmarkType = "5">
          </BreakpointContent>
