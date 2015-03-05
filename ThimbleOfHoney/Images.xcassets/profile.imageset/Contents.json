@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "thimble.png"
+      "filename" : "profile.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "thimble@2x.png"
+      "filename" : "profile@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "thimble@3x.png"
+      "filename" : "profile@3x.png"
     }
   ],
   "info" : {
