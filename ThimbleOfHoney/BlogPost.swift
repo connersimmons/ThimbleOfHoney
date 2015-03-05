@@ -12,6 +12,7 @@ class BlogPost {
     var postTitle: String = String()
     var postLink: String = String()
     var postDesc: String = String()
+    var postDate: String = String()
     var postThumbnail: UIImage
     
     init() {

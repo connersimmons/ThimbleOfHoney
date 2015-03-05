@@ -22,10 +22,12 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
         
         let aboutMeDesc = findAboutMeContent(dataString)
+        
         var cssString = "<style type='text/css'>" +
             "img {max-width: 100%; width: auto; height: auto;}" +
             "body {background-color:#f4efe6;}" +
-        "</style>"
+            "</style>"
+            
         webView.loadHTMLString(cssString + aboutMeDesc, baseURL: nil)
     }
 
@@ -43,7 +45,7 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var description = ""
         
         let rangeOfString = NSMakeRange(0, htmlContent.length)
-        let regex = NSRegularExpression(pattern: "(<section class=\"content\".*?>)(.*?</div>.*?)(</div>)", options: nil, error: nil)
+        let regex = NSRegularExpression(pattern: "(<section class=\"content\".*?><h2><br></h2>)(.*?</section>)", options: nil, error: nil)
         
         if htmlContent.length > 0 {
             let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)

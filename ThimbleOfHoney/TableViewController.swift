@@ -50,7 +50,6 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return blogPosts.count
         return xmlParser.blogPosts.count
     }
 
@@ -104,12 +103,13 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             let selectedRow = tableView.indexPathForSelectedRow()?.row
             let blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
             let viewController = segue.destinationViewController as PostViewController
-            //viewController.postLink = blogPost.postLink
+            viewController.postTitle = blogPost.postTitle
+            viewController.postDate = blogPost.postDate
             viewController.postDesc = blogPost.postDesc
             viewController.postLink = blogPost.postLink
             
             //can be used to hide the tab bar when you are in the detail view of the tableview controller
-            //viewController.hidesBottomBarWhenPushed = true
+            viewController.hidesBottomBarWhenPushed = true
         }
     }
 }

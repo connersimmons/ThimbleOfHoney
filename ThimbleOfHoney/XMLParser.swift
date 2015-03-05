@@ -19,6 +19,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
     var postTitle: String = String()
     var postLink: String = String()
     var postDesc: String = String()
+    var postDate: String = String()
     var curElement: String = String()
     var parseError: NSError?
     
@@ -41,6 +42,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
             postTitle = String()
             postLink = String()
             postDesc = String()
+            postDate = String()
         }
     }
     
@@ -54,6 +56,9 @@ class XMLParser: NSObject, NSXMLParserDelegate {
             } else if curElement == "description" {
                 postDesc += data
             }
+            else if curElement == "pubDate" {
+                postDate += data
+            }
         }
     }
     
@@ -63,6 +68,7 @@ class XMLParser: NSObject, NSXMLParserDelegate {
             blogPost.postTitle = postTitle
             blogPost.postLink = postLink
             blogPost.postDesc = postDesc
+            blogPost.postDate = postDate
             blogPosts.append(blogPost)
         }
     }

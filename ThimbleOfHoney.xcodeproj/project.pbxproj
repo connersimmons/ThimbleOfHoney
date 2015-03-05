@@ -33,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C5392E301AA82A7100D72708 /* YanoneKaffeesatz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YanoneKaffeesatz.ttf; sourceTree = "<group>"; };
+		C5392E311AA82A7D00D72708 /* QuattrocentoSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuattrocentoSans.ttf; sourceTree = "<group>"; };
 		C5BF33861AA61F1F00271BA1 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		C5BF33881AA61F9A00271BA1 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +51,7 @@
 		C5CCBCB51A9D8D3700A4F62D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C5CCBCB91A9E567800A4F62D /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AFNetworking; sourceTree = "<group>"; };
 		C5CCBCBB1A9E56E100A4F62D /* ThimbleOfHoney-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ThimbleOfHoney-Bridging-Header.h"; sourceTree = "<group>"; };
-		C5CCBCC41A9F8E1600A4F62D /* RougeScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RougeScript-Regular.ttf"; sourceTree = "<group>"; };
+		C5CCBCC41A9F8E1600A4F62D /* RougeScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = RougeScript.ttf; sourceTree = "<group>"; };
 		C5CCBCC51A9F8FC800A4F62D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C5CCBCCB1A9FD71D00A4F62D /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +142,9 @@
 		C5CCBCC31A9F8DEA00A4F62D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C5CCBCC41A9F8E1600A4F62D /* RougeScript-Regular.ttf */,
+				C5392E311AA82A7D00D72708 /* QuattrocentoSans.ttf */,
+				C5392E301AA82A7100D72708 /* YanoneKaffeesatz.ttf */,
+				C5CCBCC41A9F8E1600A4F62D /* RougeScript.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
