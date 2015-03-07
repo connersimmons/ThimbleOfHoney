@@ -37,7 +37,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         //removes navigation bar when keyboard appears
         navigationController?.hidesBarsWhenKeyboardAppears = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -55,9 +55,10 @@ class TableViewController: UITableViewController, XMLParserDelegate {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
         
         let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
+        
         cell.postLabel.text = blogPost.postTitle
         
         var urlString = findFirstImage(blogPost)
@@ -74,7 +75,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
         
         return cell
     }
-
+    
     func findFirstImage(blogPost: BlogPost) -> NSString {
         let htmlContent = blogPost.postDesc as NSString
         var imageSource = ""
@@ -100,9 +101,10 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if segue.identifier == "viewpost" {
-            let selectedRow = tableView.indexPathForSelectedRow()?.row
-            let blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
             let viewController = segue.destinationViewController as PostViewController
+            let selectedRow = self.tableView.indexPathForSelectedRow()?.row
+            var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
+
             viewController.postTitle = blogPost.postTitle
             viewController.postDate = blogPost.postDate
             viewController.postDesc = blogPost.postDesc
@@ -111,5 +113,6 @@ class TableViewController: UITableViewController, XMLParserDelegate {
             //can be used to hide the tab bar when you are in the detail view of the tableview controller
             viewController.hidesBottomBarWhenPushed = true
         }
+        
     }
 }

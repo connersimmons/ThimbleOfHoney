@@ -13,6 +13,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.93333333333333335" green="0.90196078431372551" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="TMF-aW-OzL" customClass="TableViewCell" customModule="ThimbleOfHoney" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -174,6 +175,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="RougeScript-Regular" family="Rouge Script" pointSize="11"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
@@ -189,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="1035" y="342.75"/>
         </scene>
-        <!--Social-->
+        <!--Social View Controller-->
         <scene sceneID="zCx-sf-fcj">
             <objects>
-                <viewController id="nps-4I-358" sceneMemberID="viewController">
+                <viewController id="nps-4I-358" customClass="SocialViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zeU-7u-iN0"/>
                         <viewControllerLayoutGuide type="bottom" id="GZX-Oy-P2s"/>
@@ -200,13 +202,140 @@
                     <view key="view" contentMode="scaleToFill" id="l4b-CP-dhB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vl4-NV-u0v" userLabel="Facebook">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="92" width="68" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="facebookAction:" destination="nps-4I-358" eventType="touchUpInside" id="dzl-TY-WTE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWI-UI-oAl" userLabel="Instragram">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Instagram">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="166" y="130" width="69" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="instagramAction:" destination="nps-4I-358" eventType="touchUpInside" id="R8Z-cl-4ID"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USm-zL-4NS" userLabel="Pinterest">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Pinterest">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="170" y="168" width="61" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pinterestAction:" destination="nps-4I-358" eventType="touchUpInside" id="8Fo-Fx-iVc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-ne-sdm" userLabel="Twitter">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="206" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="twitterAction:" destination="nps-4I-358" eventType="touchUpInside" id="Zhl-uD-qxe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Vl4-NV-u0v"/>
+                                <exclude reference="gWI-UI-oAl"/>
+                                <exclude reference="USm-zL-4NS"/>
+                                <exclude reference="bSc-ne-sdm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Vl4-NV-u0v"/>
+                                <include reference="gWI-UI-oAl"/>
+                                <include reference="USm-zL-4NS"/>
+                                <include reference="bSc-ne-sdm"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Social" image="thimble" id="mvI-iz-k3Z"/>
+                    <navigationItem key="navigationItem" id="cae-Eu-KOe"/>
+                    <connections>
+                        <outlet property="facebookBtn" destination="Vl4-NV-u0v" id="kbF-NQ-0kB"/>
+                        <outlet property="instagramBtn" destination="gWI-UI-oAl" id="ABy-1X-GS3"/>
+                        <outlet property="pinterestBtn" destination="USm-zL-4NS" id="bEc-gY-SvY"/>
+                        <outlet property="twitterBtn" destination="bSc-ne-sdm" id="qxf-D9-vT7"/>
+                        <segue destination="4dE-Tt-J7I" kind="show" identifier="viewsocial" id="fCd-Lo-jPb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vh-gd-iAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="1725"/>
+            <point key="canvasLocation" x="1953" y="1725"/>
+        </scene>
+        <!--SocialWV Controller-->
+        <scene sceneID="alc-ZF-RHe">
+            <objects>
+                <viewController id="4dE-Tt-J7I" customClass="SocialWVController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LfY-eA-oXX"/>
+                        <viewControllerLayoutGuide type="bottom" id="0sS-ll-vt7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Gw-Gy-8UA">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elo-AA-UsQ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Elo-AA-UsQ" firstAttribute="leading" secondItem="3Gw-Gy-8UA" secondAttribute="leading" id="Qux-qy-LgY"/>
+                            <constraint firstItem="Elo-AA-UsQ" firstAttribute="top" secondItem="LfY-eA-oXX" secondAttribute="bottom" id="e7B-Cd-I0W"/>
+                            <constraint firstAttribute="trailing" secondItem="Elo-AA-UsQ" secondAttribute="trailing" id="ehe-UQ-6yT"/>
+                            <constraint firstItem="Elo-AA-UsQ" firstAttribute="bottom" secondItem="0sS-ll-vt7" secondAttribute="top" id="yge-5u-ecU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Elo-AA-UsQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Qux-qy-LgY"/>
+                                <exclude reference="e7B-Cd-I0W"/>
+                                <exclude reference="ehe-UQ-6yT"/>
+                                <exclude reference="yge-5u-ecU"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Elo-AA-UsQ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Qux-qy-LgY"/>
+                                <include reference="e7B-Cd-I0W"/>
+                                <include reference="ehe-UQ-6yT"/>
+                                <include reference="yge-5u-ecU"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Elo-AA-UsQ" id="hD4-X2-y4M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sz5-qB-pPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2725.5" y="1725"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="A7l-Oa-sID">
@@ -223,7 +352,7 @@
                     <connections>
                         <segue destination="Lxh-dm-3au" kind="relationship" relationship="viewControllers" id="IDp-sd-vAO"/>
                         <segue destination="FtJ-Ym-Luq" kind="relationship" relationship="viewControllers" id="8EC-h0-bQv"/>
-                        <segue destination="nps-4I-358" kind="relationship" relationship="viewControllers" id="Rjw-Mh-wU0"/>
+                        <segue destination="8Ss-Y4-STN" kind="relationship" relationship="viewControllers" id="Rjw-Mh-wU0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roj-k3-DXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,6 +414,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5vf-hq-egS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1023" y="1029.75"/>
+        </scene>
+        <!--Social-->
+        <scene sceneID="Bjm-2w-NVZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ss-Y4-STN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Social" image="thimble" id="mvI-iz-k3Z"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FTN-Yu-7SM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nps-4I-358" kind="relationship" relationship="rootViewController" id="ceO-gO-pKx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwU-Dd-ljy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1035" y="1725"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C5392E331AAAC61A00D72708 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E321AAAC61A00D72708 /* SocialViewController.swift */; };
+		C5392E351AAAC8E600D72708 /* SocialWVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E341AAAC8E600D72708 /* SocialWVController.swift */; };
 		C5BF33871AA61F1F00271BA1 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF33861AA61F1F00271BA1 /* AboutMeViewController.swift */; };
 		C5BF33891AA61F9A00271BA1 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF33881AA61F9A00271BA1 /* XMLParser.swift */; };
 		C5CCBC901A9CF04600A4F62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBC8F1A9CF04600A4F62D /* AppDelegate.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		C5392E301AA82A7100D72708 /* YanoneKaffeesatz.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = YanoneKaffeesatz.ttf; sourceTree = "<group>"; };
 		C5392E311AA82A7D00D72708 /* QuattrocentoSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QuattrocentoSans.ttf; sourceTree = "<group>"; };
+		C5392E321AAAC61A00D72708 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialViewController.swift; sourceTree = "<group>"; };
+		C5392E341AAAC8E600D72708 /* SocialWVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialWVController.swift; sourceTree = "<group>"; };
 		C5BF33861AA61F1F00271BA1 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		C5BF33881AA61F9A00271BA1 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLParser.swift; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,8 @@
 				C5CCBCCB1A9FD71D00A4F62D /* ImageLoader.swift */,
 				C5CCBCC51A9F8FC800A4F62D /* LaunchScreen.xib */,
 				C5CCBC931A9CF04600A4F62D /* Main.storyboard */,
+				C5392E341AAAC8E600D72708 /* SocialWVController.swift */,
+				C5392E321AAAC61A00D72708 /* SocialViewController.swift */,
 				C5CCBCB11A9CF20300A4F62D /* PostViewController.swift */,
 				C5CCBCB01A9CF20300A4F62D /* TableViewController.swift */,
 				C5CCBCB51A9D8D3700A4F62D /* TableViewCell.swift */,
@@ -256,8 +262,10 @@
 				C5CCBCB21A9CF20300A4F62D /* BlogPost.swift in Sources */,
 				C5CCBCCC1A9FD71D00A4F62D /* ImageLoader.swift in Sources */,
 				C5CCBCB31A9CF20300A4F62D /* TableViewController.swift in Sources */,
+				C5392E331AAAC61A00D72708 /* SocialViewController.swift in Sources */,
 				C5CCBC901A9CF04600A4F62D /* AppDelegate.swift in Sources */,
 				C5CCBCB41A9CF20300A4F62D /* PostViewController.swift in Sources */,
+				C5392E351AAAC8E600D72708 /* SocialWVController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
