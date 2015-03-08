@@ -22,11 +22,11 @@ class PostViewController: UIViewController {
         
         var cssString = "<style type='text/css'>" +
             "img {max-width: 100%; width: auto; height: auto;}" +
-            "body {background-color:#f4efe6;}" +
+            "body {background-color:#F4EFE6;}" +
             "html {font-family: \"Quattrocento Sans\", sans-serif;}" +
             "</style>"
         
-        let title = "<h2 style=\"text-align:center; text-transform: uppercase; color: #499ac7;font-family: \"Yanone Kaffeesatz\", sans-serif;\">\(postTitle)</h2>"
+        let title = "<h2 style=\"text-align:center; text-transform: uppercase; color: #499AC7;font-family: \"Yanone Kaffeesatz\", sans-serif;\">\(postTitle)</h2>"
         let date = "<h3 style=\"text-align:center; color: #609d52;font-family: \"Yanone Kaffeesatz\", sans-serif;\">\(dateConversion())</h3>"
         
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)

@@ -26,9 +26,11 @@
 	<string>Main</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
+	<key>UIAppFonts</key>
 	<array>
-		<string>armv7</string>
+		<string>QuattrocentoSans-Regular.ttf</string>
+		<string>YanoneKaffeesatz-Regular.ttf</string>
+		<string>RougeScript-Regular.ttf</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
