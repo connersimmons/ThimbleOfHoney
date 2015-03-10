@@ -13,16 +13,24 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
+    var pushNotificationController: PushNotificationController?
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        let applicationID = valueForAPIKey(keyname: "PARSE_APPLICATION_ID")
-        let clientID = valueForAPIKey(keyname: "PARSE_CLIENT_ID")
-        Parse.setApplicationId(applicationID, clientKey: clientID)
+        self.pushNotificationController = PushNotificationController()
         
-        var object = PFObject(className: "testDataClass")
-        object.addObject("iOSBlog", forKey: "websiteUrl")
-        object.addObject("Five", forKey: "websiteRating")
-        object.save()
+        // Register for Push Notitications, if running iOS 8
+        if application.respondsToSelector("registerUserNotificationSettings:") {
+            
+            let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
+            let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+            
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+            
+        } else {
+            // Register for Push Notifications before iOS 8
+            application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
+        }
         
         // Override point for customization after application launch.
         var navigationBarAppearace = UINavigationBar.appearance()
@@ -34,8 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColorFromRGB(0xF4EFE6)]
         }
         
-        //navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName: UIColorFromRGB(0xF4EFE6)]
-        //navigationBarAppearace.titleTextAttributes =  [NSFontAttributeName: UIFont(name: "RougeScript", size: 20)]
         return true
     }
 
@@ -59,6 +65,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication!) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        println("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceToken)")
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.saveInBackgroundWithBlock { (succeeded, e) -> Void in
+            //code
+        }
+    }
+    
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        println("failed to register for remote notifications:  \(error)")
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        println("didReceiveRemoteNotification")
+        PFPush.handlePush(userInfo)
+    }
+    
+    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
+        UIApplication.sharedApplication().registerForRemoteNotifications()
     }
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
