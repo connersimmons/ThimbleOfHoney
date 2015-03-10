@@ -15,7 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        Parse.setApplicationId("gDMtCv9JMpUYeimujSfxkxRXIW11weaUPEtp9zvG", clientKey: "IwElp0NsJG2S0xN6thQNI06mphBlP8YpY8Y4XeJR")
+        let applicationID = valueForAPIKey(keyname: "PARSE_APPLICATION_ID")
+        let clientID = valueForAPIKey(keyname: "PARSE_CLIENT_ID")
+        Parse.setApplicationId(applicationID, clientKey: clientID)
         
         var object = PFObject(className: "testDataClass")
         object.addObject("iOSBlog", forKey: "websiteUrl")
