@@ -39,6 +39,8 @@
 		C5392FA61AAE2F6300D72708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA21AAE2F6300D72708 /* Main.storyboard */; };
 		C5392FA71AAE2F6300D72708 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA41AAE2F6300D72708 /* LaunchScreen.xib */; };
 		C5392FA81AAE2F6300D72708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA51AAE2F6300D72708 /* Images.xcassets */; };
+		C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */; };
+		C551D8421AAF506F00AC4C8B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C551D8411AAF506F00AC4C8B /* .gitignore */; };
 		C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		C5392FA41AAE2F6300D72708 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = View/LaunchScreen.xib; sourceTree = "<group>"; };
 		C5392FA51AAE2F6300D72708 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = View/Images.xcassets; sourceTree = "<group>"; };
 		C5392FA91AAE2FB300D72708 /* ThimbleOfHoney-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ThimbleOfHoney-Bridging-Header.h"; sourceTree = "<group>"; };
+		C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationController.swift; path = Controllers/PushNotificationController.swift; sourceTree = "<group>"; };
+		C551D8411AAF506F00AC4C8B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CCBC8E1A9CF04600A4F62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5CCBC9F1A9CF04600A4F62D /* ThimbleOfHoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThimbleOfHoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,7 @@
 			children = (
 				C5392E891AAE2EB800D72708 /* AboutMeViewController.swift */,
 				C5392E871AAE2E1000D72708 /* PostDetailViewController.swift */,
+				C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */,
 				C5392E7E1AAE2DE300D72708 /* Social */,
 				C5392E7D1AAE2DDA00D72708 /* TableView */,
 			);
@@ -249,6 +254,7 @@
 		C5CCBC811A9CF04600A4F62D = {
 			isa = PBXGroup;
 			children = (
+				C551D8411AAF506F00AC4C8B /* .gitignore */,
 				C5CCBC8C1A9CF04600A4F62D /* ThimbleOfHoney */,
 				C5CCBCA21A9CF04600A4F62D /* ThimbleOfHoneyTests */,
 				C5CCBC8B1A9CF04600A4F62D /* Products */,
@@ -401,6 +407,7 @@
 				C5392E8F1AAE2F0800D72708 /* RougeScript-Regular.ttf in Resources */,
 				C5392FA71AAE2F6300D72708 /* LaunchScreen.xib in Resources */,
 				C5392E901AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf in Resources */,
+				C551D8421AAF506F00AC4C8B /* .gitignore in Resources */,
 				C5392E911AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +430,7 @@
 				C5392E851AAE2E0300D72708 /* PostsTableViewController.swift in Sources */,
 				C5392E861AAE2E0300D72708 /* PostsTableViewCell.swift in Sources */,
 				C5392E821AAE2DF400D72708 /* SocialWebViewController.swift in Sources */,
+				C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */,
 				C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */,
 				C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */,
 				C5392E811AAE2DF400D72708 /* SocialViewController.swift in Sources */,
