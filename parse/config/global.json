@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "ThimbleOfHoney": {
+            "applicationId": "gDMtCv9JMpUYeimujSfxkxRXIW11weaUPEtp9zvG", 
+            "masterKey": "FDsaSbZY0xtCrf0aLyW5D2cuLqlnsbcxY5y5lTv1"
+        }, 
+        "_default": {
+            "link": "ThimbleOfHoney"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.5"
+    }
+}
