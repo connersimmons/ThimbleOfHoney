@@ -1,5 +1,5 @@
 //
-//  TableViewCell.swift
+//  PostsTableViewCell.swift
 //  ThimbleOfHoney
 //
 //  Created by Conner Simmons on 2/24/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class PostsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postLabel: UILabel!

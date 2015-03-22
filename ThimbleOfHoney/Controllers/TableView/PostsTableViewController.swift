@@ -1,5 +1,5 @@
 //
-//  TableViewController.swift
+//  PostsTableViewController.swift
 //  ThimbleOfHoney
 //
 //  Created by Conner Simmons on 2/24/15.
@@ -9,15 +9,27 @@
 import UIKit
 import Foundation
 
-class TableViewController: UITableViewController, XMLParserDelegate {
-    
+class PostsTableViewController: UITableViewController, XMLParserDelegate {
+
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     var xmlParser: XMLParser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            // Uncomment to change the width of menu
+            self.revealViewController().rearViewRevealWidth = 215
+        }
+        
+        // Do any additional setup after loading the view.
+        
         //the following line can make the dividers between table rows disappear
-        //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
         let url:NSURL = NSURL(string: "http://thimbleofhoney.com/rss")!
         xmlParser = XMLParser()
@@ -55,7 +67,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as TableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PostsTableViewCell
         
         let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
         
@@ -101,7 +113,7 @@ class TableViewController: UITableViewController, XMLParserDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if segue.identifier == "viewpost" {
-            let viewController = segue.destinationViewController as PostViewController
+            let viewController = segue.destinationViewController as PostDetailViewController
             let selectedRow = self.tableView.indexPathForSelectedRow()?.row
             var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
 

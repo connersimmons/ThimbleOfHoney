@@ -10,11 +10,18 @@ import UIKit
 
 class AboutMeViewController: UIViewController, XMLParserDelegate {
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var webView: UIWebView!
     var xmlParser: XMLParser!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         // Do any additional setup after loading the view.
         let aboutMeURL = NSURL(string:"http://thimbleofhoney.com/about")
@@ -26,7 +33,8 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var cssString = "<style type='text/css'>" +
             "img {max-width: 100%; width: auto; height: auto;}" +
             "body {background-color:#f4efe6;}" +
-        "</style>"
+            "html {font-family: 'Quattrocento Sans', sans-serif;}" +
+            "</style>"
         
         webView.loadHTMLString(cssString + aboutMeDesc, baseURL: nil)
     }
@@ -45,7 +53,7 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var description = ""
         
         let rangeOfString = NSMakeRange(0, htmlContent.length)
-        let regex = NSRegularExpression(pattern: "(<section class=\"content\".*?><h2><br></h2>)(.*?</section>)", options: nil, error: nil)
+        let regex = NSRegularExpression(pattern: "(<section class=\"content\".*?>)(<p>.*?<h2>Contact Information</h2>.*?</p>)", options: nil, error: nil)
         
         if htmlContent.length > 0 {
             let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)

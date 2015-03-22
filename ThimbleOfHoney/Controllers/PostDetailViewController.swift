@@ -1,5 +1,5 @@
 //
-//  PostViewController.swift
+//  PostDetailViewController.swift
 //  ThimbleOfHoney
 //
 //  Created by Conner Simmons on 2/24/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostViewController: UIViewController {
+class PostDetailViewController: UIViewController {
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var webView: UIWebView!
@@ -20,22 +20,16 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let title = "<h2 style=\"text-align:center; text-transform: uppercase; color: #499AC7;font-family: \"YanoneKaffeesatz-Regular\", sans-serif;\">\(postTitle)</h2>"
-        let date = "<h3 style=\"text-align:center; color: #609d52;font-family: \"YanoneKaffeesatz-Regular\", sans-serif;\">\(dateConversion())</h3>"
+        let title = "<h2 style=\"text-align:center; text-transform: uppercase; color: #499AC7;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(postTitle)</h2>"
+        let date = "<h3 style=\"text-align:center; color: #609d52;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(dateConversion())</h3>"
         
         var cssString = "<style type='text/css'>" +
             "img {max-width: 100%; width: auto; height: auto;}" +
             "body {background-color:#F4EFE6;}" +
-            "html {font-family: \"QuattrocentoSans-Regular\", sans-serif;}" +
+            "html {font-family: 'Quattrocento Sans', sans-serif;}" +
             "</style>"
         
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)
-        
-        /*
-        titleLabel.text = postTitle
-        dateLabel.text = dateConversion()
-        webView.loadHTMLString(cssString + postDesc, baseURL: nil)
-        */
     }
     
     func dateConversion() -> NSString {

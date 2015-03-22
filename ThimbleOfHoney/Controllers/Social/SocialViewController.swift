@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SocialViewController: UIViewController {
+class SocialViewController: UIViewController, UIWebViewDelegate {
     
     let instagramURL = "https://instagram.com/thimbleofhoneyblog/"
     let facebookURL = "https://www.facebook.com/ThimbleOfHoneyBlog"
@@ -16,47 +16,42 @@ class SocialViewController: UIViewController {
     let twitterURL = "https://twitter.com/ThimbleOfHoney"
     var selectedURL: String = String()
 
-    @IBOutlet weak var instagramBtn: UIButton!
-    @IBOutlet weak var facebookBtn: UIButton!
-    @IBOutlet weak var pinterestBtn: UIButton!
-    @IBOutlet weak var twitterBtn: UIButton!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        menuButton.description
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func facebookAction(sender: AnyObject) {
-        selectedURL = facebookURL
-        self.performSegueWithIdentifier("viewsocial", sender: sender)
-    }
-    
-    @IBAction func instagramAction(sender: AnyObject) {
-        selectedURL = instagramURL
-        self.performSegueWithIdentifier("viewsocial", sender: sender)
-    }
-    
-    @IBAction func pinterestAction(sender: AnyObject) {
-        selectedURL = pinterestURL
-        self.performSegueWithIdentifier("viewsocial", sender: sender)
-    }
-    
-    @IBAction func twitterAction(sender: AnyObject) {
-        selectedURL = twitterURL
-        self.performSegueWithIdentifier("viewsocial", sender: sender)
+        switch menuButton.tag {
+        case 0:
+            selectedURL = facebookURL
+        case 1:
+            selectedURL = instagramURL
+        case 2:
+            selectedURL = pinterestURL
+        case 3:
+            selectedURL = twitterURL
+        default:
+            println("default case entered")
+        }
+        
+        let url: NSURL = NSURL(string: selectedURL)!
+        let request: NSURLRequest = NSURLRequest(URL: url)
+        webView.loadRequest(request)
+        webView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if segue.identifier == "viewsocial" {
-            let viewController = segue.destinationViewController as SocialWVController
-            viewController.socialLink = selectedURL
-        }
     }
 
     /*

@@ -1,27 +1,19 @@
 //
-//  SocialWVController.swift
+//  MenuViewController.swift
 //  ThimbleOfHoney
 //
-//  Created by Conner Simmons on 3/7/15.
+//  Created by Conner Simmons on 3/21/15.
 //  Copyright (c) 2015 CWS. All rights reserved.
 //
 
 import UIKit
 
-class SocialWVController: UIViewController, UIWebViewDelegate {
-    
-    var socialLink: String = String()
+class MenuViewController: UITableViewController {
 
-    @IBOutlet weak var webView: UIWebView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url: NSURL = NSURL(string: socialLink)!
-        let request: NSURLRequest = NSURLRequest(URL: url)
-        webView.loadRequest(request)
-        webView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {

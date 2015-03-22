@@ -19,7 +19,6 @@
 		C5392E681AAE27CA00D72708 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5392E521AAE275400D72708 /* StoreKit.framework */; };
 		C5392E691AAE27CA00D72708 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5392E531AAE275400D72708 /* SystemConfiguration.framework */; };
 		C5392E811AAE2DF400D72708 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E7F1AAE2DF400D72708 /* SocialViewController.swift */; };
-		C5392E821AAE2DF400D72708 /* SocialWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E801AAE2DF400D72708 /* SocialWebViewController.swift */; };
 		C5392E851AAE2E0300D72708 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E831AAE2E0300D72708 /* PostsTableViewController.swift */; };
 		C5392E861AAE2E0300D72708 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E841AAE2E0300D72708 /* PostsTableViewCell.swift */; };
 		C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E871AAE2E1000D72708 /* PostDetailViewController.swift */; };
@@ -32,7 +31,6 @@
 		C5392F8A1AAE2F3A00D72708 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C5392F2F1AAE2F3A00D72708 /* .gitignore */; };
 		C5392F8B1AAE2F3A00D72708 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F301AAE2F3A00D72708 /* ImageLoader.swift */; };
 		C5392F8C1AAE2F3A00D72708 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C5392F311AAE2F3A00D72708 /* LICENSE */; };
-		C5392F8D1AAE2F3A00D72708 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C5392F321AAE2F3A00D72708 /* README.md */; };
 		C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9B1AAE2F4400D72708 /* XMLParser.swift */; };
 		C5392F9E1AAE2F4F00D72708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9D1AAE2F4F00D72708 /* AppDelegate.swift */; };
 		C5392FA01AAE2F5800D72708 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9F1AAE2F5800D72708 /* BlogPost.swift */; };
@@ -44,6 +42,11 @@
 		C551D8461AAF54BE00AC4C8B /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551D8451AAF54BE00AC4C8B /* ApiKeys.swift */; };
 		C551D84A1AAF598900AC4C8B /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C551D8491AAF598900AC4C8B /* ApiKeys.plist */; };
 		C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */; };
+		C5FF36E31ABDFDC7006829E7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E21ABDFDC7006829E7 /* Social.framework */; };
+		C5FF36E51ABDFDCF006829E7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E41ABDFDCF006829E7 /* Accounts.framework */; };
+		C5FF36E71ABE1B7F006829E7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */; };
+		C5FF36ED1ABE355A006829E7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5FF36EC1ABE355A006829E7 /* SWRevealViewController.m */; };
+		F687AD378FB35969D60E49CB /* Pods_ThimbleOfHoney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D152754AF0CF5076F760966 /* Pods_ThimbleOfHoney.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		071DD47821F7C19242F2D1CA /* Pods-ThimbleOfHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThimbleOfHoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThimbleOfHoney/Pods-ThimbleOfHoney.debug.xcconfig"; sourceTree = "<group>"; };
+		1D152754AF0CF5076F760966 /* Pods_ThimbleOfHoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThimbleOfHoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42314701E9D7697CA59685B4 /* Pods-ThimbleOfHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThimbleOfHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThimbleOfHoney/Pods-ThimbleOfHoney.release.xcconfig"; sourceTree = "<group>"; };
 		C5392E491AAE275400D72708 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C5392E4A1AAE275400D72708 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C5392E4B1AAE275400D72708 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,7 +75,6 @@
 		C5392E521AAE275400D72708 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5392E531AAE275400D72708 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C5392E7F1AAE2DF400D72708 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialViewController.swift; path = Controllers/Social/SocialViewController.swift; sourceTree = "<group>"; };
-		C5392E801AAE2DF400D72708 /* SocialWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialWebViewController.swift; path = Controllers/Social/SocialWebViewController.swift; sourceTree = "<group>"; };
 		C5392E831AAE2E0300D72708 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewController.swift; path = Controllers/TableView/PostsTableViewController.swift; sourceTree = "<group>"; };
 		C5392E841AAE2E0300D72708 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewCell.swift; path = Controllers/TableView/PostsTableViewCell.swift; sourceTree = "<group>"; };
 		C5392E871AAE2E1000D72708 /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailViewController.swift; path = Controllers/PostDetailViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +87,6 @@
 		C5392F2F1AAE2F3A00D72708 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C5392F301AAE2F3A00D72708 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		C5392F311AAE2F3A00D72708 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C5392F321AAE2F3A00D72708 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C5392F9B1AAE2F4400D72708 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParser.swift; path = Helpers/XMLParser.swift; sourceTree = "<group>"; };
 		C5392F9D1AAE2F4F00D72708 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Delegate/AppDelegate.swift; sourceTree = "<group>"; };
 		C5392F9F1AAE2F5800D72708 /* BlogPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlogPost.swift; path = Model/BlogPost.swift; sourceTree = "<group>"; };
@@ -99,6 +103,11 @@
 		C5CCBC9F1A9CF04600A4F62D /* ThimbleOfHoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThimbleOfHoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CCBCA41A9CF04600A4F62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThimbleOfHoneyTests.swift; sourceTree = "<group>"; };
+		C5FF36E21ABDFDC7006829E7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C5FF36E41ABDFDCF006829E7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
+		C5FF36EB1ABE355A006829E7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		C5FF36EC1ABE355A006829E7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FF36E51ABDFDCF006829E7 /* Accounts.framework in Frameworks */,
+				C5FF36E31ABDFDC7006829E7 /* Social.framework in Frameworks */,
 				C5392E5F1AAE27CA00D72708 /* AudioToolbox.framework in Frameworks */,
 				C5392E601AAE27CA00D72708 /* CFNetwork.framework in Frameworks */,
 				C5392E611AAE27CA00D72708 /* CoreGraphics.framework in Frameworks */,
@@ -119,6 +130,7 @@
 				C5392E671AAE27CA00D72708 /* Security.framework in Frameworks */,
 				C5392E681AAE27CA00D72708 /* StoreKit.framework in Frameworks */,
 				C5392E691AAE27CA00D72708 /* SystemConfiguration.framework in Frameworks */,
+				F687AD378FB35969D60E49CB /* Pods_ThimbleOfHoney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +144,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B61D6BCF06FDF66712591F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF36E41ABDFDCF006829E7 /* Accounts.framework */,
+				C5FF36E21ABDFDC7006829E7 /* Social.framework */,
+				1D152754AF0CF5076F760966 /* Pods_ThimbleOfHoney.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E8B8E288A76EB57389B91CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				071DD47821F7C19242F2D1CA /* Pods-ThimbleOfHoney.debug.xcconfig */,
+				42314701E9D7697CA59685B4 /* Pods-ThimbleOfHoney.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C5392E441AAE26CD00D72708 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				C5392E891AAE2EB800D72708 /* AboutMeViewController.swift */,
+				C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */,
 				C5392E871AAE2E1000D72708 /* PostDetailViewController.swift */,
 				C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */,
 				C5392E7E1AAE2DE300D72708 /* Social */,
@@ -202,6 +234,7 @@
 		C5392E6F1AAE2A1900D72708 /* Third-Party */ = {
 			isa = PBXGroup;
 			children = (
+				C5FF36EA1ABE355A006829E7 /* SWRevealViewController */,
 				C5392F2E1AAE2F3A00D72708 /* SwiftImageLoader */,
 			);
 			name = "Third-Party";
@@ -220,7 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				C5392E7F1AAE2DF400D72708 /* SocialViewController.swift */,
-				C5392E801AAE2DF400D72708 /* SocialWebViewController.swift */,
 			);
 			name = Social;
 			sourceTree = "<group>";
@@ -241,7 +273,6 @@
 				C5392F2F1AAE2F3A00D72708 /* .gitignore */,
 				C5392F301AAE2F3A00D72708 /* ImageLoader.swift */,
 				C5392F311AAE2F3A00D72708 /* LICENSE */,
-				C5392F321AAE2F3A00D72708 /* README.md */,
 			);
 			name = SwiftImageLoader;
 			path = "Third-Party/SwiftImageLoader";
@@ -263,6 +294,8 @@
 				C5CCBC8C1A9CF04600A4F62D /* ThimbleOfHoney */,
 				C5CCBCA21A9CF04600A4F62D /* ThimbleOfHoneyTests */,
 				C5CCBC8B1A9CF04600A4F62D /* Products */,
+				3E8B8E288A76EB57389B91CD /* Pods */,
+				05B61D6BCF06FDF66712591F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -326,6 +359,16 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		C5FF36EA1ABE355A006829E7 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF36EB1ABE355A006829E7 /* SWRevealViewController.h */,
+				C5FF36EC1ABE355A006829E7 /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
+			path = "Third-Party/SWRevealViewController";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,9 +376,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5CCBCA91A9CF04600A4F62D /* Build configuration list for PBXNativeTarget "ThimbleOfHoney" */;
 			buildPhases = (
+				5BBA99337EC40CDCA5AE8584 /* Check Pods Manifest.lock */,
 				C5CCBC861A9CF04600A4F62D /* Sources */,
 				C5CCBC871A9CF04600A4F62D /* Frameworks */,
 				C5CCBC881A9CF04600A4F62D /* Resources */,
+				A52080714AE42237C1D2BEEC /* Embed Pods Frameworks */,
+				0A3A9E47F52AD1D4665361A9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -430,6 +476,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A3A9E47F52AD1D4665361A9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThimbleOfHoney/Pods-ThimbleOfHoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BBA99337EC40CDCA5AE8584 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A52080714AE42237C1D2BEEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThimbleOfHoney/Pods-ThimbleOfHoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C5CCBC861A9CF04600A4F62D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -437,8 +531,9 @@
 			files = (
 				C5392E8A1AAE2EB800D72708 /* AboutMeViewController.swift in Sources */,
 				C5392E851AAE2E0300D72708 /* PostsTableViewController.swift in Sources */,
+				C5FF36ED1ABE355A006829E7 /* SWRevealViewController.m in Sources */,
 				C5392E861AAE2E0300D72708 /* PostsTableViewCell.swift in Sources */,
-				C5392E821AAE2DF400D72708 /* SocialWebViewController.swift in Sources */,
+				C5FF36E71ABE1B7F006829E7 /* MenuViewController.swift in Sources */,
 				C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */,
 				C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */,
 				C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */,
@@ -446,7 +541,6 @@
 				C551D8461AAF54BE00AC4C8B /* ApiKeys.swift in Sources */,
 				C5392FA01AAE2F5800D72708 /* BlogPost.swift in Sources */,
 				C5392F8B1AAE2F3A00D72708 /* ImageLoader.swift in Sources */,
-				C5392F8D1AAE2F3A00D72708 /* README.md in Sources */,
 				C5392F9E1AAE2F4F00D72708 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,6 +657,7 @@
 		};
 		C5CCBCAA1A9CF04600A4F62D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 071DD47821F7C19242F2D1CA /* Pods-ThimbleOfHoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -585,6 +680,7 @@
 		};
 		C5CCBCAB1A9CF04600A4F62D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42314701E9D7697CA59685B4 /* Pods-ThimbleOfHoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
