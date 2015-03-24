@@ -18,7 +18,6 @@
 		C5392E671AAE27CA00D72708 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5392E511AAE275400D72708 /* Security.framework */; };
 		C5392E681AAE27CA00D72708 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5392E521AAE275400D72708 /* StoreKit.framework */; };
 		C5392E691AAE27CA00D72708 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5392E531AAE275400D72708 /* SystemConfiguration.framework */; };
-		C5392E811AAE2DF400D72708 /* SocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E7F1AAE2DF400D72708 /* SocialViewController.swift */; };
 		C5392E851AAE2E0300D72708 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E831AAE2E0300D72708 /* PostsTableViewController.swift */; };
 		C5392E861AAE2E0300D72708 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E841AAE2E0300D72708 /* PostsTableViewCell.swift */; };
 		C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392E871AAE2E1000D72708 /* PostDetailViewController.swift */; };
@@ -74,7 +73,6 @@
 		C5392E511AAE275400D72708 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C5392E521AAE275400D72708 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		C5392E531AAE275400D72708 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		C5392E7F1AAE2DF400D72708 /* SocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SocialViewController.swift; path = Controllers/Social/SocialViewController.swift; sourceTree = "<group>"; };
 		C5392E831AAE2E0300D72708 /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewController.swift; path = Controllers/TableView/PostsTableViewController.swift; sourceTree = "<group>"; };
 		C5392E841AAE2E0300D72708 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostsTableViewCell.swift; path = Controllers/TableView/PostsTableViewCell.swift; sourceTree = "<group>"; };
 		C5392E871AAE2E1000D72708 /* PostDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostDetailViewController.swift; path = Controllers/PostDetailViewController.swift; sourceTree = "<group>"; };
@@ -216,7 +214,6 @@
 				C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */,
 				C5392E871AAE2E1000D72708 /* PostDetailViewController.swift */,
 				C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */,
-				C5392E7E1AAE2DE300D72708 /* Social */,
 				C5392E7D1AAE2DDA00D72708 /* TableView */,
 			);
 			name = Controllers;
@@ -247,14 +244,6 @@
 				C5392E841AAE2E0300D72708 /* PostsTableViewCell.swift */,
 			);
 			name = TableView;
-			sourceTree = "<group>";
-		};
-		C5392E7E1AAE2DE300D72708 /* Social */ = {
-			isa = PBXGroup;
-			children = (
-				C5392E7F1AAE2DF400D72708 /* SocialViewController.swift */,
-			);
-			name = Social;
 			sourceTree = "<group>";
 		};
 		C5392E8B1AAE2EF700D72708 /* Fonts */ = {
@@ -537,7 +526,6 @@
 				C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */,
 				C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */,
 				C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */,
-				C5392E811AAE2DF400D72708 /* SocialViewController.swift in Sources */,
 				C551D8461AAF54BE00AC4C8B /* ApiKeys.swift in Sources */,
 				C5392FA01AAE2F5800D72708 /* BlogPost.swift in Sources */,
 				C5392F8B1AAE2F3A00D72708 /* ImageLoader.swift in Sources */,

@@ -28,7 +28,6 @@ class SocialViewController: UIViewController, UIWebViewDelegate {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        menuButton.description
         // Do any additional setup after loading the view.
         switch menuButton.tag {
         case 0:
@@ -42,11 +41,6 @@ class SocialViewController: UIViewController, UIWebViewDelegate {
         default:
             println("default case entered")
         }
-        
-        let url: NSURL = NSURL(string: selectedURL)!
-        let request: NSURLRequest = NSURLRequest(URL: url)
-        webView.loadRequest(request)
-        webView.delegate = self
     }
     
     override func didReceiveMemoryWarning() {

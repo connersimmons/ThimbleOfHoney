@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="-1717.5" y="365.25"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="unG-lL-rRh">
             <objects>
-                <tableViewController id="hg8-wo-oZn" sceneMemberID="viewController">
+                <tableViewController id="hg8-wo-oZn" customClass="MenuViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fWR-ef-SRz">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -509,7 +509,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e3S-kH-2Sg" userLabel="Facebook">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e3S-kH-2Sg" userLabel="Facebook">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3S-kH-2Sg" id="3TY-r4-59j">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -530,7 +530,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEU-fm-iXK">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEU-fm-iXK">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="82" id="kir-ym-U27"/>
@@ -588,11 +588,8 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" button="YES"/>
                                         </accessibility>
-                                        <connections>
-                                            <segue destination="A9D-wN-M8W" kind="custom" identifier="viewsocial" customClass="SWRevealViewControllerSeguePushController" id="pOt-eZ-qlQ"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NnL-Wq-klX" userLabel="Instagram">
+                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NnL-Wq-klX" userLabel="Instagram">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NnL-Wq-klX" id="44d-xa-Cnk">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -613,7 +610,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-YK-rzx">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-YK-rzx">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="81" id="0rJ-L0-nFk"/>
@@ -671,11 +668,8 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" button="YES"/>
                                         </accessibility>
-                                        <connections>
-                                            <segue destination="A9D-wN-M8W" kind="custom" identifier="viewsocial" customClass="SWRevealViewControllerSeguePushController" id="l3u-gP-6qL"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9I8-wx-TL3" userLabel="Pinterest">
+                                    <tableViewCell tag="3" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="9I8-wx-TL3" userLabel="Pinterest">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9I8-wx-TL3" id="3BF-Fv-aOV">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -696,7 +690,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinterest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uED-NW-2Xu">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinterest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uED-NW-2Xu">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="73" id="mk6-oJ-xra"/>
@@ -754,11 +748,8 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" button="YES"/>
                                         </accessibility>
-                                        <connections>
-                                            <segue destination="A9D-wN-M8W" kind="custom" identifier="viewsocial" customClass="SWRevealViewControllerSeguePushController" id="aPl-mk-xac"/>
-                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell tag="3" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mhM-Yy-oVT" userLabel="Twitter">
+                                    <tableViewCell tag="4" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mhM-Yy-oVT" userLabel="Twitter">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mhM-Yy-oVT" id="NwS-Mc-45L">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -779,7 +770,7 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-hn-Szu">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-hn-Szu">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="56" id="9kB-a6-0pz"/>
@@ -837,9 +828,6 @@
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" none="YES" button="YES"/>
                                         </accessibility>
-                                        <connections>
-                                            <segue destination="A9D-wN-M8W" kind="custom" identifier="viewsocial" customClass="SWRevealViewControllerSeguePushController" id="SbL-ad-vPg"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -964,67 +952,6 @@
             </objects>
             <point key="canvasLocation" x="-72" y="711"/>
         </scene>
-        <!--Social View Controller-->
-        <scene sceneID="Y8e-eL-IJA">
-            <objects>
-                <viewController id="OQu-tf-6BP" customClass="SocialViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uSS-TN-80M"/>
-                        <viewControllerLayoutGuide type="bottom" id="JCS-5r-BD2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="lBy-Ad-ZYm">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdE-Y3-fky">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                                </variation>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="XdE-Y3-fky"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="XdE-Y3-fky"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <navigationItem key="navigationItem" id="tHB-Oq-cf1">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="bd7-rN-ARA"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="menuButton" destination="bd7-rN-ARA" id="2Mr-RB-9dr"/>
-                        <outlet property="webView" destination="XdE-Y3-fky" id="FM4-jf-NJF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x4W-1t-rc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-72" y="1485.75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4ZX-J5-jZR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A9D-wN-M8W" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fht-K9-XDg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="OQu-tf-6BP" kind="relationship" relationship="rootViewController" id="adK-wq-EFG"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Uw-Ib-Zov" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-933" y="1485.75"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Facebook" width="96" height="96"/>
@@ -1038,7 +965,6 @@
         <image name="thimble" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pOt-eZ-qlQ"/>
         <segue reference="UYf-ny-7sa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -121,9 +121,6 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
             viewController.postDate = blogPost.postDate
             viewController.postDesc = blogPost.postDesc
             viewController.postLink = blogPost.postLink
-            
-            //can be used to hide the tab bar when you are in the detail view of the tableview controller
-            viewController.hidesBottomBarWhenPushed = true
         }
         
     }
