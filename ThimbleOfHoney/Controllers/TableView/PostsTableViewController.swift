@@ -21,9 +21,10 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
             
             // Uncomment to change the width of menu
-            self.revealViewController().rearViewRevealWidth = 215
+            self.revealViewController().rearViewRevealWidth = 220
         }
         
         // Do any additional setup after loading the view.

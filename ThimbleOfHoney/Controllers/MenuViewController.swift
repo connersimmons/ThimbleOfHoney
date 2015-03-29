@@ -11,8 +11,8 @@ import UIKit
 class MenuViewController: UITableViewController {
 
     let instagramURL = "https://instagram.com/thimbleofhoneyblog/"
-    let facebookURL = "https://www.facebook.com/ThimbleOfHoneyBlog"
-    let pinterestURL = "https://www.pinterest.com/ThimbleOfHoney/"
+    let facebookURL = "https://facebook.com/ThimbleOfHoneyBlog"
+    let pinterestURL = "https://pinterest.com/ThimbleOfHoney/"
     let twitterURL = "https://twitter.com/ThimbleOfHoney"
     
     override func viewDidLoad() {
@@ -29,8 +29,6 @@ class MenuViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexPath = tableView.indexPathForSelectedRow()
         let selectedCell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell!;
-        
-        println(selectedCell.tag)
         let app = UIApplication.sharedApplication()
         
         switch selectedCell.tag {
@@ -45,9 +43,22 @@ class MenuViewController: UITableViewController {
         default:
             println("Relative path selected.")
         }
-        
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.revealViewController().frontViewController.view.userInteractionEnabled = false
+        self.revealViewController().view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        self.revealViewController().frontViewController.view.userInteractionEnabled = true
+    }
+    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -55,5 +66,5 @@ class MenuViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-
+    */
 }
