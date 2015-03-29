@@ -12,11 +12,16 @@ import Foundation
 class PostsTableViewController: UITableViewController, XMLParserDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var xmlParser: XMLParser!
+    var searchActive: Bool = false
+    var filteredTableData: [BlogPost] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Menu setup
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -36,6 +41,11 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         xmlParser = XMLParser()
         xmlParser.delegate = self
         xmlParser.startParsingContentsOfURL(url)
+    }
+    
+    override func scrollViewDidScroll(scrollView: UIScrollView) {
+        searchBar = searchDisplayController?.searchBar
+        searchBar.frame = CGRectMake(0,max(0,scrollView.contentOffset.y),320,44)
     }
     
     // MARK: XMLParserDelegate method implementation
@@ -63,15 +73,30 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        /*
+        if(searchActive) {
+            return filteredTableData.count
+        }
+        return xmlParser.blogPosts.count
+        */
         return xmlParser.blogPosts.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PostsTableViewCell
+        /*
+        var blogPost: BlogPost!
+        
+        if(searchActive){
+            blogPost = filteredTableData[indexPath.row]
+            cell.postLabel.text = blogPost.postTitle
+        } else {
+            cell.postLabel.text = blogPost.postTitle
+        }
+        */
         
         let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
-        
         cell.postLabel.text = blogPost.postTitle
         
         var urlString = findFirstImage(blogPost)
