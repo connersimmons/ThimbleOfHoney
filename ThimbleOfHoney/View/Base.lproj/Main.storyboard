@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s7r-Zc-PH0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -34,7 +35,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TMF-aW-OzL" id="g4q-8K-yl8">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gde-0E-NE2">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="gde-0E-NE2">
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="hnn-8k-Gvo"/>
@@ -53,7 +54,7 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-tn-LNk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBN-tn-LNk">
                                             <rect key="frame" x="108" y="8" width="479" height="84"/>
                                             <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
@@ -213,6 +214,7 @@
                         <viewControllerLayoutGuide type="bottom" id="EkN-Zw-Yis"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8jx-zU-wcx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -230,6 +232,7 @@
             <objects>
                 <tableViewController id="hg8-wo-oZn" customClass="MenuViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fWR-ef-SRz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -243,36 +246,36 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thimble of Honey Blog" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb7-b0-kkb">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="179" id="ygL-8w-UB3"/>
+                                                        <constraint firstAttribute="width" constant="193" id="8O8-3C-lHG"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="26"/>
-                                                    <color key="textColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="28"/>
+                                                    <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="ygL-8w-UB3"/>
+                                                            <exclude reference="8O8-3C-lHG"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="ygL-8w-UB3"/>
+                                                            <include reference="8O8-3C-lHG"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tb7-b0-kkb" firstAttribute="top" secondItem="DTx-Ox-gg7" secondAttribute="topMargin" constant="6" id="Bo8-g2-h8x"/>
-                                                <constraint firstItem="tb7-b0-kkb" firstAttribute="leading" secondItem="DTx-Ox-gg7" secondAttribute="leadingMargin" id="QWp-H0-9OP"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="tb7-b0-kkb" secondAttribute="bottom" constant="-13" id="d8w-6E-HzA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tb7-b0-kkb" secondAttribute="bottom" constant="-13" id="6Ro-17-UBV"/>
+                                                <constraint firstItem="tb7-b0-kkb" firstAttribute="leading" secondItem="DTx-Ox-gg7" secondAttribute="leadingMargin" id="npt-3B-ygc"/>
+                                                <constraint firstItem="tb7-b0-kkb" firstAttribute="top" secondItem="DTx-Ox-gg7" secondAttribute="topMargin" constant="6" id="wkw-ef-qJW"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
                                                     <exclude reference="tb7-b0-kkb"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="Bo8-g2-h8x"/>
-                                                    <exclude reference="QWp-H0-9OP"/>
-                                                    <exclude reference="d8w-6E-HzA"/>
+                                                    <exclude reference="6Ro-17-UBV"/>
+                                                    <exclude reference="npt-3B-ygc"/>
+                                                    <exclude reference="wkw-ef-qJW"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -280,13 +283,13 @@
                                                     <include reference="tb7-b0-kkb"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="Bo8-g2-h8x"/>
-                                                    <include reference="QWp-H0-9OP"/>
-                                                    <include reference="d8w-6E-HzA"/>
+                                                    <include reference="6Ro-17-UBV"/>
+                                                    <include reference="npt-3B-ygc"/>
+                                                    <include reference="wkw-ef-qJW"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VU3-6t-mN9" userLabel="Posts">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -313,19 +316,19 @@
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="44" id="SsY-bz-OvD"/>
+                                                        <constraint firstAttribute="width" constant="44" id="aUt-CZ-uz8"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="24"/>
                                                     <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="SsY-bz-OvD"/>
+                                                            <exclude reference="aUt-CZ-uz8"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="SsY-bz-OvD"/>
+                                                            <include reference="aUt-CZ-uz8"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
@@ -333,10 +336,11 @@
                                             <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="9ty-5l-YaP" firstAttribute="leading" secondItem="Rew-nq-UES" secondAttribute="leadingMargin" constant="10" id="0gE-tj-3jr"/>
-                                                <constraint firstItem="Mqw-9n-pmg" firstAttribute="leading" secondItem="9ty-5l-YaP" secondAttribute="trailing" constant="8" symbolic="YES" id="TFT-mK-W1r"/>
+                                                <constraint firstItem="Mqw-9n-pmg" firstAttribute="leading" secondItem="9ty-5l-YaP" secondAttribute="trailing" constant="8" symbolic="YES" id="N0y-ow-Uzn"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9ty-5l-YaP" secondAttribute="bottom" constant="-3" id="aEq-hP-Of4"/>
-                                                <constraint firstItem="Mqw-9n-pmg" firstAttribute="centerY" secondItem="Rew-nq-UES" secondAttribute="centerY" id="aZu-hg-2Cc"/>
                                                 <constraint firstItem="9ty-5l-YaP" firstAttribute="top" secondItem="Rew-nq-UES" secondAttribute="topMargin" constant="-4" id="aaC-Yi-wYw"/>
+                                                <constraint firstItem="Mqw-9n-pmg" firstAttribute="centerY" secondItem="Rew-nq-UES" secondAttribute="centerY" id="iv2-IG-Dvw"/>
+                                                <constraint firstItem="Mqw-9n-pmg" firstAttribute="top" secondItem="Rew-nq-UES" secondAttribute="topMargin" constant="1" id="poh-sz-c7I"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -347,8 +351,9 @@
                                                     <exclude reference="0gE-tj-3jr"/>
                                                     <exclude reference="aEq-hP-Of4"/>
                                                     <exclude reference="aaC-Yi-wYw"/>
-                                                    <exclude reference="TFT-mK-W1r"/>
-                                                    <exclude reference="aZu-hg-2Cc"/>
+                                                    <exclude reference="N0y-ow-Uzn"/>
+                                                    <exclude reference="iv2-IG-Dvw"/>
+                                                    <exclude reference="poh-sz-c7I"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -360,8 +365,9 @@
                                                     <include reference="0gE-tj-3jr"/>
                                                     <include reference="aEq-hP-Of4"/>
                                                     <include reference="aaC-Yi-wYw"/>
-                                                    <include reference="TFT-mK-W1r"/>
-                                                    <include reference="aZu-hg-2Cc"/>
+                                                    <include reference="N0y-ow-Uzn"/>
+                                                    <include reference="iv2-IG-Dvw"/>
+                                                    <include reference="poh-sz-c7I"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -395,19 +401,19 @@
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="80" id="2s6-s1-2dx"/>
+                                                        <constraint firstAttribute="width" constant="80" id="NAV-rV-P6W"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="24"/>
                                                     <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="2s6-s1-2dx"/>
+                                                            <exclude reference="NAV-rV-P6W"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="2s6-s1-2dx"/>
+                                                            <include reference="NAV-rV-P6W"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
@@ -415,10 +421,11 @@
                                             <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="53S-7Y-8Qn" firstAttribute="top" secondItem="aMc-lc-KVx" secondAttribute="topMargin" constant="-4" id="89a-xL-DB9"/>
-                                                <constraint firstItem="6BQ-62-4yQ" firstAttribute="centerY" secondItem="aMc-lc-KVx" secondAttribute="centerY" id="CNu-nV-hs4"/>
-                                                <constraint firstItem="6BQ-62-4yQ" firstAttribute="leading" secondItem="53S-7Y-8Qn" secondAttribute="trailing" constant="8" symbolic="YES" id="eAd-ia-l1K"/>
+                                                <constraint firstItem="6BQ-62-4yQ" firstAttribute="top" secondItem="aMc-lc-KVx" secondAttribute="topMargin" constant="1" id="LWS-HT-Wzw"/>
                                                 <constraint firstItem="53S-7Y-8Qn" firstAttribute="leading" secondItem="aMc-lc-KVx" secondAttribute="leadingMargin" constant="10" id="ePO-T9-Vyz"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="53S-7Y-8Qn" secondAttribute="bottom" constant="-3" id="iQa-yx-xCN"/>
+                                                <constraint firstItem="6BQ-62-4yQ" firstAttribute="leading" secondItem="53S-7Y-8Qn" secondAttribute="trailing" constant="8" symbolic="YES" id="uWa-DU-ROP"/>
+                                                <constraint firstItem="6BQ-62-4yQ" firstAttribute="centerY" secondItem="aMc-lc-KVx" secondAttribute="centerY" id="yiX-J9-F3T"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -429,8 +436,9 @@
                                                     <exclude reference="89a-xL-DB9"/>
                                                     <exclude reference="ePO-T9-Vyz"/>
                                                     <exclude reference="iQa-yx-xCN"/>
-                                                    <exclude reference="CNu-nV-hs4"/>
-                                                    <exclude reference="eAd-ia-l1K"/>
+                                                    <exclude reference="LWS-HT-Wzw"/>
+                                                    <exclude reference="uWa-DU-ROP"/>
+                                                    <exclude reference="yiX-J9-F3T"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -442,8 +450,9 @@
                                                     <include reference="89a-xL-DB9"/>
                                                     <include reference="ePO-T9-Vyz"/>
                                                     <include reference="iQa-yx-xCN"/>
-                                                    <include reference="CNu-nV-hs4"/>
-                                                    <include reference="eAd-ia-l1K"/>
+                                                    <include reference="LWS-HT-Wzw"/>
+                                                    <include reference="uWa-DU-ROP"/>
+                                                    <include reference="yiX-J9-F3T"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -466,8 +475,8 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="137" id="mnT-xh-8AW"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="26"/>
-                                                    <color key="textColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="28"/>
+                                                    <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -481,7 +490,7 @@
                                                     </variation>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.95686274509803926" green="0.93725490196078431" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="iaj-hz-0VY" secondAttribute="bottom" constant="-13" id="BXg-oX-vRR"/>
                                                 <constraint firstItem="iaj-hz-0VY" firstAttribute="top" secondItem="gnA-Sg-jMg" secondAttribute="topMargin" constant="6" id="mND-0d-gTy"/>
@@ -533,28 +542,29 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEU-fm-iXK">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="kir-ym-U27"/>
+                                                        <constraint firstAttribute="width" constant="82" id="GCS-Vh-heD"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="24"/>
                                                     <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="kir-ym-U27"/>
+                                                            <exclude reference="GCS-Vh-heD"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="kir-ym-U27"/>
+                                                            <include reference="GCS-Vh-heD"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="zEU-fm-iXK" firstAttribute="leading" secondItem="e2H-a8-NnR" secondAttribute="trailing" constant="8" symbolic="YES" id="AvP-of-Dmv"/>
-                                                <constraint firstItem="zEU-fm-iXK" firstAttribute="centerY" secondItem="3TY-r4-59j" secondAttribute="centerY" id="HSE-mW-Nqi"/>
+                                                <constraint firstItem="zEU-fm-iXK" firstAttribute="centerY" secondItem="3TY-r4-59j" secondAttribute="centerY" id="MLm-qG-rJq"/>
+                                                <constraint firstItem="zEU-fm-iXK" firstAttribute="leading" secondItem="e2H-a8-NnR" secondAttribute="trailing" constant="8" symbolic="YES" id="NYr-7O-W2w"/>
                                                 <constraint firstItem="e2H-a8-NnR" firstAttribute="leading" secondItem="3TY-r4-59j" secondAttribute="leadingMargin" constant="10" id="Oyb-d7-qPH"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="e2H-a8-NnR" secondAttribute="bottom" constant="-3" id="lpO-Wk-yGI"/>
+                                                <constraint firstItem="zEU-fm-iXK" firstAttribute="top" secondItem="3TY-r4-59j" secondAttribute="topMargin" constant="1" id="q5K-Np-JsD"/>
                                                 <constraint firstItem="e2H-a8-NnR" firstAttribute="top" secondItem="3TY-r4-59j" secondAttribute="topMargin" constant="-4" id="wD4-gd-bg5"/>
                                             </constraints>
                                             <variation key="default">
@@ -566,8 +576,9 @@
                                                     <exclude reference="Oyb-d7-qPH"/>
                                                     <exclude reference="lpO-Wk-yGI"/>
                                                     <exclude reference="wD4-gd-bg5"/>
-                                                    <exclude reference="AvP-of-Dmv"/>
-                                                    <exclude reference="HSE-mW-Nqi"/>
+                                                    <exclude reference="MLm-qG-rJq"/>
+                                                    <exclude reference="NYr-7O-W2w"/>
+                                                    <exclude reference="q5K-Np-JsD"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -579,8 +590,9 @@
                                                     <include reference="Oyb-d7-qPH"/>
                                                     <include reference="lpO-Wk-yGI"/>
                                                     <include reference="wD4-gd-bg5"/>
-                                                    <include reference="AvP-of-Dmv"/>
-                                                    <include reference="HSE-mW-Nqi"/>
+                                                    <include reference="MLm-qG-rJq"/>
+                                                    <include reference="NYr-7O-W2w"/>
+                                                    <include reference="q5K-Np-JsD"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -613,29 +625,30 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-YK-rzx">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="81" id="0rJ-L0-nFk"/>
+                                                        <constraint firstAttribute="width" constant="81" id="zos-HO-9cr"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="24"/>
                                                     <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="0rJ-L0-nFk"/>
+                                                            <exclude reference="zos-HO-9cr"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="0rJ-L0-nFk"/>
+                                                            <include reference="zos-HO-9cr"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="8Kf-sJ-0BK" firstAttribute="top" secondItem="44d-xa-Cnk" secondAttribute="topMargin" constant="-4" id="3k5-yY-3UZ"/>
-                                                <constraint firstItem="nsE-YK-rzx" firstAttribute="centerY" secondItem="44d-xa-Cnk" secondAttribute="centerY" id="Cxi-se-chx"/>
+                                                <constraint firstItem="nsE-YK-rzx" firstAttribute="top" secondItem="44d-xa-Cnk" secondAttribute="topMargin" constant="1" id="FID-JJ-9va"/>
+                                                <constraint firstItem="nsE-YK-rzx" firstAttribute="leading" secondItem="8Kf-sJ-0BK" secondAttribute="trailing" constant="8" symbolic="YES" id="MUw-UU-fTL"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="8Kf-sJ-0BK" secondAttribute="bottom" constant="-3" id="QLr-Ms-gB8"/>
-                                                <constraint firstItem="nsE-YK-rzx" firstAttribute="leading" secondItem="8Kf-sJ-0BK" secondAttribute="trailing" constant="8" symbolic="YES" id="UYk-Ai-KO2"/>
                                                 <constraint firstItem="8Kf-sJ-0BK" firstAttribute="leading" secondItem="44d-xa-Cnk" secondAttribute="leadingMargin" constant="10" id="peZ-3r-s7e"/>
+                                                <constraint firstItem="nsE-YK-rzx" firstAttribute="centerY" secondItem="44d-xa-Cnk" secondAttribute="centerY" id="ycr-Gk-WI3"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -646,8 +659,9 @@
                                                     <exclude reference="3k5-yY-3UZ"/>
                                                     <exclude reference="QLr-Ms-gB8"/>
                                                     <exclude reference="peZ-3r-s7e"/>
-                                                    <exclude reference="Cxi-se-chx"/>
-                                                    <exclude reference="UYk-Ai-KO2"/>
+                                                    <exclude reference="FID-JJ-9va"/>
+                                                    <exclude reference="MUw-UU-fTL"/>
+                                                    <exclude reference="ycr-Gk-WI3"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -659,8 +673,9 @@
                                                     <include reference="3k5-yY-3UZ"/>
                                                     <include reference="QLr-Ms-gB8"/>
                                                     <include reference="peZ-3r-s7e"/>
-                                                    <include reference="Cxi-se-chx"/>
-                                                    <include reference="UYk-Ai-KO2"/>
+                                                    <include reference="FID-JJ-9va"/>
+                                                    <include reference="MUw-UU-fTL"/>
+                                                    <include reference="ycr-Gk-WI3"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -693,29 +708,30 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pinterest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uED-NW-2Xu">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="73" id="mk6-oJ-xra"/>
+                                                        <constraint firstAttribute="width" constant="73" id="nwA-Sf-PeZ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="24"/>
                                                     <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="mk6-oJ-xra"/>
+                                                            <exclude reference="nwA-Sf-PeZ"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="mk6-oJ-xra"/>
+                                                            <include reference="nwA-Sf-PeZ"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Tga-qr-36i" secondAttribute="bottom" constant="-3" id="0Ru-UP-Jop"/>
-                                                <constraint firstItem="uED-NW-2Xu" firstAttribute="leading" secondItem="Tga-qr-36i" secondAttribute="trailing" constant="8" symbolic="YES" id="3bG-db-P36"/>
-                                                <constraint firstItem="uED-NW-2Xu" firstAttribute="centerY" secondItem="3BF-Fv-aOV" secondAttribute="centerY" id="Cbm-iS-Tow"/>
+                                                <constraint firstItem="uED-NW-2Xu" firstAttribute="leading" secondItem="Tga-qr-36i" secondAttribute="trailing" constant="8" symbolic="YES" id="DbD-Fi-d0Y"/>
                                                 <constraint firstItem="Tga-qr-36i" firstAttribute="leading" secondItem="3BF-Fv-aOV" secondAttribute="leadingMargin" constant="10" id="Oag-6m-qq1"/>
                                                 <constraint firstItem="Tga-qr-36i" firstAttribute="top" secondItem="3BF-Fv-aOV" secondAttribute="topMargin" constant="-4" id="oLW-mG-vg0"/>
+                                                <constraint firstItem="uED-NW-2Xu" firstAttribute="top" secondItem="3BF-Fv-aOV" secondAttribute="topMargin" constant="1" id="sqm-v8-KEI"/>
+                                                <constraint firstItem="uED-NW-2Xu" firstAttribute="centerY" secondItem="3BF-Fv-aOV" secondAttribute="centerY" id="xSS-7c-0GM"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -726,8 +742,9 @@
                                                     <exclude reference="0Ru-UP-Jop"/>
                                                     <exclude reference="Oag-6m-qq1"/>
                                                     <exclude reference="oLW-mG-vg0"/>
-                                                    <exclude reference="3bG-db-P36"/>
-                                                    <exclude reference="Cbm-iS-Tow"/>
+                                                    <exclude reference="DbD-Fi-d0Y"/>
+                                                    <exclude reference="sqm-v8-KEI"/>
+                                                    <exclude reference="xSS-7c-0GM"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -739,8 +756,9 @@
                                                     <include reference="0Ru-UP-Jop"/>
                                                     <include reference="Oag-6m-qq1"/>
                                                     <include reference="oLW-mG-vg0"/>
-                                                    <include reference="3bG-db-P36"/>
-                                                    <include reference="Cbm-iS-Tow"/>
+                                                    <include reference="DbD-Fi-d0Y"/>
+                                                    <include reference="sqm-v8-KEI"/>
+                                                    <include reference="xSS-7c-0GM"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -773,29 +791,30 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORc-hn-Szu">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="56" id="9kB-a6-0pz"/>
+                                                        <constraint firstAttribute="width" constant="56" id="5Gt-g1-xMX"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="24"/>
                                                     <color key="textColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
-                                                            <exclude reference="9kB-a6-0pz"/>
+                                                            <exclude reference="5Gt-g1-xMX"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
-                                                            <include reference="9kB-a6-0pz"/>
+                                                            <include reference="5Gt-g1-xMX"/>
                                                         </mask>
                                                     </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="1Cc-yc-Uvf" firstAttribute="leading" secondItem="NwS-Mc-45L" secondAttribute="leadingMargin" constant="10" id="9s5-h2-ngG"/>
+                                                <constraint firstItem="ORc-hn-Szu" firstAttribute="centerY" secondItem="NwS-Mc-45L" secondAttribute="centerY" id="Eap-nA-YXb"/>
                                                 <constraint firstItem="1Cc-yc-Uvf" firstAttribute="top" secondItem="NwS-Mc-45L" secondAttribute="topMargin" constant="-4" id="LWd-eg-vg5"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="1Cc-yc-Uvf" secondAttribute="bottom" constant="-3" id="Rmz-xI-zBR"/>
-                                                <constraint firstItem="ORc-hn-Szu" firstAttribute="leading" secondItem="1Cc-yc-Uvf" secondAttribute="trailing" constant="8" symbolic="YES" id="aJG-d8-sUD"/>
-                                                <constraint firstItem="ORc-hn-Szu" firstAttribute="centerY" secondItem="NwS-Mc-45L" secondAttribute="centerY" id="cgi-eY-SIc"/>
+                                                <constraint firstItem="ORc-hn-Szu" firstAttribute="top" secondItem="NwS-Mc-45L" secondAttribute="topMargin" constant="1" id="imh-At-6dP"/>
+                                                <constraint firstItem="ORc-hn-Szu" firstAttribute="leading" secondItem="1Cc-yc-Uvf" secondAttribute="trailing" constant="8" symbolic="YES" id="qNr-v1-4ro"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -806,8 +825,9 @@
                                                     <exclude reference="9s5-h2-ngG"/>
                                                     <exclude reference="LWd-eg-vg5"/>
                                                     <exclude reference="Rmz-xI-zBR"/>
-                                                    <exclude reference="aJG-d8-sUD"/>
-                                                    <exclude reference="cgi-eY-SIc"/>
+                                                    <exclude reference="Eap-nA-YXb"/>
+                                                    <exclude reference="imh-At-6dP"/>
+                                                    <exclude reference="qNr-v1-4ro"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -819,8 +839,9 @@
                                                     <include reference="9s5-h2-ngG"/>
                                                     <include reference="LWd-eg-vg5"/>
                                                     <include reference="Rmz-xI-zBR"/>
-                                                    <include reference="aJG-d8-sUD"/>
-                                                    <include reference="cgi-eY-SIc"/>
+                                                    <include reference="Eap-nA-YXb"/>
+                                                    <include reference="imh-At-6dP"/>
+                                                    <include reference="qNr-v1-4ro"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -957,12 +978,12 @@
         <image name="Facebook" width="96" height="96"/>
         <image name="Instagram" width="96" height="96"/>
         <image name="Pinterest" width="96" height="96"/>
-        <image name="Twitter" width="95" height="96"/>
+        <image name="Twitter" width="96" height="96"/>
         <image name="menu" width="22" height="22"/>
         <image name="placeholder" width="100" height="100"/>
         <image name="post" width="30" height="30"/>
-        <image name="profile" width="32" height="30"/>
-        <image name="thimble" width="30" height="30"/>
+        <image name="profile" width="60" height="60"/>
+        <image name="thimble" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UYf-ny-7sa"/>

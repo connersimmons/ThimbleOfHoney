@@ -6,9 +6,13 @@
 	<array>
 		<dict>
 			<key>Type</key>
-			<string>PSGroupSpecifier</string>
+			<string>PSTitleValueSpecifier</string>
+			<key>DefaultValue</key>
+			<string>0.0.0</string>
 			<key>Title</key>
-			<string>Acknowledgments</string>
+			<string>Version</string>
+			<key>Key</key>
+			<string>application_version</string>
 		</dict>
 		<dict>
 			<key>Type</key>

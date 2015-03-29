@@ -17,21 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var pushNotificationController: PushNotificationController?
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        self.pushNotificationController = PushNotificationController()
+        //register push notifications
+        registerPushNotifications(application)
         
-        // Register for Push Notitications, if running iOS 8
-        if application.respondsToSelector("registerUserNotificationSettings:") {
-            
-            let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
-            let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
-            
-            application.registerUserNotificationSettings(settings)
-            application.registerForRemoteNotifications()
-            
-        } else {
-            // Register for Push Notifications before iOS 8
-            application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
-        }
+        //gets version information for settings page
+        versionInformation()
         
         // Override point for customization after application launch.
         var navigationBarAppearace = UINavigationBar.appearance()
@@ -90,6 +80,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
         UIApplication.sharedApplication().registerForRemoteNotifications()
+    }
+    
+    func registerPushNotifications(application: UIApplication) {
+        self.pushNotificationController = PushNotificationController()
+        
+        // Register for Push Notitications, if running iOS 8
+        if application.respondsToSelector("registerUserNotificationSettings:") {
+            
+            let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
+            let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+            
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+            
+        } else {
+            // Register for Push Notifications before iOS 8
+            application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
+        }
+    }
+    
+    func versionInformation() {
+        let appInfo = NSBundle.mainBundle().infoDictionary as Dictionary<String,AnyObject>
+        let shortVersionString = appInfo["CFBundleShortVersionString"] as String
+        let bundleVersion      = appInfo["CFBundleVersion"] as String
+        let applicationVersion = shortVersionString + "." + bundleVersion
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(applicationVersion, forKey: "application_version")
+        defaults.synchronize()
     }
     
     func UIColorFromRGB(rgbValue: UInt) -> UIColor {
