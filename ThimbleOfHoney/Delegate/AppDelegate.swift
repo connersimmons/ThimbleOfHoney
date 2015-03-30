@@ -119,6 +119,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             alpha: CGFloat(1.0)
         )
     }
-
 }
 

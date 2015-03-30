@@ -8,11 +8,12 @@
 
 import UIKit
 import Foundation
+import IJReachability
 
 class PostsTableViewController: UITableViewController, XMLParserDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    @IBOutlet weak var searchBar: UISearchBar!
+    //@IBOutlet weak var searchBar: UISearchBar!
     
     var xmlParser: XMLParser!
     var searchActive: Bool = false
@@ -21,16 +22,8 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Menu setup
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
-            
-            // Uncomment to change the width of menu
-            self.revealViewController().rearViewRevealWidth = 220
-        }
+        menuSetup()
+        checkForInternetConnection()
         
         // Do any additional setup after loading the view.
         
@@ -43,10 +36,12 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         xmlParser.startParsingContentsOfURL(url)
     }
     
+    /*
     override func scrollViewDidScroll(scrollView: UIScrollView) {
         searchBar = searchDisplayController?.searchBar
         searchBar.frame = CGRectMake(0,max(0,scrollView.contentOffset.y),320,44)
     }
+    */
     
     // MARK: XMLParserDelegate method implementation
     
@@ -71,30 +66,18 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /*
-        if(searchActive) {
-            return filteredTableData.count
-        }
-        return xmlParser.blogPosts.count
-        */
         return xmlParser.blogPosts.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PostsTableViewCell
-        /*
-        var blogPost: BlogPost!
-        
-        if(searchActive){
-            blogPost = filteredTableData[indexPath.row]
-            cell.postLabel.text = blogPost.postTitle
-        } else {
-            cell.postLabel.text = blogPost.postTitle
-        }
-        */
         
         let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
@@ -132,9 +115,50 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         }
         return imageSource
     }
+    
+    func menuSetup() {
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+            
+            // Uncomment to change the width of menu
+            self.revealViewController().rearViewRevealWidth = 220
+        }
+    }
+    
+    func checkForInternetConnection() {
+        if IJReachability.isConnectedToNetwork(){
+            println("Network Connection: Available")
+        }
+        else {
+            println("Network Connection: Unavailable")
+            noInternetAlert()
+        }
+    }
+    
+    func noInternetAlert() {
+        let alertController = UIAlertController(title: "No Internet connection!",
+            message: "Please connect to the Internet.",
+            preferredStyle: .Alert)
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-         return 100
+        let cancelSelected = UIAlertAction(title: "Cancel", style: .Cancel){ (action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        let okSelected = UIAlertAction(title: "Settings", style: .Default){ (action) in
+            self.openSettings()
+        }
+        
+        alertController.addAction(cancelSelected)
+        alertController.addAction(okSelected)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func openSettings() {
+        UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
@@ -148,6 +172,5 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
             viewController.postDesc = blogPost.postDesc
             viewController.postLink = blogPost.postLink
         }
-        
     }
 }

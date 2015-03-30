@@ -1,0 +1,6 @@
+framework module IJReachability {
+  umbrella header "Pods-ThimbleOfHoney-IJReachability-umbrella.h"
+
+  export *
+  module * { export * }
+}

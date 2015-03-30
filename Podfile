@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'ThimbleOfHoney' do
 
-pod 'DrawerController', '~> 1.0'
+pod 'IJReachability', :git => 'https://github.com/Isuru-Nanayakkara/IJReachability.git'
 
 end
 
