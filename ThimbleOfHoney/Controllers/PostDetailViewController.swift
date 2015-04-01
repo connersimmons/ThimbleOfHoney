@@ -43,14 +43,19 @@ class PostDetailViewController: UIViewController {
     }
 
     @IBAction func shareAction(sender: AnyObject) {
+        let message = "Check out this post from Thimble of Honey!"
         let link = NSURL(string: postLink)
-        let vc = UIActivityViewController(activityItems: [link!], applicationActivities: nil)
+        let vc = UIActivityViewController(activityItems: [message, link!], applicationActivities: nil)
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func addToFavorites() {
+        
     }
     
 }

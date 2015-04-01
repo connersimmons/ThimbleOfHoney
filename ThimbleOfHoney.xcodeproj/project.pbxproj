@@ -43,6 +43,8 @@
 		C5BE59261AC78A7900611975 /* acknowledgementGenerator.rb in Resources */ = {isa = PBXBuildFile; fileRef = C5BE59251AC78A7900611975 /* acknowledgementGenerator.rb */; };
 		C5BE592A1AC78CA000611975 /* SwiftImageLoader.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE59291AC78CA000611975 /* SwiftImageLoader.license */; };
 		C5BE592C1AC78F9D00611975 /* SWRevealViewController.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */; };
+		C5BE592E1ACACAD500611975 /* IJReachability.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE592D1ACACAD500611975 /* IJReachability.license */; };
+		C5BE59311ACACDAF00611975 /* Favorites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5BE592F1ACACDAF00611975 /* Favorites.xcdatamodeld */; };
 		C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */; };
 		C5FF36E31ABDFDC7006829E7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E21ABDFDC7006829E7 /* Social.framework */; };
 		C5FF36E51ABDFDCF006829E7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E41ABDFDCF006829E7 /* Accounts.framework */; };
@@ -102,6 +104,8 @@
 		C5BE59251AC78A7900611975 /* acknowledgementGenerator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = acknowledgementGenerator.rb; path = Resources/acknowledgementGenerator.rb; sourceTree = "<group>"; };
 		C5BE59291AC78CA000611975 /* SwiftImageLoader.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftImageLoader.license; path = Resources/Licenses/SwiftImageLoader.license; sourceTree = "<group>"; };
 		C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SWRevealViewController.license; path = Resources/Licenses/SWRevealViewController.license; sourceTree = "<group>"; };
+		C5BE592D1ACACAD500611975 /* IJReachability.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IJReachability.license; path = Resources/Licenses/IJReachability.license; sourceTree = "<group>"; };
+		C5BE59301ACACDAF00611975 /* Favorites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorites.xcdatamodel; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CCBC8E1A9CF04600A4F62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5CCBC9F1A9CF04600A4F62D /* ThimbleOfHoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThimbleOfHoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				C5392F9F1AAE2F5800D72708 /* BlogPost.swift */,
+				C5BE592F1ACACDAF00611975 /* Favorites.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,6 +289,7 @@
 		C5BE591D1AC77EF300611975 /* Licenses */ = {
 			isa = PBXGroup;
 			children = (
+				C5BE592D1ACACAD500611975 /* IJReachability.license */,
 				C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */,
 				C5BE59291AC78CA000611975 /* SwiftImageLoader.license */,
 			);
@@ -470,6 +476,7 @@
 				C5392FA71AAE2F6300D72708 /* LaunchScreen.xib in Resources */,
 				C5BE59261AC78A7900611975 /* acknowledgementGenerator.rb in Resources */,
 				C5392E901AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf in Resources */,
+				C5BE592E1ACACAD500611975 /* IJReachability.license in Resources */,
 				C551D8421AAF506F00AC4C8B /* .gitignore in Resources */,
 				C5392E911AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf in Resources */,
 				C5BE591C1AC77BB200611975 /* Settings.bundle in Resources */,
@@ -560,6 +567,7 @@
 				C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */,
 				C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */,
 				C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */,
+				C5BE59311ACACDAF00611975 /* Favorites.xcdatamodeld in Sources */,
 				C551D8461AAF54BE00AC4C8B /* ApiKeys.swift in Sources */,
 				C5392FA01AAE2F5800D72708 /* BlogPost.swift in Sources */,
 				C5392F8B1AAE2F3A00D72708 /* ImageLoader.swift in Sources */,
@@ -793,6 +801,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C5BE592F1ACACDAF00611975 /* Favorites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C5BE59301ACACDAF00611975 /* Favorites.xcdatamodel */,
+			);
+			currentVersion = C5BE59301ACACDAF00611975 /* Favorites.xcdatamodel */;
+			name = Favorites.xcdatamodeld;
+			path = Model/Favorites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C5CCBC821A9CF04600A4F62D /* Project object */;
 }

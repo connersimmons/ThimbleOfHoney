@@ -13,7 +13,6 @@ import IJReachability
 class PostsTableViewController: UITableViewController, XMLParserDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    //@IBOutlet weak var searchBar: UISearchBar!
     
     var xmlParser: XMLParser!
     var searchActive: Bool = false
@@ -21,19 +20,14 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         menuSetup()
         checkForInternetConnection()
         
         // Do any additional setup after loading the view.
+        parseWebsite()
         
-        //the following line can make the dividers between table rows disappear
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
-        
-        let url:NSURL = NSURL(string: "http://thimbleofhoney.com/rss")!
-        xmlParser = XMLParser()
-        xmlParser.delegate = self
-        xmlParser.startParsingContentsOfURL(url)
+        self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     /*
@@ -44,6 +38,13 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     */
     
     // MARK: XMLParserDelegate method implementation
+    
+    func parseWebsite() {
+        let url:NSURL = NSURL(string: "http://thimbleofhoney.com/rss")!
+        xmlParser = XMLParser()
+        xmlParser.delegate = self
+        xmlParser.startParsingContentsOfURL(url)
+    }
     
     func parsingWasFinished() {
         self.tableView.reloadData()
@@ -64,7 +65,23 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
 
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        //the following line can make the dividers between table rows disappear
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        if xmlParser.blogPosts.isEmpty == false {
+            return 1
+        }
+        else {
+            let refreshLabel: UILabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
+            refreshLabel.text = "No data available. Please pull down to refresh!"
+            refreshLabel.textColor = UIColor.blackColor()
+            refreshLabel.numberOfLines = 0;
+            refreshLabel.textAlignment = NSTextAlignment.Center
+            refreshLabel.font = UIFont(name: "YanoneKaffeesatz-Regular", size: 24)
+            refreshLabel.sizeToFit()
+            
+            self.tableView.backgroundView = refreshLabel
+        }
+        return 0
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -72,6 +89,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return xmlParser.blogPosts.count
     }
 
@@ -114,6 +132,14 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
            }
         }
         return imageSource
+    }
+    
+    func refresh(sender:AnyObject) {
+        self.refreshControl?.backgroundColor = UIColor.whiteColor()
+        self.refreshControl?.tintColor = UIColor.blackColor()
+        self.refreshControl?.addTarget(self, action: "parseWebsite", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
     
     func menuSetup() {
