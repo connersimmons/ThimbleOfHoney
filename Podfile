@@ -5,6 +5,7 @@ use_frameworks!
 target 'ThimbleOfHoney' do
 
 pod 'IJReachability', :git => 'https://github.com/Isuru-Nanayakkara/IJReachability.git'
+pod 'RNFrostedSidebar', '~> 0.2.0'
 
 end
 

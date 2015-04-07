@@ -1,8 +1,10 @@
 PODS:
   - IJReachability (0.1.0)
+  - RNFrostedSidebar (0.2.0)
 
 DEPENDENCIES:
   - IJReachability (from `https://github.com/Isuru-Nanayakkara/IJReachability.git`)
+  - RNFrostedSidebar (~> 0.2.0)
 
 EXTERNAL SOURCES:
   IJReachability:
@@ -15,5 +17,6 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   IJReachability: 3eff33caca50869df09b257bcf712031a56a8575
+  RNFrostedSidebar: 9491d8627e5e99b92334d36def432c0faf7ebae4
 
 COCOAPODS: 0.36.0

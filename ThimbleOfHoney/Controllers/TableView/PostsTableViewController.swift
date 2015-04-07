@@ -15,8 +15,6 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     var xmlParser: XMLParser!
-    var searchActive: Bool = false
-    var filteredTableData: [BlogPost] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +87,6 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return xmlParser.blogPosts.count
     }
 
@@ -103,13 +100,6 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         var urlString = findFirstImage(blogPost)
         ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
             cell.postImageView.image = image
-            
-            //below makes the images into circles, replace the line above with these three if you want that
-            /*
-            cell.postImageView.image = image
-            cell.postImageView.layer.cornerRadius = cell.postImageView.frame.size.width / 2;
-            cell.postImageView.clipsToBounds = true
-            */
         })
         
         return cell
@@ -190,9 +180,20 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if segue.identifier == "viewpost" {
             let viewController = segue.destinationViewController as PostDetailViewController
+            /*
             let selectedRow = self.tableView.indexPathForSelectedRow()?.row
             var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
 
+            viewController.postTitle = blogPost.postTitle
+            viewController.postDate = blogPost.postDate
+            viewController.postDesc = blogPost.postDesc
+            viewController.postLink = blogPost.postLink
+            */
+            let selectedRow = self.tableView.indexPathForSelectedRow()
+            var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!.row]
+            viewController.currentSelection = selectedRow!
+            viewController.detailsDataSource = xmlParser.blogPosts
+            viewController.detailIndex = selectedRow!.row
             viewController.postTitle = blogPost.postTitle
             viewController.postDate = blogPost.postDate
             viewController.postDesc = blogPost.postDesc

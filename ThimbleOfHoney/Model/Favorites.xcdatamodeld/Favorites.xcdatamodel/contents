@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14C1514" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Favorites" syncable="YES"/>
+    <entity name="Favorites" syncable="YES">
+        <attribute name="postDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postDesc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Favorites" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="Favorites" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
