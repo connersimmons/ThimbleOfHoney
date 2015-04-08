@@ -14,6 +14,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    let rssFeed: String = "http://thimbleofhoney.com/rss"
     var xmlParser: XMLParser!
     
     override func viewDidLoad() {
@@ -38,7 +39,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     // MARK: XMLParserDelegate method implementation
     
     func parseWebsite() {
-        let url:NSURL = NSURL(string: "http://thimbleofhoney.com/rss")!
+        let url:NSURL = NSURL(string: rssFeed)!
         xmlParser = XMLParser()
         xmlParser.delegate = self
         xmlParser.startParsingContentsOfURL(url)
@@ -97,7 +98,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
         
-        var urlString = findFirstImage(blogPost)
+        var urlString = blogPost.postDesc.findFirstImage(blogPost.postDesc)
         ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
             cell.postImageView.image = image
         })
@@ -105,28 +106,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         return cell
     }
     
-    func findFirstImage(blogPost: BlogPost) -> NSString {
-        let htmlContent = blogPost.postDesc as NSString
-        var imageSource = ""
-        
-        let rangeOfString = NSMakeRange(0, htmlContent.length)
-        let regex = NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: nil, error: nil)
-            
-        if htmlContent.length > 0 {
-           let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)
-                
-           if match != nil {
-                var imageURL = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
-                imageURL = imageURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
-                imageSource = imageURL
-           }
-        }
-        return imageSource
-    }
-    
     func refresh(sender:AnyObject) {
-        self.refreshControl?.backgroundColor = UIColor.whiteColor()
-        self.refreshControl?.tintColor = UIColor.blackColor()
         self.refreshControl?.addTarget(self, action: "parseWebsite", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
@@ -180,20 +160,10 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if segue.identifier == "viewpost" {
             let viewController = segue.destinationViewController as PostDetailViewController
-            /*
+            
             let selectedRow = self.tableView.indexPathForSelectedRow()?.row
             var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
 
-            viewController.postTitle = blogPost.postTitle
-            viewController.postDate = blogPost.postDate
-            viewController.postDesc = blogPost.postDesc
-            viewController.postLink = blogPost.postLink
-            */
-            let selectedRow = self.tableView.indexPathForSelectedRow()
-            var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!.row]
-            viewController.currentSelection = selectedRow!
-            viewController.detailsDataSource = xmlParser.blogPosts
-            viewController.detailIndex = selectedRow!.row
             viewController.postTitle = blogPost.postTitle
             viewController.postDate = blogPost.postDate
             viewController.postDesc = blogPost.postDesc

@@ -17,11 +17,7 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
+        menuSetup()
         
         // Do any additional setup after loading the view.
         let aboutMeURL = NSURL(string:"http://thimbleofhoney.com/about")
@@ -37,6 +33,14 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
             "</style>"
         
         webView.loadHTMLString(cssString + aboutMeDesc, baseURL: nil)
+    }
+    
+    func menuSetup() {
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
     }
     
     override func didReceiveMemoryWarning() {
