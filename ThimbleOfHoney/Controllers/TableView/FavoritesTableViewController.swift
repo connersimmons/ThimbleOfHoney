@@ -85,6 +85,26 @@ class FavoritesTableViewController: UITableViewController {
         return 100
     }
     
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        let refreshLabel: UILabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
+        if parseData.count > 0 {
+            self.tableView.backgroundView = nil
+            return 1
+        }
+        else {
+            refreshLabel.hidden = false
+            refreshLabel.text = "No favorite posts yet."
+            refreshLabel.textColor = UIColor.blackColor()
+            refreshLabel.numberOfLines = 0;
+            refreshLabel.textAlignment = NSTextAlignment.Center
+            refreshLabel.font = UIFont(name: "YanoneKaffeesatz-Regular", size: 24)
+            refreshLabel.sizeToFit()
+            
+            self.tableView.backgroundView = refreshLabel
+        }
+        return 0
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return parseData.count
     }
