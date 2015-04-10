@@ -93,13 +93,13 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PostsTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PostsTableViewCell
         
         let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
         
         var urlString = blogPost.postDesc.findFirstImage(blogPost.postDesc)
-        ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
+        ImageLoader.sharedLoader.imageForUrl(urlString as String, completionHandler:{(image: UIImage?, url: String) in
             cell.postImageView.image = image
         })
         
@@ -159,7 +159,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if segue.identifier == "viewpost" {
-            let viewController = segue.destinationViewController as PostDetailViewController
+            let viewController = segue.destinationViewController as! PostDetailViewController
             
             let selectedRow = self.tableView.indexPathForSelectedRow()?.row
             var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]

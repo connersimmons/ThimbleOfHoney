@@ -104,12 +104,12 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
         query.whereKey("deviceId", equalTo: currentDeviceId)
         query.whereKey("postTitle", equalTo: postTitle)
         query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
+            (objects, error) -> Void in
             if error != nil {
                 println(error)
             }
             else {
-                if objects.isEmpty {
+                if objects!.isEmpty {
                     var object = PFObject(className: "Favorite")
                     object.addObject(currentDeviceId, forKey: "deviceId")
                     object.addObject(self.postTitle, forKey: "postTitle")

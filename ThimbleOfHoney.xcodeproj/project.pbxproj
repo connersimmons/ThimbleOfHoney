@@ -25,8 +25,6 @@
 		C5392E8F1AAE2F0800D72708 /* RougeScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5392E8C1AAE2F0800D72708 /* RougeScript-Regular.ttf */; };
 		C5392E901AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5392E8D1AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf */; };
 		C5392E911AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5392E8E1AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf */; };
-		C5392E941AAE2F1C00D72708 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5392E921AAE2F1C00D72708 /* Bolts.framework */; };
-		C5392E951AAE2F1C00D72708 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5392E931AAE2F1C00D72708 /* Parse.framework */; };
 		C5392F8A1AAE2F3A00D72708 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C5392F2F1AAE2F3A00D72708 /* .gitignore */; };
 		C5392F8B1AAE2F3A00D72708 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F301AAE2F3A00D72708 /* ImageLoader.swift */; };
 		C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9B1AAE2F4400D72708 /* XMLParser.swift */; };
@@ -48,10 +46,12 @@
 		C5BE59351ACC567A00611975 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59341ACC567A00611975 /* CustomColor.swift */; };
 		C5BE59371AD1A3E900611975 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59361AD1A3E900611975 /* Favorite.swift */; };
 		C5BE593B1AD3974200611975 /* RNFrostedSidebar.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE593A1AD3974200611975 /* RNFrostedSidebar.license */; };
-		C5BE593D1AD4417600611975 /* SwiftCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE593C1AD4417600611975 /* SwiftCoreDataHelper.swift */; };
 		C5BE593F1AD443DD00611975 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */; };
 		C5BE59411AD4490100611975 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59401AD4490100611975 /* StringExtensions.swift */; };
 		C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */; };
+		C5E954811AD759D300017792 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E9547B1AD759D300017792 /* Bolts.framework */; };
+		C5E954821AD759D300017792 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E9547C1AD759D300017792 /* Parse.framework */; };
+		C5E954861AD759D300017792 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E954801AD759D300017792 /* ParseUI.framework */; };
 		C5FF36E31ABDFDC7006829E7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E21ABDFDC7006829E7 /* Social.framework */; };
 		C5FF36E51ABDFDCF006829E7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E41ABDFDCF006829E7 /* Accounts.framework */; };
 		C5FF36E71ABE1B7F006829E7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */; };
@@ -91,8 +91,6 @@
 		C5392E8C1AAE2F0800D72708 /* RougeScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RougeScript-Regular.ttf"; path = "Resources/Fonts/RougeScript-Regular.ttf"; sourceTree = "<group>"; };
 		C5392E8D1AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "QuattrocentoSans-Regular.ttf"; path = "Resources/Fonts/QuattrocentoSans-Regular.ttf"; sourceTree = "<group>"; };
 		C5392E8E1AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "YanoneKaffeesatz-Regular.ttf"; path = "Resources/Fonts/YanoneKaffeesatz-Regular.ttf"; sourceTree = "<group>"; };
-		C5392E921AAE2F1C00D72708 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
-		C5392E931AAE2F1C00D72708 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		C5392F2F1AAE2F3A00D72708 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C5392F301AAE2F3A00D72708 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		C5392F9B1AAE2F4400D72708 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParser.swift; path = Helpers/XMLParser.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 		C5BE59341ACC567A00611975 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomColor.swift; path = Helpers/CustomColor.swift; sourceTree = "<group>"; };
 		C5BE59361AD1A3E900611975 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = Model/Favorite.swift; sourceTree = "<group>"; };
 		C5BE593A1AD3974200611975 /* RNFrostedSidebar.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RNFrostedSidebar.license; path = Resources/Licenses/RNFrostedSidebar.license; sourceTree = "<group>"; };
-		C5BE593C1AD4417600611975 /* SwiftCoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftCoreDataHelper.swift; path = Helpers/SwiftCoreDataHelper.swift; sourceTree = "<group>"; };
 		C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewController.swift; path = Controllers/TableView/FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		C5BE59401AD4490100611975 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Helpers/StringExtensions.swift; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +120,9 @@
 		C5CCBC9F1A9CF04600A4F62D /* ThimbleOfHoneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThimbleOfHoneyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5CCBCA41A9CF04600A4F62D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThimbleOfHoneyTests.swift; sourceTree = "<group>"; };
+		C5E9547B1AD759D300017792 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
+		C5E9547C1AD759D300017792 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
+		C5E954801AD759D300017792 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
 		C5FF36E21ABDFDC7006829E7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C5FF36E41ABDFDCF006829E7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
@@ -135,15 +135,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E954811AD759D300017792 /* Bolts.framework in Frameworks */,
 				C5FF36E51ABDFDCF006829E7 /* Accounts.framework in Frameworks */,
+				C5E954861AD759D300017792 /* ParseUI.framework in Frameworks */,
 				C5FF36E31ABDFDC7006829E7 /* Social.framework in Frameworks */,
 				C5392E5F1AAE27CA00D72708 /* AudioToolbox.framework in Frameworks */,
 				C5392E601AAE27CA00D72708 /* CFNetwork.framework in Frameworks */,
 				C5392E611AAE27CA00D72708 /* CoreGraphics.framework in Frameworks */,
-				C5392E941AAE2F1C00D72708 /* Bolts.framework in Frameworks */,
+				C5E954821AD759D300017792 /* Parse.framework in Frameworks */,
 				C5392E621AAE27CA00D72708 /* CoreLocation.framework in Frameworks */,
 				C5392E631AAE27CA00D72708 /* libsqlite3.dylib in Frameworks */,
-				C5392E951AAE2F1C00D72708 /* Parse.framework in Frameworks */,
 				C5392E641AAE27CA00D72708 /* libz.dylib in Frameworks */,
 				C5392E651AAE27CA00D72708 /* MobileCoreServices.framework in Frameworks */,
 				C5392E661AAE27CA00D72708 /* QuartzCore.framework in Frameworks */,
@@ -186,8 +187,9 @@
 		C5392E441AAE26CD00D72708 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C5392E921AAE2F1C00D72708 /* Bolts.framework */,
-				C5392E931AAE2F1C00D72708 /* Parse.framework */,
+				C5E9547B1AD759D300017792 /* Bolts.framework */,
+				C5E9547C1AD759D300017792 /* Parse.framework */,
+				C5E954801AD759D300017792 /* ParseUI.framework */,
 				C5392E491AAE275400D72708 /* AudioToolbox.framework */,
 				C5392E4A1AAE275400D72708 /* CFNetwork.framework */,
 				C5392E4B1AAE275400D72708 /* CoreGraphics.framework */,
@@ -246,7 +248,6 @@
 		C5392E6E1AAE2A0C00D72708 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C5BE593C1AD4417600611975 /* SwiftCoreDataHelper.swift */,
 				C551D8451AAF54BE00AC4C8B /* ApiKeys.swift */,
 				C5BE59341ACC567A00611975 /* CustomColor.swift */,
 				C5392F9B1AAE2F4400D72708 /* XMLParser.swift */,
@@ -583,7 +584,6 @@
 				C5FF36ED1ABE355A006829E7 /* SWRevealViewController.m in Sources */,
 				C5BE59371AD1A3E900611975 /* Favorite.swift in Sources */,
 				C5BE593F1AD443DD00611975 /* FavoritesTableViewController.swift in Sources */,
-				C5BE593D1AD4417600611975 /* SwiftCoreDataHelper.swift in Sources */,
 				C5392E861AAE2E0300D72708 /* PostsTableViewCell.swift in Sources */,
 				C5FF36E71ABE1B7F006829E7 /* MenuViewController.swift in Sources */,
 				C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */,

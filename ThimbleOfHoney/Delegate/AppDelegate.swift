@@ -16,6 +16,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var pushNotificationController: PushNotificationController?
 
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
+        //register push notifications
+        registerPushNotifications(application)
+        
+        //gets version information for settings page
+        versionInformation()
+        
+        // Override point for customization after application launch.
+        var navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.barTintColor = UIColorFromRGB(0x499AC7)
+        navigationBarAppearace.tintColor = UIColorFromRGB(0xF4EFE6)
+        
+        let font = UIFont(name: "RougeScript-Regular", size: 32)
+        if let font = font {
+            navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColorFromRGB(0xF4EFE6)]
+        }
+        
+        return true
+    }
+    /*
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         //register push notifications
         registerPushNotifications(application)
@@ -35,26 +55,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
-
-    func applicationWillResignActive(application: UIApplication!) {
+    */
+    func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
     }
 
-    func applicationDidEnterBackground(application: UIApplication!) {
+    func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
-    func applicationWillEnterForeground(application: UIApplication!) {
+    func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-    func applicationDidBecomeActive(application: UIApplication!) {
+    func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
-    func applicationWillTerminate(application: UIApplication!) {
+    func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
@@ -96,14 +116,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else {
             // Register for Push Notifications before iOS 8
-            application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
+            //application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
+            application.registerForRemoteNotifications()
         }
     }
     
     func versionInformation() {
-        let appInfo = NSBundle.mainBundle().infoDictionary as Dictionary<String,AnyObject>
-        let shortVersionString = appInfo["CFBundleShortVersionString"] as String
-        let bundleVersion      = appInfo["CFBundleVersion"] as String
+        let appInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String,AnyObject>
+        let shortVersionString = appInfo["CFBundleShortVersionString"] as! String
+        let bundleVersion      = appInfo["CFBundleVersion"] as! String
         let applicationVersion = shortVersionString + "." + bundleVersion
         
         let defaults = NSUserDefaults.standardUserDefaults()

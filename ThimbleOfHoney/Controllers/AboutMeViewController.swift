@@ -32,7 +32,7 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
             "html {font-family: 'Quattrocento Sans', sans-serif;}" +
             "</style>"
         
-        webView.loadHTMLString(cssString + aboutMeDesc, baseURL: nil)
+        webView.loadHTMLString(cssString + (aboutMeDesc as String), baseURL: nil)
     }
     
     func menuSetup() {
@@ -60,11 +60,11 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         let regex = NSRegularExpression(pattern: "(<section class=\"content\".*?>)(<p>.*?<h2>Contact Information</h2>.*?</p>)", options: nil, error: nil)
         
         if htmlContent.length > 0 {
-            let match = regex?.firstMatchInString(htmlContent, options: nil, range: rangeOfString)
+            let match = regex?.firstMatchInString(htmlContent as String, options: nil, range: rangeOfString)
             
             if match != nil {
                 var aboutMeDesc = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
-                description = aboutMeDesc
+                description = aboutMeDesc as String
             }
         }
         return description

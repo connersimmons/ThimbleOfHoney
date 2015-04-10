@@ -50,11 +50,11 @@ class FavoritesTableViewController: UITableViewController {
         query.whereKey("deviceId", equalTo: currentDeviceId)
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock {
-            (objects:[AnyObject]!, error: NSError!) -> Void in
+            (objects, error) -> Void in
             
             if error == nil {
-                for object in objects {
-                    let post: PFObject = object as PFObject
+                for object in objects! {
+                    let post: PFObject = object as! PFObject
                     self.parseData.addObject(object)
                 }
                 
@@ -66,15 +66,15 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell {
-        let cell:PostsTableViewCell = tableView!.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath!) as PostsTableViewCell
-        let post: PFObject = self.parseData.objectAtIndex(indexPath!.row) as PFObject
+        let cell:PostsTableViewCell = tableView!.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath!) as! PostsTableViewCell
+        let post: PFObject = self.parseData.objectAtIndex(indexPath!.row) as! PFObject
         
-        var title: AnyObject = post["postTitle"].objectAtIndex(0)
+        var title: AnyObject = post["postTitle"]!.objectAtIndex(0)
         cell.postLabel.text = title as? String
         
-        var image: AnyObject = post["postDesc"].objectAtIndex(0)
-        var urlString = (image as String).findFirstImage(image as String)
-        ImageLoader.sharedLoader.imageForUrl(urlString, completionHandler:{(image: UIImage?, url: String) in
+        var image: AnyObject = post["postDesc"]!.objectAtIndex(0)
+        var urlString = (image as! String).findFirstImage(image as! String)
+        ImageLoader.sharedLoader.imageForUrl(urlString as String, completionHandler:{(image: UIImage?, url: String) in
             cell.postImageView.image = image
         })
         
@@ -112,14 +112,14 @@ class FavoritesTableViewController: UITableViewController {
 	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "viewfavorite" {
-            let viewController = segue.destinationViewController as PostDetailViewController
+            let viewController = segue.destinationViewController as! PostDetailViewController
             let selectedRow = self.tableView.indexPathForSelectedRow()?.row
-            var favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as PFObject
+            var favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as! PFObject
             
-            viewController.postTitle = favoritePost["postTitle"].objectAtIndex(0) as String
-            viewController.postDate = favoritePost["postDate"].objectAtIndex(0) as String
-            viewController.postDesc = favoritePost["postDesc"].objectAtIndex(0) as String
-            viewController.postLink = favoritePost["postLink"].objectAtIndex(0) as String
+            viewController.postTitle = favoritePost["postTitle"]!.objectAtIndex(0) as! String
+            viewController.postDate = favoritePost["postDate"]!.objectAtIndex(0) as! String
+            viewController.postDesc = favoritePost["postDesc"]!.objectAtIndex(0) as! String
+            viewController.postLink = favoritePost["postLink"]!.objectAtIndex(0) as! String
         }
 	}
 }
