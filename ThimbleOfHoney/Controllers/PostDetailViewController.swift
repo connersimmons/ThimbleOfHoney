@@ -12,20 +12,22 @@ import RNFrostedSidebar
 
 class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, RNFrostedSidebarDelegate {
     
-    @IBOutlet weak var moreButton: UIBarButtonItem!
     @IBOutlet weak var webView: UIWebView!
 
     var postTitle: String = String()
     var postDate: String = String()
     var postDesc: String = String()
     var postLink: String = String()
-    var sidebar: RNFrostedSidebar = RNFrostedSidebar(images: nil, selectedIndices: nil, borderColors: nil)
-    var optionIndices: NSMutableIndexSet = NSMutableIndexSet()
+    var device: UIDevice = UIDevice.currentDevice()
+    var currentDeviceId: NSString = NSString()
+    //var isFavorited: Bool = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.optionIndices = NSMutableIndexSet(index: 0)
+        currentDeviceId = device.identifierForVendor.UUIDString
+        //isFavoritedPost()
+        configureNavBar()
         
         let title = "<h2 style=\"text-align:center; text-transform: uppercase; color: #499AC7;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(postTitle)</h2>"
         let date = "<h3 style=\"text-align:center; color: #609d52;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(dateConversion())</h3>"
@@ -37,7 +39,11 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
             "</style>"
         
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)
-
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,37 +60,21 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
         let formattedDate: String = dateFormatter.stringFromDate(dateFromString!)
         return formattedDate
     }
-
-    @IBAction func moreAction(sender: AnyObject) {
-        let images: [UIImage] = [UIImage(named: "ios7-upload-outline")!,
-                                 UIImage(named: "ios7-star-outline")!]
-        let colors: [UIColor] = [UIColor(red:0.376 , green:0.615 , blue:0.321 , alpha:0.85 ),
-                               UIColor(red:0.376 , green:0.615 , blue:0.321 , alpha:0.85)]
-        sidebar = RNFrostedSidebar(images: images, selectedIndices: nil, borderColors: colors)
-        sidebar.delegate = self
-        sidebar.showFromRight = true
-        sidebar.show()
-    }
     
-    func sidebar(sidebar: RNFrostedSidebar!, didTapItemAtIndex index: UInt) {
-        if index == 0 {
-            shareAction()
+    func configureNavBar() {
+        var shareImage = UIImage(named: "ios7-upload-outline")
+        var starImage = UIImage(named: "ios7-star-outline")
+        /*
+        println(isFavorited)
+        if isFavorited {
+            starImage = UIImage(named: "ios7-star-full")
         }
-        else if index == 1 {
-            addToFavorites()
-        }
+        */
+        var share = UIBarButtonItem(image: shareImage, style: UIBarButtonItemStyle.Plain, target: self, action: "shareAction")
+        var favorite = UIBarButtonItem(image: starImage, style: UIBarButtonItemStyle.Plain, target: self, action: "addToFavorites")
+        
+        self.navigationItem.rightBarButtonItems = [share, favorite]
     }
-    
-    /*
-    func sidebar(sidebar: RNFrostedSidebar!, didEnable itemEnabled: Bool, itemAtIndex index: UInt) {
-        if itemEnabled {
-            self.optionIndices.addIndex(Int(index))
-        }
-        else {
-            self.optionIndices.removeIndex(Int(index))
-        }
-    }
-    */
     
     func shareAction() {
         let message = "Check out this post from Thimble of Honey!"
@@ -96,10 +86,57 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
+    /*
+    func isFavoritedPost() -> Bool{
+        var query: PFQuery = PFQuery(className: "Favorite")
+        query.whereKey("deviceId", equalTo: currentDeviceId)
+        query.whereKey("postTitle", equalTo: postTitle)
+        query.findObjectsInBackgroundWithBlock {
+            (objects, error) -> Void in
+            println(objects)
+            if error != nil {
+                println(error)
+            }
+            else {
+                if objects!.isEmpty {
+                    self.isFavorited = false
+                }
+                else {
+                    self.isFavorited = true
+                }
+            }
+        }
+        return self.isFavorited
+    }
+    */
+    /*
     func addToFavorites() {
-        var device: UIDevice = UIDevice.currentDevice()
-        var currentDeviceId: NSString = device.identifierForVendor.UUIDString
-        
+        if isFavoritedPost() {
+            let alertController = UIAlertController(title: "Oops!",
+                message: "\"\(self.postTitle)\" is already in your favorites.",
+                preferredStyle: .Alert)
+            
+            let okSelected = UIAlertAction(title: "OK", style: .Default){ (action) in
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+            
+            alertController.addAction(okSelected)
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
+        else {
+            var object = PFObject(className: "Favorite")
+            object.addObject(currentDeviceId, forKey: "deviceId")
+            object.addObject(self.postTitle, forKey: "postTitle")
+            object.addObject(self.postDate, forKey: "postDate")
+            object.addObject(self.postDesc, forKey: "postDesc")
+            object.addObject(self.postLink, forKey: "postLink")
+            object.saveInBackground()
+        }
+    }
+    */
+    
+    func addToFavorites() {
         var query: PFQuery = PFQuery(className: "Favorite")
         query.whereKey("deviceId", equalTo: currentDeviceId)
         query.whereKey("postTitle", equalTo: postTitle)
@@ -111,17 +148,16 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
             else {
                 if objects!.isEmpty {
                     var object = PFObject(className: "Favorite")
-                    object.addObject(currentDeviceId, forKey: "deviceId")
+                    object.addObject(self.currentDeviceId, forKey: "deviceId")
                     object.addObject(self.postTitle, forKey: "postTitle")
                     object.addObject(self.postDate, forKey: "postDate")
                     object.addObject(self.postDesc, forKey: "postDesc")
                     object.addObject(self.postLink, forKey: "postLink")
                     object.saveInBackground()
-                    
-                    self.sidebar.dismiss()
+                    //self.isFavorited == true
+                    //self.configureNavBar()
                 }
                 else {
-                    self.sidebar.dismiss()
                     let alertController = UIAlertController(title: "Oops!",
                         message: "\"\(self.postTitle)\" is already in your favorites.",
                         preferredStyle: .Alert)
@@ -131,10 +167,11 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
                     }
                     
                     alertController.addAction(okSelected)
-                    
                     self.presentViewController(alertController, animated: true, completion: nil)
+                    //self.configureNavBar()
                 }
             }
         }
     }
+    
 }

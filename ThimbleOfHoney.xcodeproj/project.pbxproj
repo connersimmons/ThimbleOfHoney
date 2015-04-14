@@ -45,7 +45,6 @@
 		C5BE59311ACACDAF00611975 /* Favorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5BE592F1ACACDAF00611975 /* Favorite.xcdatamodeld */; };
 		C5BE59351ACC567A00611975 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59341ACC567A00611975 /* CustomColor.swift */; };
 		C5BE59371AD1A3E900611975 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59361AD1A3E900611975 /* Favorite.swift */; };
-		C5BE593B1AD3974200611975 /* RNFrostedSidebar.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE593A1AD3974200611975 /* RNFrostedSidebar.license */; };
 		C5BE593F1AD443DD00611975 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */; };
 		C5BE59411AD4490100611975 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59401AD4490100611975 /* StringExtensions.swift */; };
 		C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */; };
@@ -112,7 +111,6 @@
 		C5BE59301ACACDAF00611975 /* Favorite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorite.xcdatamodel; sourceTree = "<group>"; };
 		C5BE59341ACC567A00611975 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomColor.swift; path = Helpers/CustomColor.swift; sourceTree = "<group>"; };
 		C5BE59361AD1A3E900611975 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = Model/Favorite.swift; sourceTree = "<group>"; };
-		C5BE593A1AD3974200611975 /* RNFrostedSidebar.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = RNFrostedSidebar.license; path = Resources/Licenses/RNFrostedSidebar.license; sourceTree = "<group>"; };
 		C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewController.swift; path = Controllers/TableView/FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		C5BE59401AD4490100611975 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Helpers/StringExtensions.swift; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,7 +305,6 @@
 		C5BE591D1AC77EF300611975 /* Licenses */ = {
 			isa = PBXGroup;
 			children = (
-				C5BE593A1AD3974200611975 /* RNFrostedSidebar.license */,
 				C5BE592D1ACACAD500611975 /* IJReachability.license */,
 				C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */,
 				C5BE59291AC78CA000611975 /* SwiftImageLoader.license */,
@@ -497,7 +494,6 @@
 				C5392E901AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf in Resources */,
 				C5BE592E1ACACAD500611975 /* IJReachability.license in Resources */,
 				C551D8421AAF506F00AC4C8B /* .gitignore in Resources */,
-				C5BE593B1AD3974200611975 /* RNFrostedSidebar.license in Resources */,
 				C5392E911AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf in Resources */,
 				C5BE591C1AC77BB200611975 /* Settings.bundle in Resources */,
 				C551D84A1AAF598900AC4C8B /* ApiKeys.plist in Resources */,

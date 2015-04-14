@@ -104,7 +104,7 @@
                                         <mask key="constraints">
                                             <include reference="6CA-M7-04g"/>
                                             <include reference="W3E-Y3-Q7g"/>
-                                            <include reference="g1u-hc-wR5"/>
+                                            <exclude reference="g1u-hc-wR5"/>
                                             <include reference="0D6-K7-crS"/>
                                             <exclude reference="4AO-4x-LrQ"/>
                                             <include reference="4F0-2v-iLC"/>
@@ -204,16 +204,9 @@
                         </variation>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="OI7-UX-7QI">
-                        <barButtonItem key="rightBarButtonItem" image="ios7-arrow-down" style="plain" id="Xlr-0X-OLK">
-                            <connections>
-                                <action selector="moreAction:" destination="STg-bn-REY" id="KeI-Of-b0e"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="OI7-UX-7QI"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="moreButton" destination="Xlr-0X-OLK" id="kRP-tf-fwU"/>
                         <outlet property="webView" destination="3pC-vn-Qtf" id="OPV-J1-iug"/>
                     </connections>
                 </viewController>
@@ -1214,7 +1207,6 @@
         <image name="Pinterest" width="96" height="96"/>
         <image name="Twitter" width="96" height="96"/>
         <image name="favorite" width="76" height="76"/>
-        <image name="ios7-arrow-down" width="29" height="29"/>
         <image name="menu" width="22" height="22"/>
         <image name="placeholder" width="100" height="100"/>
         <image name="post" width="30" height="30"/>
@@ -1223,7 +1215,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UYf-ny-7sa"/>
-        <segue reference="a6C-Iy-liN"/>
+        <segue reference="aE1-yA-2o6"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

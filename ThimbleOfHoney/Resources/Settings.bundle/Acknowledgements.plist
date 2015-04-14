@@ -26,14 +26,6 @@
         <key>Type</key>
         <string>PSChildPaneSpecifier</string>
         <key>Title</key>
-        <string>RNFrostedSidebar</string>
-        <key>File</key>
-        <string>Acknowledgement-RNFrostedSidebar</string>
-      </dict>
-      <dict>
-        <key>Type</key>
-        <string>PSChildPaneSpecifier</string>
-        <key>Title</key>
         <string>SwiftImageLoader</string>
         <key>File</key>
         <string>Acknowledgement-SwiftImageLoader</string>

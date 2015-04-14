@@ -12,9 +12,3 @@
 #define COCOAPODS_VERSION_MINOR_IJReachability 1
 #define COCOAPODS_VERSION_PATCH_IJReachability 0
 
-// RNFrostedSidebar
-#define COCOAPODS_POD_AVAILABLE_RNFrostedSidebar
-#define COCOAPODS_VERSION_MAJOR_RNFrostedSidebar 0
-#define COCOAPODS_VERSION_MINOR_RNFrostedSidebar 2
-#define COCOAPODS_VERSION_PATCH_RNFrostedSidebar 0
-
