@@ -42,9 +42,7 @@
 		C5BE592A1AC78CA000611975 /* SwiftImageLoader.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE59291AC78CA000611975 /* SwiftImageLoader.license */; };
 		C5BE592C1AC78F9D00611975 /* SWRevealViewController.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */; };
 		C5BE592E1ACACAD500611975 /* IJReachability.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE592D1ACACAD500611975 /* IJReachability.license */; };
-		C5BE59311ACACDAF00611975 /* Favorite.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5BE592F1ACACDAF00611975 /* Favorite.xcdatamodeld */; };
-		C5BE59351ACC567A00611975 /* CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59341ACC567A00611975 /* CustomColor.swift */; };
-		C5BE59371AD1A3E900611975 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59361AD1A3E900611975 /* Favorite.swift */; };
+		C5BE59351ACC567A00611975 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59341ACC567A00611975 /* UIColorExtensions.swift */; };
 		C5BE593F1AD443DD00611975 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */; };
 		C5BE59411AD4490100611975 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59401AD4490100611975 /* StringExtensions.swift */; };
 		C5CCBCA61A9CF04600A4F62D /* ThimbleOfHoneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CCBCA51A9CF04600A4F62D /* ThimbleOfHoneyTests.swift */; };
@@ -108,9 +106,7 @@
 		C5BE59291AC78CA000611975 /* SwiftImageLoader.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftImageLoader.license; path = Resources/Licenses/SwiftImageLoader.license; sourceTree = "<group>"; };
 		C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SWRevealViewController.license; path = Resources/Licenses/SWRevealViewController.license; sourceTree = "<group>"; };
 		C5BE592D1ACACAD500611975 /* IJReachability.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IJReachability.license; path = Resources/Licenses/IJReachability.license; sourceTree = "<group>"; };
-		C5BE59301ACACDAF00611975 /* Favorite.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favorite.xcdatamodel; sourceTree = "<group>"; };
-		C5BE59341ACC567A00611975 /* CustomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomColor.swift; path = Helpers/CustomColor.swift; sourceTree = "<group>"; };
-		C5BE59361AD1A3E900611975 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = Model/Favorite.swift; sourceTree = "<group>"; };
+		C5BE59341ACC567A00611975 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtensions.swift; path = Helpers/UIColorExtensions.swift; sourceTree = "<group>"; };
 		C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewController.swift; path = Controllers/TableView/FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		C5BE59401AD4490100611975 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Helpers/StringExtensions.swift; sourceTree = "<group>"; };
 		C5CCBC8A1A9CF04600A4F62D /* ThimbleOfHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThimbleOfHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,8 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				C5392F9F1AAE2F5800D72708 /* BlogPost.swift */,
-				C5BE592F1ACACDAF00611975 /* Favorite.xcdatamodeld */,
-				C5BE59361AD1A3E900611975 /* Favorite.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -247,7 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				C551D8451AAF54BE00AC4C8B /* ApiKeys.swift */,
-				C5BE59341ACC567A00611975 /* CustomColor.swift */,
+				C5BE59341ACC567A00611975 /* UIColorExtensions.swift */,
 				C5392F9B1AAE2F4400D72708 /* XMLParser.swift */,
 				C5BE59401AD4490100611975 /* StringExtensions.swift */,
 			);
@@ -578,15 +572,13 @@
 				C5392E8A1AAE2EB800D72708 /* AboutMeViewController.swift in Sources */,
 				C5392E851AAE2E0300D72708 /* PostsTableViewController.swift in Sources */,
 				C5FF36ED1ABE355A006829E7 /* SWRevealViewController.m in Sources */,
-				C5BE59371AD1A3E900611975 /* Favorite.swift in Sources */,
 				C5BE593F1AD443DD00611975 /* FavoritesTableViewController.swift in Sources */,
 				C5392E861AAE2E0300D72708 /* PostsTableViewCell.swift in Sources */,
 				C5FF36E71ABE1B7F006829E7 /* MenuViewController.swift in Sources */,
 				C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */,
 				C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */,
 				C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */,
-				C5BE59351ACC567A00611975 /* CustomColor.swift in Sources */,
-				C5BE59311ACACDAF00611975 /* Favorite.xcdatamodeld in Sources */,
+				C5BE59351ACC567A00611975 /* UIColorExtensions.swift in Sources */,
 				C551D8461AAF54BE00AC4C8B /* ApiKeys.swift in Sources */,
 				C5BE59411AD4490100611975 /* StringExtensions.swift in Sources */,
 				C5392FA01AAE2F5800D72708 /* BlogPost.swift in Sources */,
@@ -821,20 +813,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C5BE592F1ACACDAF00611975 /* Favorite.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C5BE59301ACACDAF00611975 /* Favorite.xcdatamodel */,
-			);
-			currentVersion = C5BE59301ACACDAF00611975 /* Favorite.xcdatamodel */;
-			name = Favorite.xcdatamodeld;
-			path = Model/Favorite.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C5CCBC821A9CF04600A4F62D /* Project object */;
 }

@@ -24,12 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         var navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.barTintColor = UIColorFromRGB(0x499AC7)
-        navigationBarAppearance.tintColor = UIColorFromRGB(0xF4EFE6)
+        navigationBarAppearance.barTintColor = UIColor(rgb: 0x499AC7)
+        navigationBarAppearance.tintColor = UIColor(rgb: 0xF4EFE6)
         
         let font = UIFont(name: "RougeScript-Regular", size: 30)
         if let font = font {
-            navigationBarAppearance.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColorFromRGB(0xF4EFE6)]
+            navigationBarAppearance.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor(rgb: 0xF4EFE6)]
         }
         
         return true
@@ -63,9 +63,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let currentInstallation = PFInstallation.currentInstallation()
         
         currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.saveInBackground()
+        
+        /*
         currentInstallation.saveInBackgroundWithBlock { (succeeded, e) -> Void in
             //code
         }
+        */
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
@@ -109,15 +113,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(applicationVersion, forKey: "application_version")
         defaults.synchronize()
-    }
-    
-    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-            alpha: CGFloat(1.0)
-        )
     }
 }
 

@@ -20,7 +20,6 @@ class FavoritesTableViewController: UITableViewController {
         menuSetup()
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
@@ -97,7 +96,7 @@ class FavoritesTableViewController: UITableViewController {
         else {
             refreshLabel.hidden = false
             refreshLabel.text = "No favorite posts yet."
-            refreshLabel.textColor = UIColor.blackColor()
+            refreshLabel.textColor = UIColor(rgb: 0x499AC7)
             refreshLabel.numberOfLines = 0;
             refreshLabel.textAlignment = NSTextAlignment.Center
             refreshLabel.font = UIFont(name: "YanoneKaffeesatz-Regular", size: 24)

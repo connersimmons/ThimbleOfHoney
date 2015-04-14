@@ -72,7 +72,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         else {
             let refreshLabel: UILabel = UILabel(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
             refreshLabel.text = "No data available. Please pull down to refresh!"
-            refreshLabel.textColor = UIColor.blackColor()
+            refreshLabel.textColor = UIColor(rgb: 0x499AC7)
             refreshLabel.numberOfLines = 0;
             refreshLabel.textAlignment = NSTextAlignment.Center
             refreshLabel.font = UIFont(name: "YanoneKaffeesatz-Regular", size: 24)

@@ -16,7 +16,6 @@ class PushNotificationController: NSObject {
         let parseApplicationID = valueForAPIKey(keyname: "PARSE_APPLICATION_ID")
         let parseClientKey = valueForAPIKey(keyname: "PARSE_CLIENT_KEY")
         Parse.setApplicationId(parseApplicationID, clientKey: parseClientKey)
-        
     }
     
 }
