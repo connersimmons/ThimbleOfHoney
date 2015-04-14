@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import CoreData
-import RNFrostedSidebar
 
-class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, RNFrostedSidebarDelegate {
+class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var webView: UIWebView!
 
@@ -41,9 +39,14 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        let font = UIFont(name: "RougeScript-Regular", size: 32)
+        if let font = font {
+            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        }
         
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(nil, forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,7 +85,12 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate, R
         
         let activityItems = [message, link!]
         let vc = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-        //UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(20)]
+        
+        let font = UIFont(name: "YanoneKaffeesatz-Regular", size: 18)
+        if let font = font {
+            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
+        }
+        
         self.presentViewController(vc, animated: true, completion: nil)
     }
     

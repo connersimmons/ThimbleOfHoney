@@ -18,6 +18,9 @@ class FavoritesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         menuSetup()
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
@@ -107,6 +110,21 @@ class FavoritesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return parseData.count
+    }
+    
+    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath?) {
+        
+        switch editingStyle {
+            
+        case .Delete:
+            var selectedQuoteFromFavourites: PFObject = self.parseData.objectAtIndex(indexPath!.row) as! PFObject
+            selectedQuoteFromFavourites.deleteInBackground()
+            self.parseData.removeObjectAtIndex(indexPath!.row)
+            self.tableView.reloadData()
+            
+        default:
+            return
+        }
     }
 	
 	// In a storyboard-based application, you will often want to do a little preparation before navigation

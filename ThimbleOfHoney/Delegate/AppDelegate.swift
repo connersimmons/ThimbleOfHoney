@@ -8,7 +8,6 @@
 
 import UIKit
 import Parse
-import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,13 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         versionInformation()
         
         // Override point for customization after application launch.
-        var navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.barTintColor = UIColorFromRGB(0x499AC7)
-        navigationBarAppearace.tintColor = UIColorFromRGB(0xF4EFE6)
+        var navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.barTintColor = UIColorFromRGB(0x499AC7)
+        navigationBarAppearance.tintColor = UIColorFromRGB(0xF4EFE6)
         
-        let font = UIFont(name: "RougeScript-Regular", size: 32)
+        let font = UIFont(name: "RougeScript-Regular", size: 30)
         if let font = font {
-            navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColorFromRGB(0xF4EFE6)]
+            navigationBarAppearance.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColorFromRGB(0xF4EFE6)]
         }
         
         return true
