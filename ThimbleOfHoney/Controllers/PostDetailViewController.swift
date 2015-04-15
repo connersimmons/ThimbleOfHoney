@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import iAd
 
 class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -37,6 +38,8 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
             "</style>"
         
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)
+        
+        self.canDisplayBannerAds = true
     }
     
     override func viewWillAppear(animated: Bool) {

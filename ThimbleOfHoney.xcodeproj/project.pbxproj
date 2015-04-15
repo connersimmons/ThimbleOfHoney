@@ -49,6 +49,7 @@
 		C5E954811AD759D300017792 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E9547B1AD759D300017792 /* Bolts.framework */; };
 		C5E954821AD759D300017792 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E9547C1AD759D300017792 /* Parse.framework */; };
 		C5E954861AD759D300017792 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5E954801AD759D300017792 /* ParseUI.framework */; };
+		C5F58E5F1ADE0A0500FE76B6 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F58E5E1ADE0A0500FE76B6 /* iAd.framework */; };
 		C5FF36E31ABDFDC7006829E7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E21ABDFDC7006829E7 /* Social.framework */; };
 		C5FF36E51ABDFDCF006829E7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FF36E41ABDFDCF006829E7 /* Accounts.framework */; };
 		C5FF36E71ABE1B7F006829E7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */; };
@@ -117,6 +118,7 @@
 		C5E9547B1AD759D300017792 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Frameworks/Bolts.framework; sourceTree = "<group>"; };
 		C5E9547C1AD759D300017792 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Frameworks/Parse.framework; sourceTree = "<group>"; };
 		C5E954801AD759D300017792 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Frameworks/ParseUI.framework; sourceTree = "<group>"; };
+		C5F58E5E1ADE0A0500FE76B6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		C5FF36E21ABDFDC7006829E7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		C5FF36E41ABDFDCF006829E7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		C5FF36E61ABE1B7F006829E7 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuViewController.swift; path = Controllers/MenuViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F58E5F1ADE0A0500FE76B6 /* iAd.framework in Frameworks */,
 				C5E954811AD759D300017792 /* Bolts.framework in Frameworks */,
 				C5FF36E51ABDFDCF006829E7 /* Accounts.framework in Frameworks */,
 				C5E954861AD759D300017792 /* ParseUI.framework in Frameworks */,
@@ -162,6 +165,7 @@
 		05B61D6BCF06FDF66712591F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5F58E5E1ADE0A0500FE76B6 /* iAd.framework */,
 				C5FF36E41ABDFDCF006829E7 /* Accounts.framework */,
 				C5FF36E21ABDFDC7006829E7 /* Social.framework */,
 				1D152754AF0CF5076F760966 /* Pods_ThimbleOfHoney.framework */,
