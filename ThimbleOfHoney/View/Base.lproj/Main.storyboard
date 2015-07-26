@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s7r-Zc-PH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s7r-Zc-PH0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -176,22 +176,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3pC-vn-Qtf" firstAttribute="leading" secondItem="1JZ-4v-0Qt" secondAttribute="leading" id="3iI-ve-4OO"/>
-                            <constraint firstAttribute="trailing" secondItem="3pC-vn-Qtf" secondAttribute="trailing" id="9XM-Gy-bSX"/>
-                            <constraint firstAttribute="bottom" secondItem="3pC-vn-Qtf" secondAttribute="bottom" id="Kmi-E3-Zkb"/>
-                            <constraint firstItem="3pC-vn-Qtf" firstAttribute="top" secondItem="qca-4Q-u6G" secondAttribute="bottom" id="U5O-B0-I4C">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-64"/>
-                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="3pC-vn-Qtf" secondAttribute="bottom" id="Ma3-bS-o4C"/>
+                            <constraint firstItem="3pC-vn-Qtf" firstAttribute="leading" secondItem="1JZ-4v-0Qt" secondAttribute="leading" id="hDb-mc-5rr"/>
+                            <constraint firstAttribute="trailing" secondItem="3pC-vn-Qtf" secondAttribute="trailing" id="hPJ-ds-fu5"/>
+                            <constraint firstItem="3pC-vn-Qtf" firstAttribute="top" secondItem="qca-4Q-u6G" secondAttribute="bottom" id="vl7-pV-KBS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3pC-vn-Qtf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="3iI-ve-4OO"/>
-                                <exclude reference="9XM-Gy-bSX"/>
-                                <exclude reference="Kmi-E3-Zkb"/>
-                                <exclude reference="U5O-B0-I4C"/>
+                                <exclude reference="Ma3-bS-o4C"/>
+                                <exclude reference="hDb-mc-5rr"/>
+                                <exclude reference="hPJ-ds-fu5"/>
+                                <exclude reference="vl7-pV-KBS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -199,13 +197,14 @@
                                 <include reference="3pC-vn-Qtf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3iI-ve-4OO"/>
-                                <include reference="9XM-Gy-bSX"/>
-                                <include reference="Kmi-E3-Zkb"/>
-                                <include reference="U5O-B0-I4C"/>
+                                <include reference="Ma3-bS-o4C"/>
+                                <include reference="hDb-mc-5rr"/>
+                                <include reference="hPJ-ds-fu5"/>
+                                <include reference="vl7-pV-KBS"/>
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OI7-UX-7QI"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -215,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz6-A7-IAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="711"/>
+            <point key="canvasLocation" x="1638" y="738.75"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="EqD-xC-XE9">
@@ -1218,7 +1217,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UYf-ny-7sa"/>
-        <segue reference="aE1-yA-2o6"/>
+        <segue reference="a6C-Iy-liN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

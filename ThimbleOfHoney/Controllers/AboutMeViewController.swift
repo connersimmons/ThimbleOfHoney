@@ -20,7 +20,7 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         menuSetup()
         
         // Do any additional setup after loading the view.
-        let aboutMeURL = NSURL(string:"http://thimbleofhoney.com/about")
+        let aboutMeURL = NSURL(string:"http://thimbleofhoney.dreamhosters.com/about-me/")
         let htmlString = NSData(contentsOfURL: aboutMeURL!)
         var dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
         
@@ -57,14 +57,15 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         var description = ""
         
         let rangeOfString = NSMakeRange(0, htmlContent.length)
-        let regex = NSRegularExpression(pattern: "(<section class=\"content\".*?>)(<p>.*?<h2>Contact Information</h2>.*?</p>)", options: nil, error: nil)
+        let pattern: String = "(<div class=\"entry-content\" itemprop=\"text\"><p>)([\\s\\S]+?)(</div>)"
+        let regex = NSRegularExpression(pattern: pattern, options: nil, error: nil)
         
         if htmlContent.length > 0 {
             let match = regex?.firstMatchInString(htmlContent as String, options: nil, range: rangeOfString)
             
             if match != nil {
                 var aboutMeDesc = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
-                description = aboutMeDesc as String
+                description += aboutMeDesc as String
             }
         }
         return description

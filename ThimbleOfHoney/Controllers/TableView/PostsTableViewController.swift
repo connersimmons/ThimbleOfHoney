@@ -14,7 +14,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-    let rssFeed: String = "http://thimbleofhoney.com/rss"
+    let rssFeed: String = "http://thimbleofhoney.dreamhosters.com/feed/"
     var xmlParser: XMLParser!
     
     override func viewDidLoad() {
@@ -91,7 +91,6 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         return xmlParser.blogPosts.count
     }
 
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! PostsTableViewCell
         

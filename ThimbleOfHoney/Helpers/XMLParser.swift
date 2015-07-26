@@ -53,10 +53,9 @@ class XMLParser: NSObject, NSXMLParserDelegate {
                 postTitle += data
             } else if curElement == "link" {
                 postLink += data
-            } else if curElement == "description" {
+            } else if curElement == "content:encoded" {
                 postDesc += data
-            }
-            else if curElement == "pubDate" {
+            } else if curElement == "pubDate" {
                 postDate += data
             }
         }

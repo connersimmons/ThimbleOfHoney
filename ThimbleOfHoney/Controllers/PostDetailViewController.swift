@@ -19,14 +19,12 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     var postLink: String = String()
     var device: UIDevice = UIDevice.currentDevice()
     var currentDeviceId: NSString = NSString()
-    //var isFavorited: Bool = Bool()
+    var isFavorited: Bool = Bool()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         currentDeviceId = device.identifierForVendor.UUIDString
-        //isFavoritedPost()
-        configureNavBar()
         
         let title = "<h2 style=\"text-align:center; text-transform: uppercase; color: #499AC7;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(postTitle)</h2>"
         let date = "<h3 style=\"text-align:center; color: #609d52;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(dateConversion())</h3>"
@@ -39,17 +37,20 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)
         
+        configureNavBar()
+        
         self.canDisplayBannerAds = true
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         let font = UIFont(name: "RougeScript-Regular", size: 32)
         if let font = font {
             UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
         }
         
-        UIBarButtonItem.appearance().setBackButtonBackgroundImage(nil, forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
+        isFavoritedPost()
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,12 +71,12 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     func configureNavBar() {
         var shareImage = UIImage(named: "ios7-upload-outline")
         var starImage = UIImage(named: "ios7-star-outline")
-        /*
-        println(isFavorited)
+        
+        println("Favorited: \(self.isFavorited)")
         if isFavorited {
             starImage = UIImage(named: "ios7-star-full")
         }
-        */
+        
         var share = UIBarButtonItem(image: shareImage, style: UIBarButtonItemStyle.Plain, target: self, action: "shareAction")
         var favorite = UIBarButtonItem(image: starImage, style: UIBarButtonItemStyle.Plain, target: self, action: "addToFavorites")
         
@@ -97,29 +98,32 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
-    /*
-    func isFavoritedPost() -> Bool{
+    func isFavoritedPost(){
         var query: PFQuery = PFQuery(className: "Favorite")
+        println("postTitle: \(postTitle);   currentDeviceId: \(currentDeviceId)")
         query.whereKey("deviceId", equalTo: currentDeviceId)
         query.whereKey("postTitle", equalTo: postTitle)
         query.findObjectsInBackgroundWithBlock {
             (objects, error) -> Void in
-            println(objects)
+            //println(objects)
             if error != nil {
                 println(error)
             }
             else {
                 if objects!.isEmpty {
+                    println("Not a favorited post.")
                     self.isFavorited = false
                 }
                 else {
+                    println("Is a favorited post.")
                     self.isFavorited = true
                 }
             }
         }
-        return self.isFavorited
+        println("Query is over.")
     }
-    */
+    
+    
     /*
     func addToFavorites() {
         if isFavoritedPost() {
