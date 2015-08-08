@@ -30,8 +30,7 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         let date = "<h3 style=\"text-align:center; color: #609d52;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(dateConversion())</h3>"
         
         var cssString = "<style type='text/css'>" +
-            "img {max-width: 100%; width: auto; height: auto;}" +
-            "body {background-color:#F4EFE6;}" +
+            "img {max-width: 100%; display: block; margin-left: auto; margin-right: auto}" +
             "html {font-family: 'Quattrocento Sans', sans-serif;}" +
             "</style>"
         

@@ -107,8 +107,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func versionInformation() {
         let appInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String,AnyObject>
         let shortVersionString = appInfo["CFBundleShortVersionString"] as! String
-        let bundleVersion      = appInfo["CFBundleVersion"] as! String
-        let applicationVersion = shortVersionString + "." + bundleVersion
+        //let bundleVersion      = appInfo["CFBundleVersion"] as! String
+        //let applicationVersion = shortVersionString + "." + bundleVersion
+        let applicationVersion = shortVersionString
         
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(applicationVersion, forKey: "application_version")

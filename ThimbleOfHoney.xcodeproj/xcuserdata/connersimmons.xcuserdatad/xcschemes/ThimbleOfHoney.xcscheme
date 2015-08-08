@@ -107,7 +107,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "ThimbleOfHoney"
+      customArchiveName = "ThimbleOfHoney-072615"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

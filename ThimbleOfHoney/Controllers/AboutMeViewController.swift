@@ -28,7 +28,6 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         
         var cssString = "<style type='text/css'>" +
             "img {max-width: 100%; width: auto; height: auto;}" +
-            "body {background-color:#f4efe6;}" +
             "html {font-family: 'Quattrocento Sans', sans-serif;}" +
             "</style>"
         
