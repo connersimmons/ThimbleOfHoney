@@ -38,8 +38,6 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)
         
-        //configureNavBar()
-        
         self.canDisplayBannerAds = true
     }
     
@@ -52,8 +50,6 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
         isFavoritedPost()
-        
-        //configureNavBar()
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,15 +68,6 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func configureNavBar() {
-        /*
-        println("Favorited: \(self.isFavorited)")
-        if isFavorited {
-            self.starImage = UIImage(named: "ios7-star-full")!
-        } else {
-            self.starImage = UIImage(named: "ios7-star-outline")!
-        }
-        */
-        
         var share = UIBarButtonItem(image: shareImage, style: UIBarButtonItemStyle.Plain, target: self, action: "shareAction")
         var favorite = UIBarButtonItem(image: starImage, style: UIBarButtonItemStyle.Plain, target: self, action: "addToFavorites")
         
@@ -103,7 +90,7 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func isFavoritedPost() {
-        if findQuery() > 0 {
+        if findQuery().countObjects() > 0 {
             self.starImage = UIImage(named: "ios7-star-full")!
             self.isFavorited = true
         }
@@ -115,19 +102,12 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func addToFavorites() {
-        if findQuery() > 0 {
-            //self.isFavorited == false
+        if findQuery().countObjects() > 0 {
+            self.starImage = UIImage(named: "ios7-star-outline")!
+            self.isFavorited == false
             
-            let alertController = UIAlertController(title: "Oops!",
-                message: "\"\(self.postTitle)\" is already in your favorites.",
-                preferredStyle: .Alert)
-            
-            let okSelected = UIAlertAction(title: "OK", style: .Default){ (action) in
-                self.dismissViewControllerAnimated(true, completion: nil)
-            }
-            
-            alertController.addAction(okSelected)
-            self.presentViewController(alertController, animated: true, completion: nil)
+            var object = findQuery().getFirstObject()
+            object?.deleteInBackground()
         }
         else {
             self.starImage = UIImage(named: "ios7-star-full")!
@@ -145,57 +125,11 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         configureNavBar()
     }
     
-    func findQuery() -> Int {
+    func findQuery() -> PFQuery {
         var query: PFQuery = PFQuery(className: "Favorite")
         println("postTitle: \(postTitle);   currentDeviceId: \(currentDeviceId)")
         query.whereKey("deviceId", equalTo: currentDeviceId)
         query.whereKey("postTitle", equalTo: postTitle)
-        var count = query.findObjects()?.count
-        println("Query is over.")
-        return count!
+        return query
     }
-
-    /*
-    func addToFavorites() {
-        var query: PFQuery = PFQuery(className: "Favorite")
-        query.whereKey("deviceId", equalTo: currentDeviceId)
-        query.whereKey("postTitle", equalTo: postTitle)
-        query.findObjectsInBackgroundWithBlock {
-            (objects, error) -> Void in
-            if error != nil {
-                println(error)
-            }
-            else {
-                if objects!.isEmpty {
-                    self.isFavorited == true
-                    var object = PFObject(className: "Favorite")
-                    object.addObject(self.currentDeviceId, forKey: "deviceId")
-                    object.addObject(self.postTitle, forKey: "postTitle")
-                    object.addObject(self.postDate, forKey: "postDate")
-                    object.addObject(self.postDesc, forKey: "postDesc")
-                    object.addObject(self.postLink, forKey: "postLink")
-                    object.saveInBackground()
-                    //self.isFavorited == true
-                    //self.configureNavBar()
-                }
-                else {
-                    let alertController = UIAlertController(title: "Oops!",
-                        message: "\"\(self.postTitle)\" is already in your favorites.",
-                        preferredStyle: .Alert)
-                    
-                    let okSelected = UIAlertAction(title: "OK", style: .Default){ (action) in
-                        self.dismissViewControllerAnimated(true, completion: nil)
-                    }
-                    
-                    alertController.addAction(okSelected)
-                    self.presentViewController(alertController, animated: true, completion: nil)
-                    //self.configureNavBar()
-                    
-                    self.isFavorited == false
-                }
-            }
-        }
-        self.configureNavBar()
-    }
-    */
 }
