@@ -20,6 +20,8 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     var device: UIDevice = UIDevice.currentDevice()
     var currentDeviceId: NSString = NSString()
     var isFavorited: Bool = Bool()
+    var shareImage: UIImage = UIImage(named: "ios7-upload-outline")!
+    var starImage: UIImage = UIImage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +38,7 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         
         webView.loadHTMLString(title + date + cssString + postDesc, baseURL: nil)
         
-        configureNavBar()
+        //configureNavBar()
         
         self.canDisplayBannerAds = true
     }
@@ -50,6 +52,8 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
         isFavoritedPost()
+        
+        //configureNavBar()
     }
     
     override func didReceiveMemoryWarning() {
@@ -68,13 +72,14 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func configureNavBar() {
-        var shareImage = UIImage(named: "ios7-upload-outline")
-        var starImage = UIImage(named: "ios7-star-outline")
-        
+        /*
         println("Favorited: \(self.isFavorited)")
         if isFavorited {
-            starImage = UIImage(named: "ios7-star-full")
+            self.starImage = UIImage(named: "ios7-star-full")!
+        } else {
+            self.starImage = UIImage(named: "ios7-star-outline")!
         }
+        */
         
         var share = UIBarButtonItem(image: shareImage, style: UIBarButtonItemStyle.Plain, target: self, action: "shareAction")
         var favorite = UIBarButtonItem(image: starImage, style: UIBarButtonItemStyle.Plain, target: self, action: "addToFavorites")
@@ -97,35 +102,22 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
         self.presentViewController(vc, animated: true, completion: nil)
     }
     
-    func isFavoritedPost(){
-        var query: PFQuery = PFQuery(className: "Favorite")
-        println("postTitle: \(postTitle);   currentDeviceId: \(currentDeviceId)")
-        query.whereKey("deviceId", equalTo: currentDeviceId)
-        query.whereKey("postTitle", equalTo: postTitle)
-        query.findObjectsInBackgroundWithBlock {
-            (objects, error) -> Void in
-            //println(objects)
-            if error != nil {
-                println(error)
-            }
-            else {
-                if objects!.isEmpty {
-                    println("Not a favorited post.")
-                    self.isFavorited = false
-                }
-                else {
-                    println("Is a favorited post.")
-                    self.isFavorited = true
-                }
-            }
+    func isFavoritedPost() {
+        if findQuery() > 0 {
+            self.starImage = UIImage(named: "ios7-star-full")!
+            self.isFavorited = true
         }
-        println("Query is over.")
+        else {
+            self.starImage = UIImage(named: "ios7-star-outline")!
+            self.isFavorited = false
+        }
+        configureNavBar()
     }
     
-    
-    /*
     func addToFavorites() {
-        if isFavoritedPost() {
+        if findQuery() > 0 {
+            //self.isFavorited == false
+            
             let alertController = UIAlertController(title: "Oops!",
                 message: "\"\(self.postTitle)\" is already in your favorites.",
                 preferredStyle: .Alert)
@@ -135,21 +127,35 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
             }
             
             alertController.addAction(okSelected)
-            
             self.presentViewController(alertController, animated: true, completion: nil)
         }
         else {
+            self.starImage = UIImage(named: "ios7-star-full")!
+            
             var object = PFObject(className: "Favorite")
-            object.addObject(currentDeviceId, forKey: "deviceId")
+            object.addObject(self.currentDeviceId, forKey: "deviceId")
             object.addObject(self.postTitle, forKey: "postTitle")
             object.addObject(self.postDate, forKey: "postDate")
             object.addObject(self.postDesc, forKey: "postDesc")
             object.addObject(self.postLink, forKey: "postLink")
             object.saveInBackground()
+            
+            self.isFavorited == true
         }
+        configureNavBar()
     }
-    */
     
+    func findQuery() -> Int {
+        var query: PFQuery = PFQuery(className: "Favorite")
+        println("postTitle: \(postTitle);   currentDeviceId: \(currentDeviceId)")
+        query.whereKey("deviceId", equalTo: currentDeviceId)
+        query.whereKey("postTitle", equalTo: postTitle)
+        var count = query.findObjects()?.count
+        println("Query is over.")
+        return count!
+    }
+
+    /*
     func addToFavorites() {
         var query: PFQuery = PFQuery(className: "Favorite")
         query.whereKey("deviceId", equalTo: currentDeviceId)
@@ -161,6 +167,7 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
             }
             else {
                 if objects!.isEmpty {
+                    self.isFavorited == true
                     var object = PFObject(className: "Favorite")
                     object.addObject(self.currentDeviceId, forKey: "deviceId")
                     object.addObject(self.postTitle, forKey: "postTitle")
@@ -183,9 +190,12 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
                     alertController.addAction(okSelected)
                     self.presentViewController(alertController, animated: true, completion: nil)
                     //self.configureNavBar()
+                    
+                    self.isFavorited == false
                 }
             }
         }
+        self.configureNavBar()
     }
-    
+    */
 }
