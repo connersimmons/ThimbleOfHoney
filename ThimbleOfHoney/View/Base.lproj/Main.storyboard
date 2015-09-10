@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s7r-Zc-PH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="s7r-Zc-PH0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -137,7 +137,6 @@
         <!--Reveal View Controller-->
         <scene sceneID="EqD-xC-XE9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uTs-0f-zZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="s7r-Zc-PH0" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CPK-yD-5C6"/>
@@ -153,6 +152,7 @@
                         <segue destination="Lxh-dm-3au" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="9Yz-UT-hag"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTs-0f-zZr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2392" y="-431"/>
         </scene>
@@ -648,7 +648,7 @@
         <image name="menu" width="22" height="22"/>
         <image name="placeholder" width="100" height="100"/>
         <image name="post" width="30" height="30"/>
-        <image name="profile" width="60" height="60"/>
+        <image name="profile" width="76" height="76"/>
         <image name="thimble" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
