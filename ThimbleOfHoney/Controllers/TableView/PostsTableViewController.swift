@@ -16,6 +16,8 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate, UISpli
     let rssFeed: String = "http://thimbleofhoney.dreamhosters.com/feed/"
     var xmlParser: XMLParser!
     
+    var detailViewController: PostDetailViewController? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,6 +38,8 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate, UISpli
         
         self.splitViewController!.delegate = self;
         self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+        
+        setupSplitViewData()
     }
     
     // MARK: XMLParserDelegate method implementation
@@ -49,6 +53,22 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate, UISpli
     
     func parsingWasFinished() {
         self.tableView.reloadData()
+    }
+    
+    func setupSplitViewData() {
+        if let split = self.splitViewController {
+            let controllers = split.viewControllers
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? PostDetailViewController
+            
+            if xmlParser.blogPosts.count > 0 {
+                self.detailViewController?.postTitle = xmlParser.blogPosts[0].postTitle
+                self.detailViewController?.postDate = xmlParser.blogPosts[0].postDate
+                self.detailViewController?.postDesc = xmlParser.blogPosts[0].postDesc
+                self.detailViewController?.postLink = xmlParser.blogPosts[0].postLink
+            } else {
+                print("xmlParser.blogPosts empty")
+            }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {

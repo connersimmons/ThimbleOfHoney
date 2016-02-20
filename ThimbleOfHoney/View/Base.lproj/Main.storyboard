@@ -26,13 +26,13 @@
             <objects>
                 <tableViewController storyboardIdentifier="PostsTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5JG-WC-aUD" customClass="PostsTableViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" id="ujo-oN-dcp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="TMF-aW-OzL" customClass="PostsTableViewCell" customModule="ThimbleOfHoney" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="600" height="125"/>
+                                <rect key="frame" x="0.0" y="22" width="600" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TMF-aW-OzL" id="g4q-8K-yl8">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="124.5"/>
@@ -128,14 +128,13 @@
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="OI7-UX-7QI"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="jO2-jD-KoO" id="wis-tV-Gc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mz6-A7-IAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="183"/>
+            <point key="canvasLocation" x="1658" y="183"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="EqD-xC-XE9">
@@ -304,7 +303,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <segue destination="iuI-Dg-GZN" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="fue-9i-4fS"/>
+                                            <segue destination="5MB-aW-zIw" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="oEe-z3-en4"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -507,7 +506,7 @@
                     <tabBarItem key="tabBarItem" title="Posts" image="post" id="vjV-4j-fzF"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b9u-5p-wkM">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="b9u-5p-wkM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -536,11 +535,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cc8-KE-3H2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hjH-yG-77X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am4-Qs-gkh">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </webView>
@@ -571,7 +570,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Po6-Fx-1O2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="About Me" image="profile" id="Zom-hy-RLV"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pyr-L7-NEZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Pyr-L7-NEZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -593,13 +592,13 @@
             <objects>
                 <tableViewController storyboardIdentifier="FavoritesTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y0W-cR-CQw" customClass="FavoritesTableViewController" customModule="ThimbleOfHoney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8A1-n2-WUU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="125" id="fGV-Up-QXV" customClass="PostsTableViewCell" customModule="ThimbleOfHoney" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="86" width="600" height="125"/>
+                                <rect key="frame" x="0.0" y="22" width="600" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fGV-Up-QXV" id="klV-cn-E1w">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="125"/>
@@ -630,7 +629,7 @@
                                 <connections>
                                     <outlet property="postImageView" destination="tLG-5W-k6w" id="3al-kk-Ull"/>
                                     <outlet property="postLabel" destination="Z2M-JN-u6B" id="1nI-zE-vAg"/>
-                                    <segue destination="STg-bn-REY" kind="show" identifier="viewfavorite" id="LlI-w2-7UP"/>
+                                    <segue destination="eau-2W-l9b" kind="showDetail" identifier="viewfavorite" id="cCL-we-dRj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -652,14 +651,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dht-kD-HII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="993"/>
+            <point key="canvasLocation" x="838" y="1287"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rwI-lM-av9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iuI-Dg-GZN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="adZ-k2-GJl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="adZ-k2-GJl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -670,14 +669,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtJ-ld-anA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-702" y="993"/>
+            <point key="canvasLocation" x="46" y="1287"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="R5j-Cd-9qe">
+            <objects>
+                <splitViewController id="5MB-aW-zIw" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="iuI-Dg-GZN" kind="relationship" relationship="masterViewController" id="atI-2f-Ecu"/>
+                        <segue destination="eau-2W-l9b" kind="relationship" relationship="detailViewController" id="6bf-K5-kxm"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGI-jC-Kkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-702" y="1287"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Uhm-lJ-LlU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eau-2W-l9b" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bAC-JT-iPr">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bAC-JT-iPr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -704,9 +716,8 @@
         <image name="thimble" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mF5-tF-19E"/>
-        <segue reference="a6C-Iy-liN"/>
-        <segue reference="LlI-w2-7UP"/>
+        <segue reference="E7y-13-v2c"/>
+        <segue reference="cCL-we-dRj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -1,7 +1,9 @@
 PODS:
+  - MAThemeKit (1.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
+  - MAThemeKit
   - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
@@ -14,6 +16,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
+  MAThemeKit: 559acc98ceadc051cccb1b6bb0c4ca28475eb021
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

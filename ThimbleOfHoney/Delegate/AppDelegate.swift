@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import MAThemeKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,9 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         versionInformation()
         
         // Override point for customization after application launch.
+        MAThemeKit.customizeNavigationBarColor(UIColor(rgb: 0x499AC7), textColor: UIColor(rgb: 0xF4EFE6), buttonColor: UIColor(rgb: 0xF4EFE6))
+        
         let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.barTintColor = UIColor(rgb: 0x499AC7)
-        navigationBarAppearance.tintColor = UIColor(rgb: 0xF4EFE6)
+        //navigationBarAppearance.barTintColor = UIColor(rgb: 0x499AC7)
+        //navigationBarAppearance.tintColor = UIColor(rgb: 0xF4EFE6)
         
         let font = UIFont(name: "RougeScript-Regular", size: 30)
         if let font = font {

@@ -9,10 +9,12 @@
 import UIKit
 import CoreData
 
-class FavoritesTableViewController: UITableViewController {
+class FavoritesTableViewController: UITableViewController, UISplitViewControllerDelegate {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var parseData: NSMutableArray! = NSMutableArray()
+    var detailViewController: PostDetailViewController? = nil
+    var isWaiting = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +23,53 @@ class FavoritesTableViewController: UITableViewController {
         
         menuSetup()
         
+        loadData()
+        
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        self.splitViewController!.delegate = self
+        self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+        
+        setupSplitViewData()
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.loadData()
-        print(parseData)
+        
+    }
+    
+    func loadData() {
+        let device: UIDevice = UIDevice.currentDevice()
+        let currentDeviceId: NSString = device.identifierForVendor!.UUIDString
+        
+        parseData.removeAllObjects()
+        
+        let query: PFQuery = PFQuery(className:"Favorite")
+        query.whereKey("deviceId", equalTo: currentDeviceId)
+        query.orderByAscending("createdAt")
+        
+        let tempData = query.findObjects() as! [PFObject]
+        parseData = NSMutableArray(array: tempData)
+        parseData.reverseObjectEnumerator().allObjects
+        
+        /*
+        query.findObjectsInBackgroundWithBlock {
+            (objects, error) -> Void in
+        
+            if error == nil {
+                for object in objects! {
+                    let post: PFObject = object as! PFObject
+                    self.parseData.addObject(post)
+                }
+        
+                let array: NSArray = self.parseData.reverseObjectEnumerator().allObjects
+                self.parseData = NSMutableArray(array: array)
+                self.tableView.reloadData()
+                self.isWaiting = false
+        
+            }
+        }
+        */
     }
     
     func menuSetup() {
@@ -39,35 +81,31 @@ class FavoritesTableViewController: UITableViewController {
         }
     }
     
+    func setupSplitViewData() {
+        if let split = self.splitViewController {
+            let controllers = split.viewControllers
+            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? PostDetailViewController
+            
+            if self.parseData.count > 0 {
+                let post: PFObject = self.parseData.objectAtIndex(0) as! PFObject
+                
+                self.detailViewController?.postTitle = post["postTitle"]!.objectAtIndex(0) as! String
+                self.detailViewController?.postDate = post["postDate"]!.objectAtIndex(0) as! String
+                self.detailViewController?.postDesc = post["postDesc"]!.objectAtIndex(0) as! String
+                self.detailViewController?.postLink = post["postLink"]!.objectAtIndex(0) as! String
+            } else  {
+                print("parseData empty")
+            }
+        }
+        
+    }
+    
     func refresh(sender:AnyObject) {
         self.refreshControl?.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl?.endRefreshing()
     }
     
-    func loadData() {
-        let device: UIDevice = UIDevice.currentDevice()
-        let currentDeviceId: NSString = device.identifierForVendor!.UUIDString
-        
-        self.parseData.removeAllObjects()
-        
-        let query: PFQuery = PFQuery(className:"Favorite")
-        query.whereKey("deviceId", equalTo: currentDeviceId)
-        query.orderByAscending("createdAt")
-        query.findObjectsInBackgroundWithBlock {
-            (objects, error) -> Void in
-            
-            if error == nil {
-                for object in objects! {
-                    let post: PFObject = object as! PFObject
-                    self.parseData.addObject(post)
-                }
-                
-                let array: NSArray = self.parseData.reverseObjectEnumerator().allObjects
-                self.parseData = NSMutableArray(array: array)
-                self.tableView.reloadData()
-            }
-        }
-    }
+    // MARK: - Table View Delegate
     
     override func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath: NSIndexPath?) -> UITableViewCell {
         let cell:PostsTableViewCell = tableView!.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath!) as! PostsTableViewCell
@@ -82,8 +120,8 @@ class FavoritesTableViewController: UITableViewController {
             cell.postImageView.image = image
         })
         
-		return cell
-	}
+        return cell
+    }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 100
@@ -127,24 +165,12 @@ class FavoritesTableViewController: UITableViewController {
             return
         }
     }
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "viewfavorite" {
-            let viewController = segue.destinationViewController as! PostDetailViewController
-            let selectedRow = self.tableView.indexPathForSelectedRow?.row
-            let favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as! PFObject
-            
-            viewController.postTitle = favoritePost["postTitle"]!.objectAtIndex(0) as! String
-            viewController.postDate = favoritePost["postDate"]!.objectAtIndex(0) as! String
-            viewController.postDesc = favoritePost["postDesc"]!.objectAtIndex(0) as! String
-            viewController.postLink = favoritePost["postLink"]!.objectAtIndex(0) as! String
-        }
-
-        
-        /*
-        if segue.identifier == "viewfavorite" {
+            //let viewController = segue.destinationViewController as! PostDetailViewController
             let selectedRow = self.tableView.indexPathForSelectedRow?.row
             let favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as! PFObject
             
@@ -156,6 +182,27 @@ class FavoritesTableViewController: UITableViewController {
             viewController.postDesc = favoritePost["postDesc"]!.objectAtIndex(0) as! String
             viewController.postLink = favoritePost["postLink"]!.objectAtIndex(0) as! String
         }
+        
+        
+        /*
+        if segue.identifier == "viewfavorite" {
+        let selectedRow = self.tableView.indexPathForSelectedRow?.row
+        let favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as! PFObject
+        
+        let nav = segue.destinationViewController as! UINavigationController
+        let viewController = nav.viewControllers[0] as! PostDetailViewController
+        
+        viewController.postTitle = favoritePost["postTitle"]!.objectAtIndex(0) as! String
+        viewController.postDate = favoritePost["postDate"]!.objectAtIndex(0) as! String
+        viewController.postDesc = favoritePost["postDesc"]!.objectAtIndex(0) as! String
+        viewController.postLink = favoritePost["postLink"]!.objectAtIndex(0) as! String
+        }
         */
-	}
+    }
+    
+    // MARK: - UISplitViewControllerDelegate
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
+    }
 }

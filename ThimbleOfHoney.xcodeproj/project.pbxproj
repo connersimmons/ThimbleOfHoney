@@ -42,7 +42,6 @@
 		C5BE59261AC78A7900611975 /* acknowledgementGenerator.rb in Resources */ = {isa = PBXBuildFile; fileRef = C5BE59251AC78A7900611975 /* acknowledgementGenerator.rb */; };
 		C5BE592A1AC78CA000611975 /* SwiftImageLoader.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE59291AC78CA000611975 /* SwiftImageLoader.license */; };
 		C5BE592C1AC78F9D00611975 /* SWRevealViewController.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */; };
-		C5BE592E1ACACAD500611975 /* IJReachability.license in Resources */ = {isa = PBXBuildFile; fileRef = C5BE592D1ACACAD500611975 /* IJReachability.license */; };
 		C5BE59351ACC567A00611975 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59341ACC567A00611975 /* UIColorExtensions.swift */; };
 		C5BE593F1AD443DD00611975 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */; };
 		C5BE59411AD4490100611975 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BE59401AD4490100611975 /* StringExtensions.swift */; };
@@ -109,7 +108,6 @@
 		C5BE59251AC78A7900611975 /* acknowledgementGenerator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = acknowledgementGenerator.rb; path = Resources/acknowledgementGenerator.rb; sourceTree = "<group>"; };
 		C5BE59291AC78CA000611975 /* SwiftImageLoader.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SwiftImageLoader.license; path = Resources/Licenses/SwiftImageLoader.license; sourceTree = "<group>"; };
 		C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SWRevealViewController.license; path = Resources/Licenses/SWRevealViewController.license; sourceTree = "<group>"; };
-		C5BE592D1ACACAD500611975 /* IJReachability.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = IJReachability.license; path = Resources/Licenses/IJReachability.license; sourceTree = "<group>"; };
 		C5BE59341ACC567A00611975 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtensions.swift; path = Helpers/UIColorExtensions.swift; sourceTree = "<group>"; };
 		C5BE593E1AD443DD00611975 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewController.swift; path = Controllers/TableView/FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		C5BE59401AD4490100611975 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Helpers/StringExtensions.swift; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 		C5BE591D1AC77EF300611975 /* Licenses */ = {
 			isa = PBXGroup;
 			children = (
-				C5BE592D1ACACAD500611975 /* IJReachability.license */,
 				C5BE592B1AC78F9D00611975 /* SWRevealViewController.license */,
 				C5BE59291AC78CA000611975 /* SwiftImageLoader.license */,
 			);
@@ -493,7 +490,6 @@
 				C5392FA71AAE2F6300D72708 /* LaunchScreen.xib in Resources */,
 				C5BE59261AC78A7900611975 /* acknowledgementGenerator.rb in Resources */,
 				C5392E901AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf in Resources */,
-				C5BE592E1ACACAD500611975 /* IJReachability.license in Resources */,
 				C551D8421AAF506F00AC4C8B /* .gitignore in Resources */,
 				C5392E911AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf in Resources */,
 				C5BE591C1AC77BB200611975 /* Settings.bundle in Resources */,
@@ -646,6 +642,7 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -690,6 +687,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Conner Simmons (WLS28UCV9R)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
