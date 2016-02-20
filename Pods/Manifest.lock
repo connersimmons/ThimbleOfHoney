@@ -1,19 +1,19 @@
 PODS:
-  - IJReachability (0.1.0)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - IJReachability (from `https://github.com/Isuru-Nanayakkara/IJReachability.git`)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
 
 EXTERNAL SOURCES:
-  IJReachability:
-    :git: https://github.com/Isuru-Nanayakkara/IJReachability.git
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
-  IJReachability:
-    :commit: da69c8f4bed9f82203bb49180fb36091b4cd0d28
-    :git: https://github.com/Isuru-Nanayakkara/IJReachability.git
+  SwiftyJSON:
+    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  IJReachability: 3eff33caca50869df09b257bcf712031a56a8575
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-COCOAPODS: 0.36.0
+COCOAPODS: 0.39.0

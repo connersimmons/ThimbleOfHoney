@@ -26,12 +26,12 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentDeviceId = device.identifierForVendor.UUIDString
+        currentDeviceId = device.identifierForVendor!.UUIDString
         
         let title = "<h2 style=\"text-align:center; text-transform: uppercase; color: #499AC7;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(postTitle)</h2>"
         let date = "<h3 style=\"text-align:center; color: #609d52;font-family: 'Yanone Kaffeesatz', sans-serif;\">\(dateConversion())</h3>"
         
-        var cssString = "<style type='text/css'>" +
+        let cssString = "<style type='text/css'>" +
             "img {max-width: 100%; display: block; margin-left: auto; margin-right: auto}" +
             "html {font-family: 'Quattrocento Sans', sans-serif;}" +
             "</style>"
@@ -43,6 +43,7 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
         
         let font = UIFont(name: "RougeScript-Regular", size: 32)
         if let font = font {
@@ -58,18 +59,20 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func dateConversion() -> NSString {
-        var dateFormatter = NSDateFormatter()
+        let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "ee, dd MM yyyy HH:mm:ss z"
-        var dateFromString = dateFormatter.dateFromString(postDate)
         
-        dateFormatter.dateFormat = "d MMMM yyyy"
-        let formattedDate: String = dateFormatter.stringFromDate(dateFromString!)
-        return formattedDate
+        if let parsedDateTimeString = dateFormatter.dateFromString(postDate) {
+            dateFormatter.dateFormat = "d MMMM yyyy"
+            return dateFormatter.stringFromDate(parsedDateTimeString)
+        } else {
+            return "Could not parse date"
+        }
     }
     
     func configureNavBar() {
-        var share = UIBarButtonItem(image: shareImage, style: UIBarButtonItemStyle.Plain, target: self, action: "shareAction")
-        var favorite = UIBarButtonItem(image: starImage, style: UIBarButtonItemStyle.Plain, target: self, action: "addToFavorites")
+        let share = UIBarButtonItem(image: shareImage, style: UIBarButtonItemStyle.Plain, target: self, action: "shareAction")
+        let favorite = UIBarButtonItem(image: starImage, style: UIBarButtonItemStyle.Plain, target: self, action: "addToFavorites")
         
         self.navigationItem.rightBarButtonItems = [share, favorite]
     }
@@ -104,15 +107,15 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
     func addToFavorites() {
         if findQuery().countObjects() > 0 {
             self.starImage = UIImage(named: "ios7-star-outline")!
-            self.isFavorited == false
+            self.isFavorited = false
             
-            var object = findQuery().getFirstObject()
+            let object = findQuery().getFirstObject()
             object?.deleteInBackground()
         }
         else {
             self.starImage = UIImage(named: "ios7-star-full")!
             
-            var object = PFObject(className: "Favorite")
+            let object = PFObject(className: "Favorite")
             object.addObject(self.currentDeviceId, forKey: "deviceId")
             object.addObject(self.postTitle, forKey: "postTitle")
             object.addObject(self.postDate, forKey: "postDate")
@@ -120,14 +123,14 @@ class PostDetailViewController: UIViewController, UIGestureRecognizerDelegate {
             object.addObject(self.postLink, forKey: "postLink")
             object.saveInBackground()
             
-            self.isFavorited == true
+            self.isFavorited = true
         }
         configureNavBar()
     }
     
     func findQuery() -> PFQuery {
-        var query: PFQuery = PFQuery(className: "Favorite")
-        println("postTitle: \(postTitle);   currentDeviceId: \(currentDeviceId)")
+        let query: PFQuery = PFQuery(className: "Favorite")
+        print("postTitle: \(postTitle);   currentDeviceId: \(currentDeviceId)")
         query.whereKey("deviceId", equalTo: currentDeviceId)
         query.whereKey("postTitle", equalTo: postTitle)
         return query

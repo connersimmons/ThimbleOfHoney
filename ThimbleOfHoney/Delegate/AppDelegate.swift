@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         versionInformation()
         
         // Override point for customization after application launch.
-        var navigationBarAppearance = UINavigationBar.appearance()
+        let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.barTintColor = UIColor(rgb: 0x499AC7)
         navigationBarAppearance.tintColor = UIColor(rgb: 0xF4EFE6)
         
@@ -58,7 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        println("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceToken)")
+        print("didRegisterForRemoteNotificationsWithDeviceToken: \(deviceToken)")
         
         let currentInstallation = PFInstallation.currentInstallation()
         
@@ -73,11 +73,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        println("failed to register for remote notifications:  \(error)")
+        print("failed to register for remote notifications:  \(error)")
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        println("didReceiveRemoteNotification")
+        print("didReceiveRemoteNotification")
         PFPush.handlePush(userInfo)
     }
     
@@ -91,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Register for Push Notitications, if running iOS 8
         if application.respondsToSelector("registerUserNotificationSettings:") {
             
-            let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
+            let types:UIUserNotificationType = ([.Alert, .Badge, .Sound])
             let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
             
             application.registerUserNotificationSettings(settings)
@@ -105,7 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func versionInformation() {
-        let appInfo = NSBundle.mainBundle().infoDictionary as! Dictionary<String,AnyObject>
+        let appInfo = NSBundle.mainBundle().infoDictionary! as Dictionary<String,AnyObject>
         let shortVersionString = appInfo["CFBundleShortVersionString"] as! String
         //let bundleVersion      = appInfo["CFBundleVersion"] as! String
         //let applicationVersion = shortVersionString + "." + bundleVersion

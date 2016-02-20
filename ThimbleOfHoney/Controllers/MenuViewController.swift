@@ -27,7 +27,7 @@ class MenuViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let indexPath = tableView.indexPathForSelectedRow()
+        let indexPath = tableView.indexPathForSelectedRow
         let selectedCell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell!;
         let app = UIApplication.sharedApplication()
         
@@ -41,8 +41,10 @@ class MenuViewController: UITableViewController {
         case 4:
             app.openURL(NSURL(string: twitterURL)!)
         default:
-            println("Relative path selected.")
+            print("Relative path selected.")
         }
+        
+        tableView.deselectRowAtIndexPath(indexPath!, animated: true)
     }
     
     override func viewWillAppear(animated: Bool) {

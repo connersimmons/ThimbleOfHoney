@@ -22,6 +22,8 @@ class PostsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        postImageView.layer.cornerRadius = 5
+        postLabel.numberOfLines = 0
     }
 
 }

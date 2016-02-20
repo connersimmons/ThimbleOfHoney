@@ -17,6 +17,8 @@ class FavoritesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.contentInset = UIEdgeInsetsMake(8, 0, 0, 0)
+        
         menuSetup()
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -25,7 +27,7 @@ class FavoritesTableViewController: UITableViewController {
     
     override func viewDidAppear(animated: Bool) {
         self.loadData()
-        println(parseData)
+        print(parseData)
     }
     
     func menuSetup() {
@@ -43,12 +45,12 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     func loadData() {
-        var device: UIDevice = UIDevice.currentDevice()
-        var currentDeviceId: NSString = device.identifierForVendor.UUIDString
+        let device: UIDevice = UIDevice.currentDevice()
+        let currentDeviceId: NSString = device.identifierForVendor!.UUIDString
         
         self.parseData.removeAllObjects()
         
-        var query: PFQuery = PFQuery(className:"Favorite")
+        let query: PFQuery = PFQuery(className:"Favorite")
         query.whereKey("deviceId", equalTo: currentDeviceId)
         query.orderByAscending("createdAt")
         query.findObjectsInBackgroundWithBlock {
@@ -57,7 +59,7 @@ class FavoritesTableViewController: UITableViewController {
             if error == nil {
                 for object in objects! {
                     let post: PFObject = object as! PFObject
-                    self.parseData.addObject(object)
+                    self.parseData.addObject(post)
                 }
                 
                 let array: NSArray = self.parseData.reverseObjectEnumerator().allObjects
@@ -71,11 +73,11 @@ class FavoritesTableViewController: UITableViewController {
         let cell:PostsTableViewCell = tableView!.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath!) as! PostsTableViewCell
         let post: PFObject = self.parseData.objectAtIndex(indexPath!.row) as! PFObject
         
-        var title: AnyObject = post["postTitle"]!.objectAtIndex(0)
+        let title: AnyObject = post["postTitle"]!.objectAtIndex(0)
         cell.postLabel.text = title as? String
         
-        var image: AnyObject = post["postDesc"]!.objectAtIndex(0)
-        var urlString = (image as! String).findFirstImage(image as! String)
+        let image: AnyObject = post["postDesc"]!.objectAtIndex(0)
+        let urlString = (image as! String).findFirstImage()
         ImageLoader.sharedLoader.imageForUrl(urlString as String, completionHandler:{(image: UIImage?, url: String) in
             cell.postImageView.image = image
         })
@@ -116,7 +118,7 @@ class FavoritesTableViewController: UITableViewController {
         switch editingStyle {
             
         case .Delete:
-            var selectedQuoteFromFavourites: PFObject = self.parseData.objectAtIndex(indexPath!.row) as! PFObject
+            let selectedQuoteFromFavourites: PFObject = self.parseData.objectAtIndex(indexPath!.row) as! PFObject
             selectedQuoteFromFavourites.deleteInBackground()
             self.parseData.removeObjectAtIndex(indexPath!.row)
             self.tableView.reloadData()
@@ -128,15 +130,32 @@ class FavoritesTableViewController: UITableViewController {
 	
 	// In a storyboard-based application, you will often want to do a little preparation before navigation
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "viewfavorite" {
             let viewController = segue.destinationViewController as! PostDetailViewController
-            let selectedRow = self.tableView.indexPathForSelectedRow()?.row
-            var favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as! PFObject
+            let selectedRow = self.tableView.indexPathForSelectedRow?.row
+            let favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as! PFObject
             
             viewController.postTitle = favoritePost["postTitle"]!.objectAtIndex(0) as! String
             viewController.postDate = favoritePost["postDate"]!.objectAtIndex(0) as! String
             viewController.postDesc = favoritePost["postDesc"]!.objectAtIndex(0) as! String
             viewController.postLink = favoritePost["postLink"]!.objectAtIndex(0) as! String
         }
+
+        
+        /*
+        if segue.identifier == "viewfavorite" {
+            let selectedRow = self.tableView.indexPathForSelectedRow?.row
+            let favoritePost: PFObject = self.parseData.objectAtIndex(selectedRow!) as! PFObject
+            
+            let nav = segue.destinationViewController as! UINavigationController
+            let viewController = nav.viewControllers[0] as! PostDetailViewController
+            
+            viewController.postTitle = favoritePost["postTitle"]!.objectAtIndex(0) as! String
+            viewController.postDate = favoritePost["postDate"]!.objectAtIndex(0) as! String
+            viewController.postDesc = favoritePost["postDesc"]!.objectAtIndex(0) as! String
+            viewController.postLink = favoritePost["postLink"]!.objectAtIndex(0) as! String
+        }
+        */
 	}
 }

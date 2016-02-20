@@ -19,19 +19,25 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         
         menuSetup()
         
-        // Do any additional setup after loading the view.
-        let aboutMeURL = NSURL(string:"http://thimbleofhoney.dreamhosters.com/about-me/")
-        let htmlString = NSData(contentsOfURL: aboutMeURL!)
-        var dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
-        
-        let aboutMeDesc = findAboutMeContent(dataString)
-        
-        var cssString = "<style type='text/css'>" +
-            "img {max-width: 100%; width: auto; height: auto;}" +
-            "html {font-family: 'Quattrocento Sans', sans-serif;}" +
+        if Reachability.isConnectedToNetwork() == true {
+            print("Network Connection: Available")
+            
+            let aboutMeURL = NSURL(string:"http://thimbleofhoney.dreamhosters.com/about-me/")
+            let htmlString = NSData(contentsOfURL: aboutMeURL!)
+            let dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
+            
+            let aboutMeDesc = findAboutMeContent(dataString)
+            
+            let cssString = "<style type='text/css'>" +
+                "img {max-width: 100%; width: auto; height: auto;}" +
+                "html {font-family: 'Quattrocento Sans', sans-serif;}" +
             "</style>"
-        
-        webView.loadHTMLString(cssString + (aboutMeDesc as String), baseURL: nil)
+            
+            webView.loadHTMLString(cssString + (aboutMeDesc as String), baseURL: nil)
+        } else {
+            print("Network Connection: Unavailable")
+            noInternetAlert()
+        }
     }
     
     func menuSetup() {
@@ -51,19 +57,42 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
         self.reloadInputViews()
     }
     
+    func noInternetAlert() {
+        let alertController = UIAlertController(title: "No Internet connection!",
+            message: "Please connect to the Internet.",
+            preferredStyle: .Alert)
+        
+        let cancelSelected = UIAlertAction(title: "Cancel", style: .Cancel){ (action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        let okSelected = UIAlertAction(title: "Settings", style: .Default){ (action) in
+            self.openSettings()
+        }
+        
+        alertController.addAction(cancelSelected)
+        alertController.addAction(okSelected)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func openSettings() {
+        UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+    }
+    
     func findAboutMeContent(html: NSString) -> NSString {
         let htmlContent = html
         var description = ""
         
         let rangeOfString = NSMakeRange(0, htmlContent.length)
         let pattern: String = "(<div class=\"entry-content\" itemprop=\"text\"><p>)([\\s\\S]+?)(</div>)"
-        let regex = NSRegularExpression(pattern: pattern, options: nil, error: nil)
+        let regex = try? NSRegularExpression(pattern: pattern, options: [])
         
         if htmlContent.length > 0 {
-            let match = regex?.firstMatchInString(htmlContent as String, options: nil, range: rangeOfString)
+            let match = regex?.firstMatchInString(htmlContent as String, options: [], range: rangeOfString)
             
             if match != nil {
-                var aboutMeDesc = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
+                let aboutMeDesc = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
                 description += aboutMeDesc as String
             }
         }

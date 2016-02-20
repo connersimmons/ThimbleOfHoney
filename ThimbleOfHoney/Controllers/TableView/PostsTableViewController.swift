@@ -8,9 +8,8 @@
 
 import UIKit
 import Foundation
-import IJReachability
 
-class PostsTableViewController: UITableViewController, XMLParserDelegate {
+class PostsTableViewController: UITableViewController, XMLParserDelegate, UISplitViewControllerDelegate {
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -20,21 +19,24 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        menuSetup()
-        checkForInternetConnection()
+        self.tableView.contentInset = UIEdgeInsetsMake(8, 0, 0, 0)
         
-        // Do any additional setup after loading the view.
+        menuSetup()
+        
+        if Reachability.isConnectedToNetwork() == true {
+            print("Network Connection: Available")
+        } else {
+            print("Network Connection: Unavailable")
+            noInternetAlert()
+        }
+        
         parseWebsite()
         
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        self.splitViewController!.delegate = self;
+        self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
     }
-    
-    /*
-    override func scrollViewDidScroll(scrollView: UIScrollView) {
-        searchBar = searchDisplayController?.searchBar
-        searchBar.frame = CGRectMake(0,max(0,scrollView.contentOffset.y),320,44)
-    }
-    */
     
     // MARK: XMLParserDelegate method implementation
     
@@ -97,7 +99,7 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         let blogPost: BlogPost = xmlParser.blogPosts[indexPath.row]
         cell.postLabel.text = blogPost.postTitle
         
-        var urlString = blogPost.postDesc.findFirstImage(blogPost.postDesc)
+        let urlString = blogPost.postDesc.findFirstImage()
         ImageLoader.sharedLoader.imageForUrl(urlString as String, completionHandler:{(image: UIImage?, url: String) in
             cell.postImageView.image = image
         })
@@ -120,16 +122,6 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
             
             // Uncomment to change the width of menu
             self.revealViewController().rearViewRevealWidth = 220
-        }
-    }
-    
-    func checkForInternetConnection() {
-        if IJReachability.isConnectedToNetwork(){
-            println("Network Connection: Available")
-        }
-        else {
-            println("Network Connection: Unavailable")
-            noInternetAlert()
         }
     }
     
@@ -156,17 +148,44 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate {
         UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
     
+    // MARK: - Navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)  {
         if segue.identifier == "viewpost" {
-            let viewController = segue.destinationViewController as! PostDetailViewController
             
-            let selectedRow = self.tableView.indexPathForSelectedRow()?.row
-            var blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
-
+            let selectedRow = self.tableView.indexPathForSelectedRow?.row
+            let blogPost: BlogPost = xmlParser.blogPosts[selectedRow!]
+            
+            let nav = segue.destinationViewController as! UINavigationController
+            let viewController = nav.viewControllers[0] as! PostDetailViewController
+            
             viewController.postTitle = blogPost.postTitle
             viewController.postDate = blogPost.postDate
             viewController.postDesc = blogPost.postDesc
             viewController.postLink = blogPost.postLink
+
+            /*
+            var detail: PostDetailViewController
+            if let navigationController = segue.destinationViewController as? UINavigationController {
+                detail = navigationController.topViewController as! PostDetailViewController
+            } else {
+                detail = segue.destinationViewController as! PostDetailViewController
+            }
+            
+            if let path = tableView.indexPathForSelectedRow()?.row {
+                var blogPost: BlogPost = xmlParser.blogPosts[path]
+                detail.postTitle = blogPost.postTitle
+                detail.postDate = blogPost.postDate
+                detail.postDesc = blogPost.postDesc
+                detail.postLink = blogPost.postLink
+            }
+            */
         }
+    }
+    
+    // MARK: - UISplitViewControllerDelegate
+    
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController, ontoPrimaryViewController primaryViewController: UIViewController) -> Bool {
+        return true
     }
 }

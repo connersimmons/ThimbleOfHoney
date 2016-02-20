@@ -10,15 +10,15 @@ import Foundation
 
 extension String {
         
-    func findFirstImage(aString: String) -> NSString {
-        let htmlContent = aString as NSString
+    func findFirstImage() -> NSString {
+        let htmlContent = self as NSString
         var imageSource = ""
         
         let rangeOfString = NSMakeRange(0, htmlContent.length)
-        let regex = NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: nil, error: nil)
+        let regex = try? NSRegularExpression(pattern: "(<img.*?src=\")(.*?)(\".*?>)", options: [])
         
         if htmlContent.length > 0 {
-           let match = regex?.firstMatchInString(htmlContent as String, options: nil, range: rangeOfString)
+           let match = regex?.firstMatchInString(htmlContent as String, options: [], range: rangeOfString)
                 
            if match != nil {
                 var imageURL = htmlContent.substringWithRange(match!.rangeAtIndex(2)) as NSString
@@ -26,6 +26,7 @@ extension String {
                 imageSource = imageURL as String
            }
         }
+        
         return imageSource
     }
     
