@@ -4,7 +4,6 @@ use_frameworks!
 
 target 'ThimbleOfHoney' do
   pod 'MAThemeKit'
-  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 
 target 'ThimbleOfHoneyTests' do

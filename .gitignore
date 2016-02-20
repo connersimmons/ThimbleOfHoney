@@ -17,7 +17,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 
-#/ThimbleOfHoney/Resources/ApiKeys.plist
+/ThimbleOfHoney/Resources/ApiKeys.plist
 
 # CocoaPods
 #

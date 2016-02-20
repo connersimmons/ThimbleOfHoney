@@ -9,11 +9,19 @@
 import UIKit
 
 class MenuViewController: UITableViewController {
-
-    let instagramURL = "https://instagram.com/thimbleofhoneyblog/"
-    let facebookURL = "https://facebook.com/ThimbleOfHoneyBlog"
-    let pinterestURL = "https://pinterest.com/ThimbleOfHoney/"
-    let twitterURL = "https://twitter.com/ThimbleOfHoney"
+    
+    let facebookURL = "fb://profile/909558142401429"
+    let facebookURLWeb = "https://facebook.com/ThimbleOfHoneyBlog"
+    
+    let instagramURL = "instagram://user?username=thimbleofhoneyblog"
+    let instagramURLWeb = "https://instagram.com/thimbleofhoneyblog/"
+    
+    let pinterestURL = "pinterest://user/ThimbleOfHoney/"
+    let pinterestURLWeb = "https://pinterest.com/ThimbleOfHoney/"
+    
+    let twitterURL = "twitter://user?screen_name=ThimbleOfHoney"
+    let twitterURLWeb = "https://twitter.com/ThimbleOfHoney"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +39,48 @@ class MenuViewController: UITableViewController {
         let selectedCell = tableView.cellForRowAtIndexPath(indexPath!) as UITableViewCell!;
         let app = UIApplication.sharedApplication()
         
+        let fbInstalled = schemeAvailable("fb://")
+        let igInstalled = schemeAvailable("instagram://")
+        let pnInstalled = schemeAvailable("pinterest://")
+        let twInstalled = schemeAvailable("twitter://")
+        
         switch selectedCell.tag {
         case 1:
-            app.openURL(NSURL(string: facebookURL)!)
+            if fbInstalled {
+                app.openURL(NSURL(string: facebookURL)!)
+            } else {
+                app.openURL(NSURL(string: facebookURLWeb)!)
+            }
         case 2:
-            app.openURL(NSURL(string: instagramURL)!)
+            if igInstalled {
+                app.openURL(NSURL(string: instagramURL)!)
+            } else {
+                app.openURL(NSURL(string: instagramURLWeb)!)
+            }
         case 3:
-            app.openURL(NSURL(string: pinterestURL)!)
+            if pnInstalled {
+                app.openURL(NSURL(string: pinterestURL)!)
+            } else {
+                app.openURL(NSURL(string: pinterestURLWeb)!)
+            }
         case 4:
-            app.openURL(NSURL(string: twitterURL)!)
+            if twInstalled {
+                app.openURL(NSURL(string: twitterURL)!)
+            } else {
+                app.openURL(NSURL(string: twitterURLWeb)!)
+            }
         default:
             print("Relative path selected.")
         }
         
         tableView.deselectRowAtIndexPath(indexPath!, animated: true)
+    }
+    
+    func schemeAvailable(scheme: String) -> Bool {
+        if let url = NSURL.init(string: scheme) {
+            return UIApplication.sharedApplication().canOpenURL(url)
+        }
+        return false
     }
     
     override func viewWillAppear(animated: Bool) {

@@ -24,7 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         versionInformation()
         
         // Override point for customization after application launch.
-        MAThemeKit.customizeNavigationBarColor(UIColor(rgb: 0x499AC7), textColor: UIColor(rgb: 0xF4EFE6), buttonColor: UIColor(rgb: 0xF4EFE6))
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        MAThemeKit.customizeNavigationBarColor(UIColor(rgb: 0x499AC7), textColor: UIColor.whiteColor(), buttonColor: UIColor.whiteColor())
         
         let navigationBarAppearance = UINavigationBar.appearance()
         //navigationBarAppearance.barTintColor = UIColor(rgb: 0x499AC7)
@@ -32,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let font = UIFont(name: "RougeScript-Regular", size: 30)
         if let font = font {
-            navigationBarAppearance.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor(rgb: 0xF4EFE6)]
+            navigationBarAppearance.titleTextAttributes = [NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor()]
         }
         
         return true

@@ -30,11 +30,11 @@
 		C5392F9E1AAE2F4F00D72708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9D1AAE2F4F00D72708 /* AppDelegate.swift */; };
 		C5392FA01AAE2F5800D72708 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9F1AAE2F5800D72708 /* BlogPost.swift */; };
 		C5392FA61AAE2F6300D72708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA21AAE2F6300D72708 /* Main.storyboard */; };
-		C5392FA71AAE2F6300D72708 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA41AAE2F6300D72708 /* LaunchScreen.xib */; };
 		C5392FA81AAE2F6300D72708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA51AAE2F6300D72708 /* Images.xcassets */; };
 		C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */; };
 		C53EB1181C780B810030F623 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53EB1171C780B810030F623 /* Reachability.swift */; };
 		C53EB11A1C7810E70030F623 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53EB1191C7810E70030F623 /* Accelerate.framework */; };
+		C53EB11E1C790ECB0030F623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53EB11D1C790ECB0030F623 /* LaunchScreen.storyboard */; };
 		C551D8421AAF506F00AC4C8B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C551D8411AAF506F00AC4C8B /* .gitignore */; };
 		C551D8461AAF54BE00AC4C8B /* ApiKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551D8451AAF54BE00AC4C8B /* ApiKeys.swift */; };
 		C551D84A1AAF598900AC4C8B /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C551D8491AAF598900AC4C8B /* ApiKeys.plist */; };
@@ -94,12 +94,12 @@
 		C5392F9D1AAE2F4F00D72708 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Delegate/AppDelegate.swift; sourceTree = "<group>"; };
 		C5392F9F1AAE2F5800D72708 /* BlogPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BlogPost.swift; path = Model/BlogPost.swift; sourceTree = "<group>"; };
 		C5392FA31AAE2F6300D72708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		C5392FA41AAE2F6300D72708 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = View/LaunchScreen.xib; sourceTree = "<group>"; };
 		C5392FA51AAE2F6300D72708 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = View/Images.xcassets; sourceTree = "<group>"; };
 		C5392FA91AAE2FB300D72708 /* ThimbleOfHoney-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ThimbleOfHoney-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationController.swift; path = Controllers/PushNotificationController.swift; sourceTree = "<group>"; };
 		C53EB1171C780B810030F623 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Helpers/Reachability.swift; sourceTree = "<group>"; };
 		C53EB1191C7810E70030F623 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		C53EB11D1C790ECB0030F623 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = View/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C54A92AE1BAD038D00A5A3DB /* IJReachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJReachability.framework; path = "Pods/../build/Debug-iphoneos/IJReachability.framework"; sourceTree = "<group>"; };
 		C551D8411AAF506F00AC4C8B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C551D8451AAF54BE00AC4C8B /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiKeys.swift; path = Helpers/ApiKeys.swift; sourceTree = "<group>"; };
@@ -217,8 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				C5392FA21AAE2F6300D72708 /* Main.storyboard */,
-				C5392FA41AAE2F6300D72708 /* LaunchScreen.xib */,
 				C5392FA51AAE2F6300D72708 /* Images.xcassets */,
+				C53EB11D1C790ECB0030F623 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -487,8 +487,8 @@
 				C5392FA81AAE2F6300D72708 /* Images.xcassets in Resources */,
 				C5392E8F1AAE2F0800D72708 /* RougeScript-Regular.ttf in Resources */,
 				C5BE592C1AC78F9D00611975 /* SWRevealViewController.license in Resources */,
-				C5392FA71AAE2F6300D72708 /* LaunchScreen.xib in Resources */,
 				C5BE59261AC78A7900611975 /* acknowledgementGenerator.rb in Resources */,
+				C53EB11E1C790ECB0030F623 /* LaunchScreen.storyboard in Resources */,
 				C5392E901AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf in Resources */,
 				C551D8421AAF506F00AC4C8B /* .gitignore in Resources */,
 				C5392E911AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf in Resources */,

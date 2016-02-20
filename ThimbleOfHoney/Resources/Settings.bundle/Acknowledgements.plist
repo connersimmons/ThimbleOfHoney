@@ -18,6 +18,14 @@
         <key>Type</key>
         <string>PSChildPaneSpecifier</string>
         <key>Title</key>
+        <string>MAThemeKit</string>
+        <key>File</key>
+        <string>Acknowledgement-MAThemeKit</string>
+      </dict>
+      <dict>
+        <key>Type</key>
+        <string>PSChildPaneSpecifier</string>
+        <key>Title</key>
         <string>SwiftImageLoader</string>
         <key>File</key>
         <string>Acknowledgement-SwiftImageLoader</string>

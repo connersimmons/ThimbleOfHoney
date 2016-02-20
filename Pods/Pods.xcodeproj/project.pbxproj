@@ -7,71 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0EDB7A906E97D1A935EACFF0E6001BA0 /* Pods-ThimbleOfHoney-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E22CC1C6B172B0662F47A0C654EA1FD2 /* Pods-ThimbleOfHoney-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		203BB2EEB399DDA7CB56BD0674F9D64E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		2D00670125403B2A15B32C81C9B089FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		38CF3DAD00B524FBD378AD77493874BC /* MAThemeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 895FF6D2D13BA577FB7786CD32B75FE4 /* MAThemeKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3F76DA0B24C473762699625359A841EE /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B224DCECFEFB777604383BFA280DB0 /* SwiftyJSON-dummy.m */; };
-		43179EBBF3502C8614A24FD1FB195AAC /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61B4A29B5D809045AEF75B9FF1DB4557 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63D78F7EE824A69C0A411497A8119028 /* Pods-ThimbleOfHoney-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 815FCEB2C3BE60943F82575BC3914817 /* Pods-ThimbleOfHoney-dummy.m */; };
-		88027DE6A90E674A0D8E47A2BE8E8ABE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		966C1087875C115F4090E4408BF85DE7 /* MAThemeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E75764255978487B23C463F3AFE7C2A0 /* MAThemeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1E40551FAD688A324EB55CFE3406F1D /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6D1B53E315A7FA64B3D8E2E9898BBA /* SwiftyJSON.swift */; };
-		D7DFED0A7C530896FA3BF8E9A062F46C /* MAThemeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F8A044C6778499230DDD878EFFEA180 /* MAThemeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D815FE5F7220572463687ADD7A110B76 /* Pods-ThimbleOfHoney-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E22CC1C6B172B0662F47A0C654EA1FD2 /* Pods-ThimbleOfHoney-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8E00C663B0C5296860B5E4246E2C40A /* MAThemeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1C52E91385B2F1FE8BDAFD7396821A9 /* MAThemeKit-dummy.m */; };
-		FFDFC7CD6459782E0F567E615233A3F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		2EB7922F5BCFC9548A0FD787FFEF7A7B /* Pods-ThimbleOfHoney-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 815FCEB2C3BE60943F82575BC3914817 /* Pods-ThimbleOfHoney-dummy.m */; };
+		38CF3DAD00B524FBD378AD77493874BC /* MAThemeKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDB841DB4A5D84CF0B9ED39A219AFD9 /* MAThemeKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		966C1087875C115F4090E4408BF85DE7 /* MAThemeKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E4DC04774B5C3EC129209F9C837DF12 /* MAThemeKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7DFED0A7C530896FA3BF8E9A062F46C /* MAThemeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D49EC25047246C8E2B62A4F8B1A53FE5 /* MAThemeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8E00C663B0C5296860B5E4246E2C40A /* MAThemeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E7AD001E127F1D749B676EEA021E93F /* MAThemeKit-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		97435CD93495495DDC7D931446E5B56A /* PBXContainerItemProxy */ = {
+		2206C2B6314CC66D267663D25F7DF716 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4FDAD9E429643688B30F2AF4A0B1D858;
 			remoteInfo = MAThemeKit;
 		};
-		9EE2E28A56E11056F20602707D6015B2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3642DDC131A9C6AD24C87BCCAD4A1E5C;
-			remoteInfo = SwiftyJSON;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05819A95F514B47469A581AF1345FA43 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1872690B13549F81862D3B2B3C1788E8 /* MAThemeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAThemeKit-prefix.pch"; sourceTree = "<group>"; };
 		1A97D4A936C7636C6C678BAC636DA1D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E886AB97DE110376CBE40A5A7C3AC54 /* MAThemeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAThemeKit.xcconfig; sourceTree = "<group>"; };
-		358C4F150C35CF5BA6B1C1190D4190FB /* Pods_ThimbleOfHoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThimbleOfHoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3E48772E7C4B87CC0B2478EB115847A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E7AD001E127F1D749B676EEA021E93F /* MAThemeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAThemeKit-dummy.m"; sourceTree = "<group>"; };
+		333592DF0AD2D129E25B7D757A117A6A /* MAThemeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MAThemeKit.modulemap; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3F8A044C6778499230DDD878EFFEA180 /* MAThemeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAThemeKit.h; path = MAThemeKit/MAThemeKit.h; sourceTree = "<group>"; };
-		4A0AED922F15EDCA9C2BE43D8F3FA4B4 /* MAThemeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MAThemeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C6D1B53E315A7FA64B3D8E2E9898BBA /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		51D717BDD119361B45501BAD453C4902 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		4E4DC04774B5C3EC129209F9C837DF12 /* MAThemeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAThemeKit-umbrella.h"; sourceTree = "<group>"; };
 		53959BB0B5C93890C5078F157D6CF1C6 /* Pods-ThimbleOfHoney.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ThimbleOfHoney.modulemap"; sourceTree = "<group>"; };
-		551D319B0AD6AC185B00580DBBB0AE4D /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		61B4A29B5D809045AEF75B9FF1DB4557 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		6FDB841DB4A5D84CF0B9ED39A219AFD9 /* MAThemeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAThemeKit.m; path = MAThemeKit/MAThemeKit.m; sourceTree = "<group>"; };
+		75374882BF7A503BB9C01C1CF9D62C40 /* MAThemeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MAThemeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C65C7A92A2EA0DAF48597E13A15341 /* Pods-ThimbleOfHoney-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ThimbleOfHoney-acknowledgements.plist"; sourceTree = "<group>"; };
-		8017AD7FC9D3202958BD3F8739C0045F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		815FCEB2C3BE60943F82575BC3914817 /* Pods-ThimbleOfHoney-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ThimbleOfHoney-dummy.m"; sourceTree = "<group>"; };
 		8472F871A3B1C1E9F26AD8EDB5C6D4A7 /* Pods-ThimbleOfHoney-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ThimbleOfHoney-frameworks.sh"; sourceTree = "<group>"; };
-		84B224DCECFEFB777604383BFA280DB0 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
-		895FF6D2D13BA577FB7786CD32B75FE4 /* MAThemeKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MAThemeKit.m; path = MAThemeKit/MAThemeKit.m; sourceTree = "<group>"; };
 		9A65B65662B738465E6B13DF00EEA19F /* Pods-ThimbleOfHoney-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ThimbleOfHoney-resources.sh"; sourceTree = "<group>"; };
 		AD75F93993988D4B97BB728F51BB23B5 /* Pods-ThimbleOfHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ThimbleOfHoney.debug.xcconfig"; sourceTree = "<group>"; };
 		B46C929E87D93B20F625014F5864154A /* Pods-ThimbleOfHoney-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ThimbleOfHoney-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C28BBBBF8EF1C4D5D13F04BCBE860953 /* Pods-ThimbleOfHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ThimbleOfHoney.release.xcconfig"; sourceTree = "<group>"; };
-		D1C52E91385B2F1FE8BDAFD7396821A9 /* MAThemeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MAThemeKit-dummy.m"; sourceTree = "<group>"; };
+		D49EC25047246C8E2B62A4F8B1A53FE5 /* MAThemeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MAThemeKit.h; path = MAThemeKit/MAThemeKit.h; sourceTree = "<group>"; };
+		D688779979BB7E7A0D98CC32783F21B8 /* Pods_ThimbleOfHoney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ThimbleOfHoney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22CC1C6B172B0662F47A0C654EA1FD2 /* Pods-ThimbleOfHoney-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ThimbleOfHoney-umbrella.h"; sourceTree = "<group>"; };
-		E75764255978487B23C463F3AFE7C2A0 /* MAThemeKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAThemeKit-umbrella.h"; sourceTree = "<group>"; };
-		F345255895B024124A30B2D6E8ED8292 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		FA268C8D4516A0D797533DA4F8362CB9 /* MAThemeKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MAThemeKit.modulemap; sourceTree = "<group>"; };
-		FBDA97238F6A8082CBC55D557E79D489 /* MAThemeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MAThemeKit-prefix.pch"; sourceTree = "<group>"; };
-		FEFE97C7084484E2DDC9D1B2DC324FDD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE2ACC2472BC34E151EEDDD6BBDD5A4 /* MAThemeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MAThemeKit.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5176D22873FE5D918D34EFFC6DF8B8D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203BB2EEB399DDA7CB56BD0674F9D64E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4EDEF9B6939EAA807AAA0CE265A44FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,47 +69,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE294F53D51B1F5809EF9A93213151BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88027DE6A90E674A0D8E47A2BE8E8ABE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E14EDF02A0260FD44E188601992E8811 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FFDFC7CD6459782E0F567E615233A3F2 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		46FF10C6C7E34BA821F237DCFBFC2842 /* Products */ = {
+		10BBCADB8D533FD46C41733F6FAFEF15 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A0AED922F15EDCA9C2BE43D8F3FA4B4 /* MAThemeKit.framework */,
-				358C4F150C35CF5BA6B1C1190D4190FB /* Pods_ThimbleOfHoney.framework */,
-				8017AD7FC9D3202958BD3F8739C0045F /* SwiftyJSON.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7CAE959E1F890237899905AED93F945F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				FEFE97C7084484E2DDC9D1B2DC324FDD /* Info.plist */,
-				FA268C8D4516A0D797533DA4F8362CB9 /* MAThemeKit.modulemap */,
-				1E886AB97DE110376CBE40A5A7C3AC54 /* MAThemeKit.xcconfig */,
-				D1C52E91385B2F1FE8BDAFD7396821A9 /* MAThemeKit-dummy.m */,
-				FBDA97238F6A8082CBC55D557E79D489 /* MAThemeKit-prefix.pch */,
-				E75764255978487B23C463F3AFE7C2A0 /* MAThemeKit-umbrella.h */,
+				05819A95F514B47469A581AF1345FA43 /* Info.plist */,
+				333592DF0AD2D129E25B7D757A117A6A /* MAThemeKit.modulemap */,
+				FEE2ACC2472BC34E151EEDDD6BBDD5A4 /* MAThemeKit.xcconfig */,
+				2E7AD001E127F1D749B676EEA021E93F /* MAThemeKit-dummy.m */,
+				1872690B13549F81862D3B2B3C1788E8 /* MAThemeKit-prefix.pch */,
+				4E4DC04774B5C3EC129209F9C837DF12 /* MAThemeKit-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MAThemeKit";
+			sourceTree = "<group>";
+		};
+		68AD45A25EC3BFFB857C8B2740C4028D /* MAThemeKit */ = {
+			isa = PBXGroup;
+			children = (
+				D49EC25047246C8E2B62A4F8B1A53FE5 /* MAThemeKit.h */,
+				6FDB841DB4A5D84CF0B9ED39A219AFD9 /* MAThemeKit.m */,
+				10BBCADB8D533FD46C41733F6FAFEF15 /* Support Files */,
+			);
+			path = MAThemeKit;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -128,33 +101,19 @@
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E4EF67C77B45AD60A56AD43DE4B23113 /* Pods */,
-				46FF10C6C7E34BA821F237DCFBFC2842 /* Products */,
+				FA224DFE94B182A292798131C51A341A /* Pods */,
+				8255BF67C30463C2F0668E2BB0454034 /* Products */,
 				C6F0BB73E2B31ED644C0622C5B6ED175 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8C2F4B51BCA32A435B1D7598AE2AFC6A /* Support Files */ = {
+		8255BF67C30463C2F0668E2BB0454034 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3E48772E7C4B87CC0B2478EB115847A4 /* Info.plist */,
-				51D717BDD119361B45501BAD453C4902 /* SwiftyJSON.modulemap */,
-				F345255895B024124A30B2D6E8ED8292 /* SwiftyJSON.xcconfig */,
-				84B224DCECFEFB777604383BFA280DB0 /* SwiftyJSON-dummy.m */,
-				551D319B0AD6AC185B00580DBBB0AE4D /* SwiftyJSON-prefix.pch */,
-				61B4A29B5D809045AEF75B9FF1DB4557 /* SwiftyJSON-umbrella.h */,
+				75374882BF7A503BB9C01C1CF9D62C40 /* MAThemeKit.framework */,
+				D688779979BB7E7A0D98CC32783F21B8 /* Pods_ThimbleOfHoney.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
-			sourceTree = "<group>";
-		};
-		8D33EF51A5D5465FFBBDBD98AC780E7D /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				4C6D1B53E315A7FA64B3D8E2E9898BBA /* SwiftyJSON.swift */,
-				8C2F4B51BCA32A435B1D7598AE2AFC6A /* Support Files */,
-			);
-			path = SwiftyJSON;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -199,23 +158,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E4EF67C77B45AD60A56AD43DE4B23113 /* Pods */ = {
+		FA224DFE94B182A292798131C51A341A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E69D6EAA0666C10F163811907417D904 /* MAThemeKit */,
-				8D33EF51A5D5465FFBBDBD98AC780E7D /* SwiftyJSON */,
+				68AD45A25EC3BFFB857C8B2740C4028D /* MAThemeKit */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E69D6EAA0666C10F163811907417D904 /* MAThemeKit */ = {
-			isa = PBXGroup;
-			children = (
-				3F8A044C6778499230DDD878EFFEA180 /* MAThemeKit.h */,
-				895FF6D2D13BA577FB7786CD32B75FE4 /* MAThemeKit.m */,
-				7CAE959E1F890237899905AED93F945F /* Support Files */,
-			);
-			path = MAThemeKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,42 +178,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		27390799CA8B68AB111D4BE607222FA8 /* Headers */ = {
+		F42ABDFCFB7193BB2EDAFE9D09BE2658 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D815FE5F7220572463687ADD7A110B76 /* Pods-ThimbleOfHoney-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F793A9B7A26568AFFC38745E7E25D5FD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43179EBBF3502C8614A24FD1FB195AAC /* SwiftyJSON-umbrella.h in Headers */,
+				0EDB7A906E97D1A935EACFF0E6001BA0 /* Pods-ThimbleOfHoney-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3642DDC131A9C6AD24C87BCCAD4A1E5C /* SwiftyJSON */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EE510496A4A29E4498CBB9459DE11854 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
-			buildPhases = (
-				AADC418F2A8B61BCD88086915D9594AE /* Sources */,
-				DE294F53D51B1F5809EF9A93213151BA /* Frameworks */,
-				F793A9B7A26568AFFC38745E7E25D5FD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyJSON;
-			productName = SwiftyJSON;
-			productReference = 8017AD7FC9D3202958BD3F8739C0045F /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4FDAD9E429643688B30F2AF4A0B1D858 /* MAThemeKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3372AD6D0284CDC91105E21607B44B1D /* Build configuration list for PBXNativeTarget "MAThemeKit" */;
@@ -280,26 +203,25 @@
 			);
 			name = MAThemeKit;
 			productName = MAThemeKit;
-			productReference = 4A0AED922F15EDCA9C2BE43D8F3FA4B4 /* MAThemeKit.framework */;
+			productReference = 75374882BF7A503BB9C01C1CF9D62C40 /* MAThemeKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5575E338506682A4A59BED8B7B318763 /* Pods-ThimbleOfHoney */ = {
+		69AFAA12C354036E19C3FD532CAA9F9F /* Pods-ThimbleOfHoney */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3AA51513CCCAFC2D01D13000C890D85A /* Build configuration list for PBXNativeTarget "Pods-ThimbleOfHoney" */;
+			buildConfigurationList = 67914DC1B7E8CEF799322622D7E0E2B3 /* Build configuration list for PBXNativeTarget "Pods-ThimbleOfHoney" */;
 			buildPhases = (
-				76586A1F7F846F5FA47AE452555A8084 /* Sources */,
-				E14EDF02A0260FD44E188601992E8811 /* Frameworks */,
-				27390799CA8B68AB111D4BE607222FA8 /* Headers */,
+				8D490AC56C4524CE95B13B37D0B03464 /* Sources */,
+				5176D22873FE5D918D34EFFC6DF8B8D7 /* Frameworks */,
+				F42ABDFCFB7193BB2EDAFE9D09BE2658 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5710BF0D505B797A83AFD9FB835F6434 /* PBXTargetDependency */,
-				18990E49C94FAF91F5F28165BE592B23 /* PBXTargetDependency */,
+				BF7EB06F7A731E496451FC6CEF7C9B61 /* PBXTargetDependency */,
 			);
 			name = "Pods-ThimbleOfHoney";
 			productName = "Pods-ThimbleOfHoney";
-			productReference = 358C4F150C35CF5BA6B1C1190D4190FB /* Pods_ThimbleOfHoney.framework */;
+			productReference = D688779979BB7E7A0D98CC32783F21B8 /* Pods_ThimbleOfHoney.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -319,23 +241,22 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 46FF10C6C7E34BA821F237DCFBFC2842 /* Products */;
+			productRefGroup = 8255BF67C30463C2F0668E2BB0454034 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4FDAD9E429643688B30F2AF4A0B1D858 /* MAThemeKit */,
-				5575E338506682A4A59BED8B7B318763 /* Pods-ThimbleOfHoney */,
-				3642DDC131A9C6AD24C87BCCAD4A1E5C /* SwiftyJSON */,
+				69AFAA12C354036E19C3FD532CAA9F9F /* Pods-ThimbleOfHoney */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		76586A1F7F846F5FA47AE452555A8084 /* Sources */ = {
+		8D490AC56C4524CE95B13B37D0B03464 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D78F7EE824A69C0A411497A8119028 /* Pods-ThimbleOfHoney-dummy.m in Sources */,
+				2EB7922F5BCFC9548A0FD787FFEF7A7B /* Pods-ThimbleOfHoney-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,36 +269,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AADC418F2A8B61BCD88086915D9594AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F76DA0B24C473762699625359A841EE /* SwiftyJSON-dummy.m in Sources */,
-				D1E40551FAD688A324EB55CFE3406F1D /* SwiftyJSON.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		18990E49C94FAF91F5F28165BE592B23 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = 3642DDC131A9C6AD24C87BCCAD4A1E5C /* SwiftyJSON */;
-			targetProxy = 9EE2E28A56E11056F20602707D6015B2 /* PBXContainerItemProxy */;
-		};
-		5710BF0D505B797A83AFD9FB835F6434 /* PBXTargetDependency */ = {
+		BF7EB06F7A731E496451FC6CEF7C9B61 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MAThemeKit;
 			target = 4FDAD9E429643688B30F2AF4A0B1D858 /* MAThemeKit */;
-			targetProxy = 97435CD93495495DDC7D931446E5B56A /* PBXContainerItemProxy */;
+			targetProxy = 2206C2B6314CC66D267663D25F7DF716 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4B3B1E30AB195C3E49E9B4F3B64CF6F8 /* Debug */ = {
+		56C0375A5ABAF095FF54734DAA353989 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F345255895B024124A30B2D6E8ED8292 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = C28BBBBF8EF1C4D5D13F04BCBE860953 /* Pods-ThimbleOfHoney.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -386,22 +292,24 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ThimbleOfHoney/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ThimbleOfHoney/Pods-ThimbleOfHoney.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ThimbleOfHoney;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -444,7 +352,7 @@
 		};
 		65A0723F96568D1C2A39CD887068FA57 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E886AB97DE110376CBE40A5A7C3AC54 /* MAThemeKit.xcconfig */;
+			baseConfigurationReference = FEE2ACC2472BC34E151EEDDD6BBDD5A4 /* MAThemeKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -461,33 +369,6 @@
 				MODULEMAP_FILE = "Target Support Files/MAThemeKit/MAThemeKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = MAThemeKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		68149793735A1BD4657DC7812D250DCB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F345255895B024124A30B2D6E8ED8292 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,40 +411,9 @@
 			};
 			name = Release;
 		};
-		7CD09460E3E5CFE9EAFB70B8E1A2983A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD75F93993988D4B97BB728F51BB23B5 /* Pods-ThimbleOfHoney.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ThimbleOfHoney/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-ThimbleOfHoney/Pods-ThimbleOfHoney.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ThimbleOfHoney;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C4E0321696ACEE82D234940BBBB5B829 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E886AB97DE110376CBE40A5A7C3AC54 /* MAThemeKit.xcconfig */;
+			baseConfigurationReference = FEE2ACC2472BC34E151EEDDD6BBDD5A4 /* MAThemeKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -588,9 +438,9 @@
 			};
 			name = Debug;
 		};
-		F58DE0F88121FAD6FB0D1AC5C05DCF0B /* Release */ = {
+		EECCBB8C6405777B9533DD1015183EAE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C28BBBBF8EF1C4D5D13F04BCBE860953 /* Pods-ThimbleOfHoney.release.xcconfig */;
+			baseConfigurationReference = AD75F93993988D4B97BB728F51BB23B5 /* Pods-ThimbleOfHoney.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -605,7 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ThimbleOfHoney/Pods-ThimbleOfHoney.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -616,7 +466,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -639,20 +489,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3AA51513CCCAFC2D01D13000C890D85A /* Build configuration list for PBXNativeTarget "Pods-ThimbleOfHoney" */ = {
+		67914DC1B7E8CEF799322622D7E0E2B3 /* Build configuration list for PBXNativeTarget "Pods-ThimbleOfHoney" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7CD09460E3E5CFE9EAFB70B8E1A2983A /* Debug */,
-				F58DE0F88121FAD6FB0D1AC5C05DCF0B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EE510496A4A29E4498CBB9459DE11854 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4B3B1E30AB195C3E49E9B4F3B64CF6F8 /* Debug */,
-				68149793735A1BD4657DC7812D250DCB /* Release */,
+				EECCBB8C6405777B9533DD1015183EAE /* Debug */,
+				56C0375A5ABAF095FF54734DAA353989 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

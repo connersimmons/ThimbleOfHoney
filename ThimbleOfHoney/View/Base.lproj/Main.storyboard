@@ -203,7 +203,6 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqw-9n-pmg">
                                                     <rect key="frame" x="56" y="11" width="42" height="21"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="42" id="36J-ab-RLb"/>
                                                     </constraints>
@@ -245,7 +244,6 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6BQ-62-4yQ">
                                                     <rect key="frame" x="56" y="11" width="76" height="21"/>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="76" id="Yg8-k4-AO7"/>
                                                     </constraints>
@@ -505,7 +503,6 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lxh-dm-3au" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Posts" image="post" id="vjV-4j-fzF"/>
                     <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="b9u-5p-wkM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -717,7 +714,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="E7y-13-v2c"/>
-        <segue reference="cCL-we-dRj"/>
+        <segue reference="a6C-Iy-liN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.28627450980392155" green="0.60392156862745094" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
