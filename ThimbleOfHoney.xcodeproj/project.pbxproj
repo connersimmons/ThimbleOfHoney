@@ -24,7 +24,6 @@
 		C5392E8F1AAE2F0800D72708 /* RougeScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5392E8C1AAE2F0800D72708 /* RougeScript-Regular.ttf */; };
 		C5392E901AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5392E8D1AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf */; };
 		C5392E911AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5392E8E1AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf */; };
-		C5392F8A1AAE2F3A00D72708 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C5392F2F1AAE2F3A00D72708 /* .gitignore */; };
 		C5392F8B1AAE2F3A00D72708 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F301AAE2F3A00D72708 /* ImageLoader.swift */; };
 		C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9B1AAE2F4400D72708 /* XMLParser.swift */; };
 		C5392F9E1AAE2F4F00D72708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392F9D1AAE2F4F00D72708 /* AppDelegate.swift */; };
@@ -32,7 +31,6 @@
 		C5392FA61AAE2F6300D72708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA21AAE2F6300D72708 /* Main.storyboard */; };
 		C5392FA81AAE2F6300D72708 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5392FA51AAE2F6300D72708 /* Images.xcassets */; };
 		C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */; };
-		C53EB1181C780B810030F623 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53EB1171C780B810030F623 /* Reachability.swift */; };
 		C53EB11A1C7810E70030F623 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C53EB1191C7810E70030F623 /* Accelerate.framework */; };
 		C53EB11E1C790ECB0030F623 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C53EB11D1C790ECB0030F623 /* LaunchScreen.storyboard */; };
 		C551D8421AAF506F00AC4C8B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C551D8411AAF506F00AC4C8B /* .gitignore */; };
@@ -88,7 +86,6 @@
 		C5392E8C1AAE2F0800D72708 /* RougeScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "RougeScript-Regular.ttf"; path = "Resources/Fonts/RougeScript-Regular.ttf"; sourceTree = "<group>"; };
 		C5392E8D1AAE2F0800D72708 /* QuattrocentoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "QuattrocentoSans-Regular.ttf"; path = "Resources/Fonts/QuattrocentoSans-Regular.ttf"; sourceTree = "<group>"; };
 		C5392E8E1AAE2F0800D72708 /* YanoneKaffeesatz-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "YanoneKaffeesatz-Regular.ttf"; path = "Resources/Fonts/YanoneKaffeesatz-Regular.ttf"; sourceTree = "<group>"; };
-		C5392F2F1AAE2F3A00D72708 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C5392F301AAE2F3A00D72708 /* ImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		C5392F9B1AAE2F4400D72708 /* XMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XMLParser.swift; path = Helpers/XMLParser.swift; sourceTree = "<group>"; };
 		C5392F9D1AAE2F4F00D72708 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Delegate/AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,10 +94,8 @@
 		C5392FA51AAE2F6300D72708 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = View/Images.xcassets; sourceTree = "<group>"; };
 		C5392FA91AAE2FB300D72708 /* ThimbleOfHoney-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ThimbleOfHoney-Bridging-Header.h"; sourceTree = "<group>"; };
 		C5392FAA1AAF4B1800D72708 /* PushNotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationController.swift; path = Controllers/PushNotificationController.swift; sourceTree = "<group>"; };
-		C53EB1171C780B810030F623 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Helpers/Reachability.swift; sourceTree = "<group>"; };
 		C53EB1191C7810E70030F623 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		C53EB11D1C790ECB0030F623 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = View/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C54A92AE1BAD038D00A5A3DB /* IJReachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IJReachability.framework; path = "Pods/../build/Debug-iphoneos/IJReachability.framework"; sourceTree = "<group>"; };
 		C551D8411AAF506F00AC4C8B /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C551D8451AAF54BE00AC4C8B /* ApiKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiKeys.swift; path = Helpers/ApiKeys.swift; sourceTree = "<group>"; };
 		C551D8491AAF598900AC4C8B /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = Resources/ApiKeys.plist; sourceTree = "<group>"; };
@@ -167,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				C53EB1191C7810E70030F623 /* Accelerate.framework */,
-				C54A92AE1BAD038D00A5A3DB /* IJReachability.framework */,
 				C5F58E5E1ADE0A0500FE76B6 /* iAd.framework */,
 				C5FF36E41ABDFDCF006829E7 /* Accounts.framework */,
 				C5FF36E21ABDFDC7006829E7 /* Social.framework */,
@@ -250,7 +244,6 @@
 				C5BE59341ACC567A00611975 /* UIColorExtensions.swift */,
 				C5392F9B1AAE2F4400D72708 /* XMLParser.swift */,
 				C5BE59401AD4490100611975 /* StringExtensions.swift */,
-				C53EB1171C780B810030F623 /* Reachability.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -287,7 +280,6 @@
 		C5392F2E1AAE2F3A00D72708 /* SwiftImageLoader */ = {
 			isa = PBXGroup;
 			children = (
-				C5392F2F1AAE2F3A00D72708 /* .gitignore */,
 				C5392F301AAE2F3A00D72708 /* ImageLoader.swift */,
 			);
 			name = SwiftImageLoader;
@@ -448,6 +440,9 @@
 							com.apple.InAppPurchase = {
 								enabled = 0;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					C5CCBC9E1A9CF04600A4F62D = {
@@ -483,7 +478,6 @@
 			files = (
 				C5392FA61AAE2F6300D72708 /* Main.storyboard in Resources */,
 				C5BE592A1AC78CA000611975 /* SwiftImageLoader.license in Resources */,
-				C5392F8A1AAE2F3A00D72708 /* .gitignore in Resources */,
 				C5392FA81AAE2F6300D72708 /* Images.xcassets in Resources */,
 				C5392E8F1AAE2F0800D72708 /* RougeScript-Regular.ttf in Resources */,
 				C5BE592C1AC78F9D00611975 /* SWRevealViewController.license in Resources */,
@@ -578,7 +572,6 @@
 				C5BE593F1AD443DD00611975 /* FavoritesTableViewController.swift in Sources */,
 				C5392E861AAE2E0300D72708 /* PostsTableViewCell.swift in Sources */,
 				C5FF36E71ABE1B7F006829E7 /* MenuViewController.swift in Sources */,
-				C53EB1181C780B810030F623 /* Reachability.swift in Sources */,
 				C5392FAB1AAF4B1800D72708 /* PushNotificationController.swift in Sources */,
 				C5392F9C1AAE2F4400D72708 /* XMLParser.swift in Sources */,
 				C5392E881AAE2E1000D72708 /* PostDetailViewController.swift in Sources */,
@@ -717,10 +710,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThimbleOfHoney",
 					"$(PROJECT_DIR)/ThimbleOfHoney/Frameworks",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ThimbleOfHoney/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cws.ThimbleOfHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -743,10 +735,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ThimbleOfHoney",
 					"$(PROJECT_DIR)/ThimbleOfHoney/Frameworks",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = ThimbleOfHoney/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cws.ThimbleOfHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -762,10 +753,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -784,10 +772,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = ThimbleOfHoneyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cws.$(PRODUCT_NAME:rfc1034identifier)";

@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import ReachabilitySwift
 
 class AboutMeViewController: UIViewController, XMLParserDelegate {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var webView: UIWebView!
     var xmlParser: XMLParser!
+    var reachability: Reachability!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menuSetup()
         
-        if Reachability.isConnectedToNetwork() == true {
+        let reachability = try! Reachability.reachabilityForInternetConnection()
+        
+        if reachability.currentReachabilityStatus == .NotReachable {
+            print("Network Connection: Unavailable")
+            noInternetAlert()
+        } else {
             print("Network Connection: Available")
-            
             let aboutMeURL = NSURL(string:"http://thimbleofhoney.dreamhosters.com/about-me/")
             let htmlString = NSData(contentsOfURL: aboutMeURL!)
             let dataString: NSString = NSString(data: htmlString!, encoding: NSUTF8StringEncoding)!
@@ -34,9 +40,6 @@ class AboutMeViewController: UIViewController, XMLParserDelegate {
             "</style>"
             
             webView.loadHTMLString(cssString + (aboutMeDesc as String), baseURL: nil)
-        } else {
-            print("Network Connection: Unavailable")
-            noInternetAlert()
         }
     }
     

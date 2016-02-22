@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import ReachabilitySwift
 
 class FavoritesTableViewController: UITableViewController, UISplitViewControllerDelegate {
     
@@ -15,21 +16,30 @@ class FavoritesTableViewController: UITableViewController, UISplitViewController
     var parseData: NSMutableArray! = NSMutableArray()
     var detailViewController: PostDetailViewController? = nil
     var isWaiting = true
+    var reachability: Reachability!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.contentInset = UIEdgeInsetsMake(8, 0, 0, 0)
         
-        menuSetup()
-        
-        loadData()
-        
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
         self.splitViewController!.delegate = self
         self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
+        
+        menuSetup()
+        
+        let reachability = try! Reachability.reachabilityForInternetConnection()
+        
+        if reachability.currentReachabilityStatus == .NotReachable {
+            print("Network Connection: Unavailable")
+            noInternetAlert()
+        } else {
+            print("Network Connection: Available")
+            loadData()
+        }
         
         setupSplitViewData()
     }
@@ -103,6 +113,29 @@ class FavoritesTableViewController: UITableViewController, UISplitViewController
     func refresh(sender:AnyObject) {
         self.refreshControl?.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
         self.refreshControl?.endRefreshing()
+    }
+    
+    func noInternetAlert() {
+        let alertController = UIAlertController(title: "No Internet connection!",
+            message: "Please connect to the Internet.",
+            preferredStyle: .Alert)
+        
+        let cancelSelected = UIAlertAction(title: "Cancel", style: .Cancel){ (action) in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        let okSelected = UIAlertAction(title: "Settings", style: .Default){ (action) in
+            self.openSettings()
+        }
+        
+        alertController.addAction(cancelSelected)
+        alertController.addAction(okSelected)
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func openSettings() {
+        UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
     }
     
     // MARK: - Table View Delegate

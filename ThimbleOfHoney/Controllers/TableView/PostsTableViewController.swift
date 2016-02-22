@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import ReachabilitySwift
 
 class PostsTableViewController: UITableViewController, XMLParserDelegate, UISplitViewControllerDelegate {
 
@@ -17,29 +18,34 @@ class PostsTableViewController: UITableViewController, XMLParserDelegate, UISpli
     var xmlParser: XMLParser!
     
     var detailViewController: PostDetailViewController? = nil
+    var reachability: Reachability!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.tableView.contentInset = UIEdgeInsetsMake(8, 0, 0, 0)
         
-        menuSetup()
-        
-        if Reachability.isConnectedToNetwork() == true {
-            print("Network Connection: Available")
-        } else {
-            print("Network Connection: Unavailable")
-            noInternetAlert()
-        }
-        
-        parseWebsite()
-        
         self.refreshControl?.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         
         self.splitViewController!.delegate = self;
         self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible
         
+        menuSetup()
+        
+        parseWebsite()
         setupSplitViewData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let reachability = try! Reachability.reachabilityForInternetConnection()
+        
+        if reachability.currentReachabilityStatus == .NotReachable {
+            print("Network Connection: Unavailable")
+            noInternetAlert()
+        } else {
+            print("Network Connection: Available")
+            
+        }
     }
     
     // MARK: XMLParserDelegate method implementation

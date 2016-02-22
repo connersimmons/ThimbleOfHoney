@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'ThimbleOfHoney' do
   pod 'MAThemeKit'
+  pod 'ReachabilitySwift', :git => 'https://github.com/ashleymills/Reachability.swift'
 end
 
 target 'ThimbleOfHoneyTests' do

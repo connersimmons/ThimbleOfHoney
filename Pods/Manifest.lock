@@ -1,10 +1,22 @@
 PODS:
   - MAThemeKit (1.0)
+  - ReachabilitySwift (2.3.3)
 
 DEPENDENCIES:
   - MAThemeKit
+  - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
+
+EXTERNAL SOURCES:
+  ReachabilitySwift:
+    :git: https://github.com/ashleymills/Reachability.swift
+
+CHECKOUT OPTIONS:
+  ReachabilitySwift:
+    :commit: cf126c0584a209143c75bf1d0f23fd904891e26e
+    :git: https://github.com/ashleymills/Reachability.swift
 
 SPEC CHECKSUMS:
   MAThemeKit: 559acc98ceadc051cccb1b6bb0c4ca28475eb021
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
 
 COCOAPODS: 0.39.0
